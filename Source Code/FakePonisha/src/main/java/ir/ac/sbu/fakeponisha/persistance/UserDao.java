@@ -5,11 +5,35 @@ import java.util.List;
 
 public interface UserDao {
 
+    /**
+     *
+     * @return
+     */
     public List<User> getAllUsers();
 
+    /**
+     *
+     * @param userId
+     * @return
+     */
     public User getUser(int userId);
 
+    /**
+     *
+     * @param userName
+     * @return
+     */
+    public User getUser(String userName);
+
+    /**
+     *
+     * @param user
+     */
     public void insertUser(User user);
 
+    /**
+     *
+     * @param user
+     */
     public void updateUser(User user);
 }

@@ -7,7 +7,6 @@ import ir.ac.sbu.fakeponisha.utils.Response;
 import ir.ac.sbu.fakeponisha.utils.Tag;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -71,7 +70,6 @@ public class RegisterController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        UserDao userDao = new UserDaoImplementation();
         Response.initialize(response);
         HttpSession session = request.getSession();
         String userName = new String(request.getParameter(Tag.USER_NAME).getBytes("8859_1"), "UTF-8");
@@ -81,29 +79,14 @@ public class RegisterController extends HttpServlet {
         User user = new User();
         user.setUsername(userName);
         user.setPassword(password);
-        List<User> users = userDao.getAllUsers();
-        //userDao.insertUser(user);
-        request.setAttribute(Tag.USER, user);
-        session.setAttribute(Tag.USER, user);
 
         response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet RegisterController</title>");
-            out.println("</head>");
-            out.println("<body>");
-            for (User u : users) {
-                out.println("<h1>Servlet RegisterController at " + u.toString() + "</h1>");    
-            }
-            
-            out.println("</body>");
-            out.println("</html>");
-        }
-//        RequestDispatcher rd = request.getRequestDispatcher(Tag.LOGIN_PAGE);
-//        rd.forward(request, response);
+        String forwardPage = checkInsertUser(user);
+//        request.setAttribute(Tag.USER, user);
+//        session.setAttribute(Tag.USER, user);
+
+        RequestDispatcher rd = request.getRequestDispatcher(forwardPage);
+        rd.forward(request, response);
     }
 
     /**
@@ -114,6 +97,17 @@ public class RegisterController extends HttpServlet {
     @Override
     public String getServletInfo() {
         return "This servlet is used to register users in Ponisha site.";
+    }
+
+    private String checkInsertUser(User user) {
+        UserDao userDao = new UserDaoImplementation();
+        User u = userDao.getUser(user.getUsername());
+        if (u == null) {
+            userDao.insertUser(user);
+            return Tag.FIRST_PAGE;
+        } else {
+            return Tag.REGISTER_PAGE;
+        }
     }
 
 }

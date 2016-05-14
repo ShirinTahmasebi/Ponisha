@@ -5,8 +5,9 @@ import ir.ac.sbu.fakeponisha.utils.Tag;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.NoResultException;
+import javax.persistence.NonUniqueResultException;
 import javax.persistence.Persistence;
-import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 
 public class UserDaoImplementation implements UserDao {
@@ -42,4 +43,19 @@ public class UserDaoImplementation implements UserDao {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+    @Override
+    public User getUser(String userName) {
+        EntityManagerFactory emf;
+        emf = Persistence.createEntityManagerFactory(Tag.PERSISTANCE_UNIT_NAME);
+        em = emf.createEntityManager();
+        TypedQuery<User> user = em.createNamedQuery("User.findByUsername", User.class);
+        user.setParameter(1, userName);
+        try {
+            return user.getSingleResult();
+        } catch (NoResultException e ) {
+            return null;
+        }catch(NonUniqueResultException e){
+            return user.getResultList().get(0);
+        }
+    }
 }

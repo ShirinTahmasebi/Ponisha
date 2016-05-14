@@ -1,14 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package ir.ac.sbu.fakeponisha.utils;
 
-/**
- *
- * @author Shirin
- */
 public class Tag {
 
     final public static String USER = "user";
@@ -18,4 +9,5 @@ public class Tag {
     final public static String REGISTER_PAGE = "register.jsp";
     final public static String EMAIL = "email";
     final public static String PERSISTANCE_UNIT_NAME = "UserService";
+    final public static String FIRST_PAGE = "first_page.jsp";
 }
