@@ -1,0 +1,326 @@
+08-May-2016 19:47:42.125 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+08-May-2016 19:47:42.127 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+08-May-2016 19:53:00.627 SEVERE [http-nio-8080-exec-1] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/FakePonisha] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [14] in the generated java file: [/Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/work/Catalina/localhost/FakePonisha/org/apache/jsp/about_005fus_jsp.java]
+Only a type can be imported. model.User resolves to a package
+
+An error occurred at line: [15] in the generated java file: [/Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/work/Catalina/localhost/FakePonisha/org/apache/jsp/about_005fus_jsp.java]
+Only a type can be imported. utils.Tag resolves to a package
+
+An error occurred at line: 11 in the jsp file: /menu.jsp
+Tag.USER cannot be resolved to a type
+8: 	<body style= "margin:0">
+9: 		<div id = "mySidenav" class = "sidenav">
+10: 			<a href="javascript:void(0)" class="closebtn menu-item-line" onclick="closeNav()">x</a>
+11: 			<%if (session.getAttribute(Tag.USER)!= null)
+12: 				out.println("<a href='user_profile_editable.jsp' class='firstitem menu-item-line'>پروفایل</a>");
+13: 			else
+14: 				out.println("<a href='login.jsp' class='firstitem menu-item-line'>ورود</a>");%>
+
+
+An error occurred at line: 19 in the jsp file: /menu.jsp
+Tag.USER cannot be resolved to a type
+16: 			<a href="contact-us.jsp" class="thirditem menu-item-line">ارتباط&nbsp;با&nbsp;ما</a>
+17: 			<a href="about_us.jsp" class="forthitem menu-item-line">درباره&nbsp;ما</a>
+18: 			<a href="creat_new_project.jsp" class="fifthitem menu-item-line">ایجاد&nbsp;پروژه</a>
+19: 			<%if (session.getAttribute(Tag.USER)!= null)
+20: 				out.println("<a href='LogoutController' class='sixthitem menu-item-line'>خروج</a>");
+21: 			%>
+22: 		</div>
+
+
+An error occurred at line: 28 in the jsp file: /menu.jsp
+Tag.USER cannot be resolved to a type
+25: 				<img src="img/menu-black.png"/> 
+26: 			</span>
+27: 			<span dir="rtl" style="cursor:pointer;position: absolute;right:100px;top:0;  margin: 3px; padding: 0px 8px 0px 8px; border-radius: 5px; background:#903;">
+28: 				<%if (session.getAttribute(Tag.USER)!= null)
+29: 				out.println(
+30: 			"<span id='header_text' style='cursor:pointer;position: absolute;right:50px;top:20px;  margin: 3px; padding: 0px 8px 0px 8px; border-radius: 5px; background:#903;' onclick='openProfileLink();'>سلام،" + (((User)session.getAttribute(Tag.USER)).getUserName()) + "</span>");
+31: 			else
+
+
+An error occurred at line: 30 in the jsp file: /menu.jsp
+User cannot be resolved to a type
+27: 			<span dir="rtl" style="cursor:pointer;position: absolute;right:100px;top:0;  margin: 3px; padding: 0px 8px 0px 8px; border-radius: 5px; background:#903;">
+28: 				<%if (session.getAttribute(Tag.USER)!= null)
+29: 				out.println(
+30: 			"<span id='header_text' style='cursor:pointer;position: absolute;right:50px;top:20px;  margin: 3px; padding: 0px 8px 0px 8px; border-radius: 5px; background:#903;' onclick='openProfileLink();'>سلام،" + (((User)session.getAttribute(Tag.USER)).getUserName()) + "</span>");
+31: 			else
+32: 				out.println(
+33: 						"<span id='header_text' style='cursor:pointer;position: absolute;right:50px;top:20px;  margin: 3px; padding: 0px 8px 0px 8px; border-radius: 5px; background:#903;' onclick='openLoginLink();'>وارد&nbspشوید</span>");
+
+
+An error occurred at line: 30 in the jsp file: /menu.jsp
+Tag.USER cannot be resolved to a type
+27: 			<span dir="rtl" style="cursor:pointer;position: absolute;right:100px;top:0;  margin: 3px; padding: 0px 8px 0px 8px; border-radius: 5px; background:#903;">
+28: 				<%if (session.getAttribute(Tag.USER)!= null)
+29: 				out.println(
+30: 			"<span id='header_text' style='cursor:pointer;position: absolute;right:50px;top:20px;  margin: 3px; padding: 0px 8px 0px 8px; border-radius: 5px; background:#903;' onclick='openProfileLink();'>سلام،" + (((User)session.getAttribute(Tag.USER)).getUserName()) + "</span>");
+31: 			else
+32: 				out.println(
+33: 						"<span id='header_text' style='cursor:pointer;position: absolute;right:50px;top:20px;  margin: 3px; padding: 0px 8px 0px 8px; border-radius: 5px; background:#903;' onclick='openLoginLink();'>وارد&nbspشوید</span>");
+
+
+Stacktrace:] with root cause
+ org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [14] in the generated java file: [/Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/work/Catalina/localhost/FakePonisha/org/apache/jsp/about_005fus_jsp.java]
+Only a type can be imported. model.User resolves to a package
+
+An error occurred at line: [15] in the generated java file: [/Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/work/Catalina/localhost/FakePonisha/org/apache/jsp/about_005fus_jsp.java]
+Only a type can be imported. utils.Tag resolves to a package
+
+An error occurred at line: 11 in the jsp file: /menu.jsp
+Tag.USER cannot be resolved to a type
+8: 	<body style= "margin:0">
+9: 		<div id = "mySidenav" class = "sidenav">
+10: 			<a href="javascript:void(0)" class="closebtn menu-item-line" onclick="closeNav()">x</a>
+11: 			<%if (session.getAttribute(Tag.USER)!= null)
+12: 				out.println("<a href='user_profile_editable.jsp' class='firstitem menu-item-line'>پروفایل</a>");
+13: 			else
+14: 				out.println("<a href='login.jsp' class='firstitem menu-item-line'>ورود</a>");%>
+
+
+An error occurred at line: 19 in the jsp file: /menu.jsp
+Tag.USER cannot be resolved to a type
+16: 			<a href="contact-us.jsp" class="thirditem menu-item-line">ارتباط&nbsp;با&nbsp;ما</a>
+17: 			<a href="about_us.jsp" class="forthitem menu-item-line">درباره&nbsp;ما</a>
+18: 			<a href="creat_new_project.jsp" class="fifthitem menu-item-line">ایجاد&nbsp;پروژه</a>
+19: 			<%if (session.getAttribute(Tag.USER)!= null)
+20: 				out.println("<a href='LogoutController' class='sixthitem menu-item-line'>خروج</a>");
+21: 			%>
+22: 		</div>
+
+
+An error occurred at line: 28 in the jsp file: /menu.jsp
+Tag.USER cannot be resolved to a type
+25: 				<img src="img/menu-black.png"/> 
+26: 			</span>
+27: 			<span dir="rtl" style="cursor:pointer;position: absolute;right:100px;top:0;  margin: 3px; padding: 0px 8px 0px 8px; border-radius: 5px; background:#903;">
+28: 				<%if (session.getAttribute(Tag.USER)!= null)
+29: 				out.println(
+30: 			"<span id='header_text' style='cursor:pointer;position: absolute;right:50px;top:20px;  margin: 3px; padding: 0px 8px 0px 8px; border-radius: 5px; background:#903;' onclick='openProfileLink();'>سلام،" + (((User)session.getAttribute(Tag.USER)).getUserName()) + "</span>");
+31: 			else
+
+
+An error occurred at line: 30 in the jsp file: /menu.jsp
+User cannot be resolved to a type
+27: 			<span dir="rtl" style="cursor:pointer;position: absolute;right:100px;top:0;  margin: 3px; padding: 0px 8px 0px 8px; border-radius: 5px; background:#903;">
+28: 				<%if (session.getAttribute(Tag.USER)!= null)
+29: 				out.println(
+30: 			"<span id='header_text' style='cursor:pointer;position: absolute;right:50px;top:20px;  margin: 3px; padding: 0px 8px 0px 8px; border-radius: 5px; background:#903;' onclick='openProfileLink();'>سلام،" + (((User)session.getAttribute(Tag.USER)).getUserName()) + "</span>");
+31: 			else
+32: 				out.println(
+33: 						"<span id='header_text' style='cursor:pointer;position: absolute;right:50px;top:20px;  margin: 3px; padding: 0px 8px 0px 8px; border-radius: 5px; background:#903;' onclick='openLoginLink();'>وارد&nbspشوید</span>");
+
+
+An error occurred at line: 30 in the jsp file: /menu.jsp
+Tag.USER cannot be resolved to a type
+27: 			<span dir="rtl" style="cursor:pointer;position: absolute;right:100px;top:0;  margin: 3px; padding: 0px 8px 0px 8px; border-radius: 5px; background:#903;">
+28: 				<%if (session.getAttribute(Tag.USER)!= null)
+29: 				out.println(
+30: 			"<span id='header_text' style='cursor:pointer;position: absolute;right:50px;top:20px;  margin: 3px; padding: 0px 8px 0px 8px; border-radius: 5px; background:#903;' onclick='openProfileLink();'>سلام،" + (((User)session.getAttribute(Tag.USER)).getUserName()) + "</span>");
+31: 			else
+32: 				out.println(
+33: 						"<span id='header_text' style='cursor:pointer;position: absolute;right:50px;top:20px;  margin: 3px; padding: 0px 8px 0px 8px; border-radius: 5px; background:#903;' onclick='openLoginLink();'>وارد&nbspشوید</span>");
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:198)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:457)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:361)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:336)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:323)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:585)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:363)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:396)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:340)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:292)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:212)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:141)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:616)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:522)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1095)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:672)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1502)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1458)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+08-May-2016 19:54:08.473 SEVERE [http-nio-8080-exec-11] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/FakePonisha] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [14] in the generated java file: [/Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/work/Catalina/localhost/FakePonisha/org/apache/jsp/login_jsp.java]
+Only a type can be imported. model.User resolves to a package
+
+An error occurred at line: [15] in the generated java file: [/Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/work/Catalina/localhost/FakePonisha/org/apache/jsp/login_jsp.java]
+Only a type can be imported. utils.Tag resolves to a package
+
+An error occurred at line: 11 in the jsp file: /menu.jsp
+Tag.USER cannot be resolved to a type
+8: 	<body style= "margin:0">
+9: 		<div id = "mySidenav" class = "sidenav">
+10: 			<a href="javascript:void(0)" class="closebtn menu-item-line" onclick="closeNav()">x</a>
+11: 			<%if (session.getAttribute(Tag.USER)!= null)
+12: 				out.println("<a href='user_profile_editable.jsp' class='firstitem menu-item-line'>پروفایل</a>");
+13: 			else
+14: 				out.println("<a href='login.jsp' class='firstitem menu-item-line'>ورود</a>");%>
+
+
+An error occurred at line: 19 in the jsp file: /menu.jsp
+Tag.USER cannot be resolved to a type
+16: 			<a href="contact-us.jsp" class="thirditem menu-item-line">ارتباط&nbsp;با&nbsp;ما</a>
+17: 			<a href="about_us.jsp" class="forthitem menu-item-line">درباره&nbsp;ما</a>
+18: 			<a href="creat_new_project.jsp" class="fifthitem menu-item-line">ایجاد&nbsp;پروژه</a>
+19: 			<%if (session.getAttribute(Tag.USER)!= null)
+20: 				out.println("<a href='LogoutController' class='sixthitem menu-item-line'>خروج</a>");
+21: 			%>
+22: 		</div>
+
+
+An error occurred at line: 28 in the jsp file: /menu.jsp
+Tag.USER cannot be resolved to a type
+25: 				<img src="img/menu-black.png"/> 
+26: 			</span>
+27: 			<span dir="rtl" style="cursor:pointer;position: absolute;right:100px;top:0;  margin: 3px; padding: 0px 8px 0px 8px; border-radius: 5px; background:#903;">
+28: 				<%if (session.getAttribute(Tag.USER)!= null)
+29: 				out.println(
+30: 			"<span id='header_text' style='cursor:pointer;position: absolute;right:50px;top:20px;  margin: 3px; padding: 0px 8px 0px 8px; border-radius: 5px; background:#903;' onclick='openProfileLink();'>سلام،" + (((User)session.getAttribute(Tag.USER)).getUserName()) + "</span>");
+31: 			else
+
+
+An error occurred at line: 30 in the jsp file: /menu.jsp
+User cannot be resolved to a type
+27: 			<span dir="rtl" style="cursor:pointer;position: absolute;right:100px;top:0;  margin: 3px; padding: 0px 8px 0px 8px; border-radius: 5px; background:#903;">
+28: 				<%if (session.getAttribute(Tag.USER)!= null)
+29: 				out.println(
+30: 			"<span id='header_text' style='cursor:pointer;position: absolute;right:50px;top:20px;  margin: 3px; padding: 0px 8px 0px 8px; border-radius: 5px; background:#903;' onclick='openProfileLink();'>سلام،" + (((User)session.getAttribute(Tag.USER)).getUserName()) + "</span>");
+31: 			else
+32: 				out.println(
+33: 						"<span id='header_text' style='cursor:pointer;position: absolute;right:50px;top:20px;  margin: 3px; padding: 0px 8px 0px 8px; border-radius: 5px; background:#903;' onclick='openLoginLink();'>وارد&nbspشوید</span>");
+
+
+An error occurred at line: 30 in the jsp file: /menu.jsp
+Tag.USER cannot be resolved to a type
+27: 			<span dir="rtl" style="cursor:pointer;position: absolute;right:100px;top:0;  margin: 3px; padding: 0px 8px 0px 8px; border-radius: 5px; background:#903;">
+28: 				<%if (session.getAttribute(Tag.USER)!= null)
+29: 				out.println(
+30: 			"<span id='header_text' style='cursor:pointer;position: absolute;right:50px;top:20px;  margin: 3px; padding: 0px 8px 0px 8px; border-radius: 5px; background:#903;' onclick='openProfileLink();'>سلام،" + (((User)session.getAttribute(Tag.USER)).getUserName()) + "</span>");
+31: 			else
+32: 				out.println(
+33: 						"<span id='header_text' style='cursor:pointer;position: absolute;right:50px;top:20px;  margin: 3px; padding: 0px 8px 0px 8px; border-radius: 5px; background:#903;' onclick='openLoginLink();'>وارد&nbspشوید</span>");
+
+
+Stacktrace:] with root cause
+ org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [14] in the generated java file: [/Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/work/Catalina/localhost/FakePonisha/org/apache/jsp/login_jsp.java]
+Only a type can be imported. model.User resolves to a package
+
+An error occurred at line: [15] in the generated java file: [/Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/work/Catalina/localhost/FakePonisha/org/apache/jsp/login_jsp.java]
+Only a type can be imported. utils.Tag resolves to a package
+
+An error occurred at line: 11 in the jsp file: /menu.jsp
+Tag.USER cannot be resolved to a type
+8: 	<body style= "margin:0">
+9: 		<div id = "mySidenav" class = "sidenav">
+10: 			<a href="javascript:void(0)" class="closebtn menu-item-line" onclick="closeNav()">x</a>
+11: 			<%if (session.getAttribute(Tag.USER)!= null)
+12: 				out.println("<a href='user_profile_editable.jsp' class='firstitem menu-item-line'>پروفایل</a>");
+13: 			else
+14: 				out.println("<a href='login.jsp' class='firstitem menu-item-line'>ورود</a>");%>
+
+
+An error occurred at line: 19 in the jsp file: /menu.jsp
+Tag.USER cannot be resolved to a type
+16: 			<a href="contact-us.jsp" class="thirditem menu-item-line">ارتباط&nbsp;با&nbsp;ما</a>
+17: 			<a href="about_us.jsp" class="forthitem menu-item-line">درباره&nbsp;ما</a>
+18: 			<a href="creat_new_project.jsp" class="fifthitem menu-item-line">ایجاد&nbsp;پروژه</a>
+19: 			<%if (session.getAttribute(Tag.USER)!= null)
+20: 				out.println("<a href='LogoutController' class='sixthitem menu-item-line'>خروج</a>");
+21: 			%>
+22: 		</div>
+
+
+An error occurred at line: 28 in the jsp file: /menu.jsp
+Tag.USER cannot be resolved to a type
+25: 				<img src="img/menu-black.png"/> 
+26: 			</span>
+27: 			<span dir="rtl" style="cursor:pointer;position: absolute;right:100px;top:0;  margin: 3px; padding: 0px 8px 0px 8px; border-radius: 5px; background:#903;">
+28: 				<%if (session.getAttribute(Tag.USER)!= null)
+29: 				out.println(
+30: 			"<span id='header_text' style='cursor:pointer;position: absolute;right:50px;top:20px;  margin: 3px; padding: 0px 8px 0px 8px; border-radius: 5px; background:#903;' onclick='openProfileLink();'>سلام،" + (((User)session.getAttribute(Tag.USER)).getUserName()) + "</span>");
+31: 			else
+
+
+An error occurred at line: 30 in the jsp file: /menu.jsp
+User cannot be resolved to a type
+27: 			<span dir="rtl" style="cursor:pointer;position: absolute;right:100px;top:0;  margin: 3px; padding: 0px 8px 0px 8px; border-radius: 5px; background:#903;">
+28: 				<%if (session.getAttribute(Tag.USER)!= null)
+29: 				out.println(
+30: 			"<span id='header_text' style='cursor:pointer;position: absolute;right:50px;top:20px;  margin: 3px; padding: 0px 8px 0px 8px; border-radius: 5px; background:#903;' onclick='openProfileLink();'>سلام،" + (((User)session.getAttribute(Tag.USER)).getUserName()) + "</span>");
+31: 			else
+32: 				out.println(
+33: 						"<span id='header_text' style='cursor:pointer;position: absolute;right:50px;top:20px;  margin: 3px; padding: 0px 8px 0px 8px; border-radius: 5px; background:#903;' onclick='openLoginLink();'>وارد&nbspشوید</span>");
+
+
+An error occurred at line: 30 in the jsp file: /menu.jsp
+Tag.USER cannot be resolved to a type
+27: 			<span dir="rtl" style="cursor:pointer;position: absolute;right:100px;top:0;  margin: 3px; padding: 0px 8px 0px 8px; border-radius: 5px; background:#903;">
+28: 				<%if (session.getAttribute(Tag.USER)!= null)
+29: 				out.println(
+30: 			"<span id='header_text' style='cursor:pointer;position: absolute;right:50px;top:20px;  margin: 3px; padding: 0px 8px 0px 8px; border-radius: 5px; background:#903;' onclick='openProfileLink();'>سلام،" + (((User)session.getAttribute(Tag.USER)).getUserName()) + "</span>");
+31: 			else
+32: 				out.println(
+33: 						"<span id='header_text' style='cursor:pointer;position: absolute;right:50px;top:20px;  margin: 3px; padding: 0px 8px 0px 8px; border-radius: 5px; background:#903;' onclick='openLoginLink();'>وارد&nbspشوید</span>");
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:198)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:457)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:361)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:336)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:323)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:585)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:363)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:396)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:340)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:292)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:212)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:141)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:616)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:522)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1095)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:672)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1502)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1458)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+08-May-2016 20:36:51.316 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+08-May-2016 20:36:51.316 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()

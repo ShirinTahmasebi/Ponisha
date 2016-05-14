@@ -1,0 +1,831 @@
+14-May-2016 02:37:30.521 INFO [http-nio-8080-exec-204] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000402: Using Hibernate built-in connection pool (not for production use!)
+14-May-2016 02:37:30.522 INFO [http-nio-8080-exec-204] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000115: Hibernate connection pool size: 20
+14-May-2016 02:37:30.522 INFO [http-nio-8080-exec-204] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000006: Autocommit mode: true
+14-May-2016 02:37:30.522 INFO [http-nio-8080-exec-204] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/library?zeroDateTimeBehavior=convertToNull]
+14-May-2016 02:37:30.522 INFO [http-nio-8080-exec-204] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+14-May-2016 02:37:30.532 INFO [http-nio-8080-exec-204] org.hibernate.dialect.Dialect.<init> HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+14-May-2016 02:37:30.536 INFO [http-nio-8080-exec-204] org.hibernate.engine.transaction.internal.TransactionFactoryInitiator.initiateService HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+14-May-2016 02:37:30.536 INFO [http-nio-8080-exec-204] org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory.<init> HHH000397: Using ASTQueryTranslatorFactory
+14-May-2016 02:37:30.552 WARN [http-nio-8080-exec-204] org.hibernate.ejb.internal.EntityManagerFactoryRegistry.addEntityManagerFactory HHH000436: Entity manager factory name (UserService) is already registered.  If entity manager will be clustered or passivated, specify a unique value for property 'hibernate.ejb.entitymanager_factory_name'
+14-May-2016 02:46:08.246 INFO [http-nio-8080-exec-204] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FakePonisha] has started
+14-May-2016 02:46:08.253 WARNING [http-nio-8080-exec-204] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [FakePonisha] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+14-May-2016 02:46:08.255 WARNING [http-nio-8080-exec-204] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [FakePonisha] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+ com.mysql.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:40)
+14-May-2016 02:46:09.822 INFO [http-nio-8080-exec-204] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+14-May-2016 02:46:09.827 INFO [http-nio-8080-exec-204] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FakePonisha] is completed
+14-May-2016 02:46:11.037 INFO [http-nio-8080-exec-210] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+14-May-2016 02:48:20.570 INFO [http-nio-8080-exec-214] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+14-May-2016 02:48:46.627 INFO [http-nio-8080-exec-221] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/FakePonisha]
+14-May-2016 02:48:46.657 INFO [http-nio-8080-exec-216] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/conf/Catalina/localhost/FakePonisha.xml
+14-May-2016 02:48:46.664 WARNING [http-nio-8080-exec-216] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+14-May-2016 02:48:47.475 INFO [http-nio-8080-exec-216] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+14-May-2016 02:48:47.477 INFO [http-nio-8080-exec-216] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/conf/Catalina/localhost/FakePonisha.xml has finished in 820 ms
+14-May-2016 02:48:47.493 INFO [http-nio-8080-exec-205] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/FakePonisha]] after start() had already been called. The second call will be ignored.
+14-May-2016 02:48:53.592 INFO [http-nio-8080-exec-219] org.hibernate.annotations.common.Version.<clinit> HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+14-May-2016 02:48:53.599 INFO [http-nio-8080-exec-219] org.hibernate.Version.logVersion HHH000412: Hibernate Core {4.2.8.Final}
+14-May-2016 02:48:53.600 INFO [http-nio-8080-exec-219] org.hibernate.cfg.Environment.<clinit> HHH000206: hibernate.properties not found
+14-May-2016 02:48:53.602 INFO [http-nio-8080-exec-219] org.hibernate.cfg.Environment.buildBytecodeProvider HHH000021: Bytecode provider name : javassist
+14-May-2016 02:48:53.729 INFO [http-nio-8080-exec-219] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000402: Using Hibernate built-in connection pool (not for production use!)
+14-May-2016 02:48:53.732 INFO [http-nio-8080-exec-219] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000115: Hibernate connection pool size: 20
+14-May-2016 02:48:53.733 INFO [http-nio-8080-exec-219] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000006: Autocommit mode: true
+14-May-2016 02:48:53.733 INFO [http-nio-8080-exec-219] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ponisha?zeroDateTimeBehavior=convertToNull]
+14-May-2016 02:48:53.733 INFO [http-nio-8080-exec-219] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+14-May-2016 02:48:53.981 INFO [http-nio-8080-exec-219] org.hibernate.dialect.Dialect.<init> HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+14-May-2016 02:48:54.111 INFO [http-nio-8080-exec-219] org.hibernate.engine.transaction.internal.TransactionFactoryInitiator.initiateService HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+14-May-2016 02:48:54.116 INFO [http-nio-8080-exec-219] org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory.<init> HHH000397: Using ASTQueryTranslatorFactory
+14-May-2016 02:48:54.526 WARN [http-nio-8080-exec-219] org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions SQL Error: 1146, SQLState: 42S02
+14-May-2016 02:48:54.526 ERROR [http-nio-8080-exec-219] org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions Table 'ponisha.users' doesn't exist
+14-May-2016 02:49:48.148 WARNING [http-nio-8080-exec-222] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [FakePonisha] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+14-May-2016 02:49:48.151 WARNING [http-nio-8080-exec-222] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [FakePonisha] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+ com.mysql.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:40)
+14-May-2016 02:49:48.657 INFO [http-nio-8080-exec-222] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/FakePonisha]
+14-May-2016 02:49:48.690 INFO [http-nio-8080-exec-217] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/conf/Catalina/localhost/FakePonisha.xml
+14-May-2016 02:49:48.692 WARNING [http-nio-8080-exec-217] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+14-May-2016 02:49:49.467 INFO [http-nio-8080-exec-217] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+14-May-2016 02:49:49.470 INFO [http-nio-8080-exec-217] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/conf/Catalina/localhost/FakePonisha.xml has finished in 781 ms
+14-May-2016 02:49:49.487 INFO [http-nio-8080-exec-227] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/FakePonisha]] after start() had already been called. The second call will be ignored.
+14-May-2016 02:49:50.258 INFO [http-nio-8080-exec-224] org.hibernate.annotations.common.Version.<clinit> HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+14-May-2016 02:49:50.264 INFO [http-nio-8080-exec-224] org.hibernate.Version.logVersion HHH000412: Hibernate Core {4.2.8.Final}
+14-May-2016 02:49:50.266 INFO [http-nio-8080-exec-224] org.hibernate.cfg.Environment.<clinit> HHH000206: hibernate.properties not found
+14-May-2016 02:49:50.268 INFO [http-nio-8080-exec-224] org.hibernate.cfg.Environment.buildBytecodeProvider HHH000021: Bytecode provider name : javassist
+14-May-2016 02:49:50.385 INFO [http-nio-8080-exec-224] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000402: Using Hibernate built-in connection pool (not for production use!)
+14-May-2016 02:49:50.388 INFO [http-nio-8080-exec-224] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000115: Hibernate connection pool size: 20
+14-May-2016 02:49:50.388 INFO [http-nio-8080-exec-224] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000006: Autocommit mode: true
+14-May-2016 02:49:50.388 INFO [http-nio-8080-exec-224] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ponisha?zeroDateTimeBehavior=convertToNull]
+14-May-2016 02:49:50.388 INFO [http-nio-8080-exec-224] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+14-May-2016 02:49:50.635 INFO [http-nio-8080-exec-224] org.hibernate.dialect.Dialect.<init> HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+14-May-2016 02:49:50.774 INFO [http-nio-8080-exec-224] org.hibernate.engine.transaction.internal.TransactionFactoryInitiator.initiateService HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+14-May-2016 02:49:50.781 INFO [http-nio-8080-exec-224] org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory.<init> HHH000397: Using ASTQueryTranslatorFactory
+14-May-2016 02:49:51.255 WARN [http-nio-8080-exec-224] org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions SQL Error: 1146, SQLState: 42S02
+14-May-2016 02:49:51.256 ERROR [http-nio-8080-exec-224] org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions Table 'ponisha.users' doesn't exist
+14-May-2016 02:50:42.375 WARNING [http-nio-8080-exec-212] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [FakePonisha] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+14-May-2016 02:50:42.377 WARNING [http-nio-8080-exec-212] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [FakePonisha] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+ com.mysql.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:40)
+14-May-2016 02:50:42.885 INFO [http-nio-8080-exec-212] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/FakePonisha]
+14-May-2016 02:50:42.917 INFO [http-nio-8080-exec-223] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/conf/Catalina/localhost/FakePonisha.xml
+14-May-2016 02:50:42.921 WARNING [http-nio-8080-exec-223] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+14-May-2016 02:50:43.732 INFO [http-nio-8080-exec-223] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+14-May-2016 02:50:43.734 INFO [http-nio-8080-exec-223] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/conf/Catalina/localhost/FakePonisha.xml has finished in 818 ms
+14-May-2016 02:50:43.753 INFO [http-nio-8080-exec-217] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/FakePonisha]] after start() had already been called. The second call will be ignored.
+14-May-2016 02:50:49.549 INFO [http-nio-8080-exec-232] org.hibernate.annotations.common.Version.<clinit> HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+14-May-2016 02:50:49.558 INFO [http-nio-8080-exec-232] org.hibernate.Version.logVersion HHH000412: Hibernate Core {4.2.8.Final}
+14-May-2016 02:50:49.560 INFO [http-nio-8080-exec-232] org.hibernate.cfg.Environment.<clinit> HHH000206: hibernate.properties not found
+14-May-2016 02:50:49.561 INFO [http-nio-8080-exec-232] org.hibernate.cfg.Environment.buildBytecodeProvider HHH000021: Bytecode provider name : javassist
+14-May-2016 02:50:49.691 INFO [http-nio-8080-exec-232] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000402: Using Hibernate built-in connection pool (not for production use!)
+14-May-2016 02:50:49.694 INFO [http-nio-8080-exec-232] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000115: Hibernate connection pool size: 20
+14-May-2016 02:50:49.694 INFO [http-nio-8080-exec-232] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000006: Autocommit mode: true
+14-May-2016 02:50:49.695 INFO [http-nio-8080-exec-232] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ponisha?zeroDateTimeBehavior=convertToNull]
+14-May-2016 02:50:49.695 INFO [http-nio-8080-exec-232] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+14-May-2016 02:50:49.962 INFO [http-nio-8080-exec-232] org.hibernate.dialect.Dialect.<init> HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+14-May-2016 02:50:50.110 INFO [http-nio-8080-exec-232] org.hibernate.engine.transaction.internal.TransactionFactoryInitiator.initiateService HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+14-May-2016 02:50:50.115 INFO [http-nio-8080-exec-232] org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory.<init> HHH000397: Using ASTQueryTranslatorFactory
+14-May-2016 02:50:50.660 WARN [http-nio-8080-exec-232] org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions SQL Error: 1146, SQLState: 42S02
+14-May-2016 02:50:50.660 ERROR [http-nio-8080-exec-232] org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions Table 'ponisha.users' doesn't exist
+14-May-2016 02:51:19.321 INFO [http-nio-8080-exec-225] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000402: Using Hibernate built-in connection pool (not for production use!)
+14-May-2016 02:51:19.321 INFO [http-nio-8080-exec-225] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000115: Hibernate connection pool size: 20
+14-May-2016 02:51:19.321 INFO [http-nio-8080-exec-225] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000006: Autocommit mode: true
+14-May-2016 02:51:19.322 INFO [http-nio-8080-exec-225] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ponisha?zeroDateTimeBehavior=convertToNull]
+14-May-2016 02:51:19.322 INFO [http-nio-8080-exec-225] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+14-May-2016 02:51:19.331 INFO [http-nio-8080-exec-225] org.hibernate.dialect.Dialect.<init> HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+14-May-2016 02:51:19.337 INFO [http-nio-8080-exec-225] org.hibernate.engine.transaction.internal.TransactionFactoryInitiator.initiateService HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+14-May-2016 02:51:19.338 INFO [http-nio-8080-exec-225] org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory.<init> HHH000397: Using ASTQueryTranslatorFactory
+14-May-2016 02:51:19.368 WARN [http-nio-8080-exec-225] org.hibernate.ejb.internal.EntityManagerFactoryRegistry.addEntityManagerFactory HHH000436: Entity manager factory name (UserService) is already registered.  If entity manager will be clustered or passivated, specify a unique value for property 'hibernate.ejb.entitymanager_factory_name'
+14-May-2016 02:51:19.370 WARN [http-nio-8080-exec-225] org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions SQL Error: 1146, SQLState: 42S02
+14-May-2016 02:51:19.370 ERROR [http-nio-8080-exec-225] org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions Table 'ponisha.users' doesn't exist
+14-May-2016 02:51:26.052 INFO [http-nio-8080-exec-230] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000402: Using Hibernate built-in connection pool (not for production use!)
+14-May-2016 02:51:26.053 INFO [http-nio-8080-exec-230] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000115: Hibernate connection pool size: 20
+14-May-2016 02:51:26.053 INFO [http-nio-8080-exec-230] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000006: Autocommit mode: true
+14-May-2016 02:51:26.053 INFO [http-nio-8080-exec-230] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ponisha?zeroDateTimeBehavior=convertToNull]
+14-May-2016 02:51:26.053 INFO [http-nio-8080-exec-230] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+14-May-2016 02:51:26.069 INFO [http-nio-8080-exec-230] org.hibernate.dialect.Dialect.<init> HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+14-May-2016 02:51:26.074 INFO [http-nio-8080-exec-230] org.hibernate.engine.transaction.internal.TransactionFactoryInitiator.initiateService HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+14-May-2016 02:51:26.074 INFO [http-nio-8080-exec-230] org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory.<init> HHH000397: Using ASTQueryTranslatorFactory
+14-May-2016 02:51:26.105 WARN [http-nio-8080-exec-230] org.hibernate.ejb.internal.EntityManagerFactoryRegistry.addEntityManagerFactory HHH000436: Entity manager factory name (UserService) is already registered.  If entity manager will be clustered or passivated, specify a unique value for property 'hibernate.ejb.entitymanager_factory_name'
+14-May-2016 02:51:26.108 WARN [http-nio-8080-exec-230] org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions SQL Error: 1146, SQLState: 42S02
+14-May-2016 02:51:26.109 ERROR [http-nio-8080-exec-230] org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions Table 'ponisha.users' doesn't exist
+14-May-2016 02:52:15.653 WARNING [http-nio-8080-exec-237] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [FakePonisha] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+14-May-2016 02:52:15.656 WARNING [http-nio-8080-exec-237] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [FakePonisha] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+ com.mysql.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:40)
+14-May-2016 02:52:16.163 INFO [http-nio-8080-exec-237] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/FakePonisha]
+14-May-2016 02:52:16.252 INFO [http-nio-8080-exec-239] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/conf/Catalina/localhost/FakePonisha.xml
+14-May-2016 02:52:16.260 WARNING [http-nio-8080-exec-239] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+14-May-2016 02:52:17.340 INFO [http-nio-8080-exec-239] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+14-May-2016 02:52:17.341 INFO [http-nio-8080-exec-239] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/conf/Catalina/localhost/FakePonisha.xml has finished in 1,089 ms
+14-May-2016 02:52:17.362 INFO [http-nio-8080-exec-240] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/FakePonisha]] after start() had already been called. The second call will be ignored.
+14-May-2016 02:52:23.422 INFO [http-nio-8080-exec-235] org.hibernate.annotations.common.Version.<clinit> HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+14-May-2016 02:52:23.429 INFO [http-nio-8080-exec-235] org.hibernate.Version.logVersion HHH000412: Hibernate Core {4.2.8.Final}
+14-May-2016 02:52:23.432 INFO [http-nio-8080-exec-235] org.hibernate.cfg.Environment.<clinit> HHH000206: hibernate.properties not found
+14-May-2016 02:52:23.433 INFO [http-nio-8080-exec-235] org.hibernate.cfg.Environment.buildBytecodeProvider HHH000021: Bytecode provider name : javassist
+14-May-2016 02:52:24.079 INFO [http-nio-8080-exec-235] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000402: Using Hibernate built-in connection pool (not for production use!)
+14-May-2016 02:52:24.083 INFO [http-nio-8080-exec-235] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000115: Hibernate connection pool size: 20
+14-May-2016 02:52:24.084 INFO [http-nio-8080-exec-235] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000006: Autocommit mode: true
+14-May-2016 02:52:24.084 INFO [http-nio-8080-exec-235] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ponisha?zeroDateTimeBehavior=convertToNull]
+14-May-2016 02:52:24.084 INFO [http-nio-8080-exec-235] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+14-May-2016 02:52:24.346 INFO [http-nio-8080-exec-235] org.hibernate.dialect.Dialect.<init> HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+14-May-2016 02:52:24.509 INFO [http-nio-8080-exec-235] org.hibernate.engine.transaction.internal.TransactionFactoryInitiator.initiateService HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+14-May-2016 02:52:24.514 INFO [http-nio-8080-exec-235] org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory.<init> HHH000397: Using ASTQueryTranslatorFactory
+14-May-2016 02:52:25.230 WARN [http-nio-8080-exec-235] org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions SQL Error: 1146, SQLState: 42S02
+14-May-2016 02:52:25.230 ERROR [http-nio-8080-exec-235] org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions Table 'ponisha.users' doesn't exist
+14-May-2016 02:53:03.562 INFO [http-nio-8080-exec-241] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000402: Using Hibernate built-in connection pool (not for production use!)
+14-May-2016 02:53:03.562 INFO [http-nio-8080-exec-241] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000115: Hibernate connection pool size: 20
+14-May-2016 02:53:03.562 INFO [http-nio-8080-exec-241] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000006: Autocommit mode: true
+14-May-2016 02:53:03.562 INFO [http-nio-8080-exec-241] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ponisha?zeroDateTimeBehavior=convertToNull]
+14-May-2016 02:53:03.563 INFO [http-nio-8080-exec-241] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+14-May-2016 02:53:03.576 INFO [http-nio-8080-exec-241] org.hibernate.dialect.Dialect.<init> HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+14-May-2016 02:53:03.581 INFO [http-nio-8080-exec-241] org.hibernate.engine.transaction.internal.TransactionFactoryInitiator.initiateService HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+14-May-2016 02:53:03.581 INFO [http-nio-8080-exec-241] org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory.<init> HHH000397: Using ASTQueryTranslatorFactory
+14-May-2016 02:53:03.614 WARN [http-nio-8080-exec-241] org.hibernate.ejb.internal.EntityManagerFactoryRegistry.addEntityManagerFactory HHH000436: Entity manager factory name (UserService) is already registered.  If entity manager will be clustered or passivated, specify a unique value for property 'hibernate.ejb.entitymanager_factory_name'
+14-May-2016 02:53:03.615 WARN [http-nio-8080-exec-241] org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions SQL Error: 1146, SQLState: 42S02
+14-May-2016 02:53:03.616 ERROR [http-nio-8080-exec-241] org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions Table 'ponisha.users' doesn't exist
+14-May-2016 02:53:07.292 INFO [http-nio-8080-exec-236] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000402: Using Hibernate built-in connection pool (not for production use!)
+14-May-2016 02:53:07.293 INFO [http-nio-8080-exec-236] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000115: Hibernate connection pool size: 20
+14-May-2016 02:53:07.293 INFO [http-nio-8080-exec-236] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000006: Autocommit mode: true
+14-May-2016 02:53:07.293 INFO [http-nio-8080-exec-236] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ponisha?zeroDateTimeBehavior=convertToNull]
+14-May-2016 02:53:07.293 INFO [http-nio-8080-exec-236] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+14-May-2016 02:53:07.303 INFO [http-nio-8080-exec-236] org.hibernate.dialect.Dialect.<init> HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+14-May-2016 02:53:07.307 INFO [http-nio-8080-exec-236] org.hibernate.engine.transaction.internal.TransactionFactoryInitiator.initiateService HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+14-May-2016 02:53:07.308 INFO [http-nio-8080-exec-236] org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory.<init> HHH000397: Using ASTQueryTranslatorFactory
+14-May-2016 02:53:07.341 WARN [http-nio-8080-exec-236] org.hibernate.ejb.internal.EntityManagerFactoryRegistry.addEntityManagerFactory HHH000436: Entity manager factory name (UserService) is already registered.  If entity manager will be clustered or passivated, specify a unique value for property 'hibernate.ejb.entitymanager_factory_name'
+14-May-2016 02:53:07.343 WARN [http-nio-8080-exec-236] org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions SQL Error: 1146, SQLState: 42S02
+14-May-2016 02:53:07.343 ERROR [http-nio-8080-exec-236] org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions Table 'ponisha.users' doesn't exist
+14-May-2016 02:53:41.790 WARNING [http-nio-8080-exec-243] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [FakePonisha] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+14-May-2016 02:53:41.791 WARNING [http-nio-8080-exec-243] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [FakePonisha] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+ com.mysql.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:40)
+14-May-2016 02:53:42.293 INFO [http-nio-8080-exec-243] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/FakePonisha]
+14-May-2016 02:53:42.325 INFO [http-nio-8080-exec-245] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/conf/Catalina/localhost/FakePonisha.xml
+14-May-2016 02:53:42.333 WARNING [http-nio-8080-exec-245] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+14-May-2016 02:53:43.226 INFO [http-nio-8080-exec-245] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+14-May-2016 02:53:43.228 INFO [http-nio-8080-exec-245] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/conf/Catalina/localhost/FakePonisha.xml has finished in 902 ms
+14-May-2016 02:53:43.252 INFO [http-nio-8080-exec-234] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/FakePonisha]] after start() had already been called. The second call will be ignored.
+14-May-2016 02:53:50.647 INFO [http-nio-8080-exec-248] org.hibernate.annotations.common.Version.<clinit> HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+14-May-2016 02:53:50.655 INFO [http-nio-8080-exec-248] org.hibernate.Version.logVersion HHH000412: Hibernate Core {4.2.8.Final}
+14-May-2016 02:53:50.657 INFO [http-nio-8080-exec-248] org.hibernate.cfg.Environment.<clinit> HHH000206: hibernate.properties not found
+14-May-2016 02:53:50.659 INFO [http-nio-8080-exec-248] org.hibernate.cfg.Environment.buildBytecodeProvider HHH000021: Bytecode provider name : javassist
+14-May-2016 02:53:50.789 INFO [http-nio-8080-exec-248] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000402: Using Hibernate built-in connection pool (not for production use!)
+14-May-2016 02:53:50.793 INFO [http-nio-8080-exec-248] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000115: Hibernate connection pool size: 20
+14-May-2016 02:53:50.793 INFO [http-nio-8080-exec-248] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000006: Autocommit mode: true
+14-May-2016 02:53:50.793 INFO [http-nio-8080-exec-248] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ponisha?zeroDateTimeBehavior=convertToNull]
+14-May-2016 02:53:50.793 INFO [http-nio-8080-exec-248] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+14-May-2016 02:53:51.045 INFO [http-nio-8080-exec-248] org.hibernate.dialect.Dialect.<init> HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+14-May-2016 02:53:51.186 INFO [http-nio-8080-exec-248] org.hibernate.engine.transaction.internal.TransactionFactoryInitiator.initiateService HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+14-May-2016 02:53:51.190 INFO [http-nio-8080-exec-248] org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory.<init> HHH000397: Using ASTQueryTranslatorFactory
+14-May-2016 02:53:51.648 WARN [http-nio-8080-exec-248] org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions SQL Error: 1146, SQLState: 42S02
+14-May-2016 02:53:51.648 ERROR [http-nio-8080-exec-248] org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions Table 'ponisha.users' doesn't exist
+14-May-2016 02:54:08.945 INFO [http-nio-8080-exec-242] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FakePonisha] has started
+14-May-2016 02:54:08.953 WARNING [http-nio-8080-exec-242] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [FakePonisha] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+14-May-2016 02:54:08.954 WARNING [http-nio-8080-exec-242] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [FakePonisha] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+ com.mysql.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:40)
+14-May-2016 02:54:09.998 INFO [http-nio-8080-exec-242] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+14-May-2016 02:54:10.002 INFO [http-nio-8080-exec-242] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FakePonisha] is completed
+14-May-2016 02:54:14.535 INFO [http-nio-8080-exec-250] org.hibernate.annotations.common.Version.<clinit> HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+14-May-2016 02:54:14.541 INFO [http-nio-8080-exec-250] org.hibernate.Version.logVersion HHH000412: Hibernate Core {4.2.8.Final}
+14-May-2016 02:54:14.544 INFO [http-nio-8080-exec-250] org.hibernate.cfg.Environment.<clinit> HHH000206: hibernate.properties not found
+14-May-2016 02:54:14.545 INFO [http-nio-8080-exec-250] org.hibernate.cfg.Environment.buildBytecodeProvider HHH000021: Bytecode provider name : javassist
+14-May-2016 02:54:14.845 INFO [http-nio-8080-exec-250] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000402: Using Hibernate built-in connection pool (not for production use!)
+14-May-2016 02:54:14.848 INFO [http-nio-8080-exec-250] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000115: Hibernate connection pool size: 20
+14-May-2016 02:54:14.849 INFO [http-nio-8080-exec-250] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000006: Autocommit mode: true
+14-May-2016 02:54:14.849 INFO [http-nio-8080-exec-250] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ponisha?zeroDateTimeBehavior=convertToNull]
+14-May-2016 02:54:14.849 INFO [http-nio-8080-exec-250] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+14-May-2016 02:54:15.099 INFO [http-nio-8080-exec-250] org.hibernate.dialect.Dialect.<init> HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+14-May-2016 02:54:15.233 INFO [http-nio-8080-exec-250] org.hibernate.engine.transaction.internal.TransactionFactoryInitiator.initiateService HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+14-May-2016 02:54:15.238 INFO [http-nio-8080-exec-250] org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory.<init> HHH000397: Using ASTQueryTranslatorFactory
+14-May-2016 02:54:15.684 WARN [http-nio-8080-exec-250] org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions SQL Error: 1146, SQLState: 42S02
+14-May-2016 02:54:15.684 ERROR [http-nio-8080-exec-250] org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions Table 'ponisha.users' doesn't exist
+14-May-2016 02:54:33.658 WARNING [http-nio-8080-exec-243] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [FakePonisha] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+14-May-2016 02:54:33.660 WARNING [http-nio-8080-exec-243] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [FakePonisha] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+ com.mysql.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:40)
+14-May-2016 02:54:34.171 INFO [http-nio-8080-exec-243] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/FakePonisha]
+14-May-2016 02:54:34.226 INFO [http-nio-8080-exec-254] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/conf/Catalina/localhost/FakePonisha.xml
+14-May-2016 02:54:34.230 WARNING [http-nio-8080-exec-254] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+14-May-2016 02:54:35.341 INFO [http-nio-8080-exec-254] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+14-May-2016 02:54:35.343 INFO [http-nio-8080-exec-254] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/conf/Catalina/localhost/FakePonisha.xml has finished in 1,117 ms
+14-May-2016 02:54:35.358 INFO [http-nio-8080-exec-234] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/FakePonisha]] after start() had already been called. The second call will be ignored.
+14-May-2016 02:54:53.025 INFO [http-nio-8080-exec-258] org.hibernate.annotations.common.Version.<clinit> HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+14-May-2016 02:54:53.033 INFO [http-nio-8080-exec-258] org.hibernate.Version.logVersion HHH000412: Hibernate Core {4.2.8.Final}
+14-May-2016 02:54:53.036 INFO [http-nio-8080-exec-258] org.hibernate.cfg.Environment.<clinit> HHH000206: hibernate.properties not found
+14-May-2016 02:54:53.037 INFO [http-nio-8080-exec-258] org.hibernate.cfg.Environment.buildBytecodeProvider HHH000021: Bytecode provider name : javassist
+14-May-2016 02:54:53.168 INFO [http-nio-8080-exec-258] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000402: Using Hibernate built-in connection pool (not for production use!)
+14-May-2016 02:54:53.171 INFO [http-nio-8080-exec-258] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000115: Hibernate connection pool size: 20
+14-May-2016 02:54:53.171 INFO [http-nio-8080-exec-258] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000006: Autocommit mode: true
+14-May-2016 02:54:53.172 INFO [http-nio-8080-exec-258] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ponisha?zeroDateTimeBehavior=convertToNull]
+14-May-2016 02:54:53.172 INFO [http-nio-8080-exec-258] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+14-May-2016 02:54:53.434 INFO [http-nio-8080-exec-258] org.hibernate.dialect.Dialect.<init> HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+14-May-2016 02:54:53.589 INFO [http-nio-8080-exec-258] org.hibernate.engine.transaction.internal.TransactionFactoryInitiator.initiateService HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+14-May-2016 02:54:53.594 INFO [http-nio-8080-exec-258] org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory.<init> HHH000397: Using ASTQueryTranslatorFactory
+14-May-2016 02:54:54.268 WARN [http-nio-8080-exec-258] org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions SQL Error: 1146, SQLState: 42S02
+14-May-2016 02:54:54.268 ERROR [http-nio-8080-exec-258] org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions Table 'ponisha.users' doesn't exist
+14-May-2016 02:55:07.825 INFO [http-nio-8080-exec-257] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000402: Using Hibernate built-in connection pool (not for production use!)
+14-May-2016 02:55:07.826 INFO [http-nio-8080-exec-257] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000115: Hibernate connection pool size: 20
+14-May-2016 02:55:07.826 INFO [http-nio-8080-exec-257] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000006: Autocommit mode: true
+14-May-2016 02:55:07.827 INFO [http-nio-8080-exec-257] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ponisha?zeroDateTimeBehavior=convertToNull]
+14-May-2016 02:55:07.828 INFO [http-nio-8080-exec-257] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+14-May-2016 02:55:07.844 INFO [http-nio-8080-exec-257] org.hibernate.dialect.Dialect.<init> HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+14-May-2016 02:55:07.852 INFO [http-nio-8080-exec-257] org.hibernate.engine.transaction.internal.TransactionFactoryInitiator.initiateService HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+14-May-2016 02:55:07.852 INFO [http-nio-8080-exec-257] org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory.<init> HHH000397: Using ASTQueryTranslatorFactory
+14-May-2016 02:55:07.939 WARN [http-nio-8080-exec-257] org.hibernate.ejb.internal.EntityManagerFactoryRegistry.addEntityManagerFactory HHH000436: Entity manager factory name (UserService) is already registered.  If entity manager will be clustered or passivated, specify a unique value for property 'hibernate.ejb.entitymanager_factory_name'
+14-May-2016 02:55:07.944 WARN [http-nio-8080-exec-257] org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions SQL Error: 1146, SQLState: 42S02
+14-May-2016 02:55:07.944 ERROR [http-nio-8080-exec-257] org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions Table 'ponisha.users' doesn't exist
+14-May-2016 02:55:18.988 WARNING [http-nio-8080-exec-256] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [FakePonisha] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+14-May-2016 02:55:18.989 WARNING [http-nio-8080-exec-256] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [FakePonisha] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+ com.mysql.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:40)
+14-May-2016 02:55:33.062 INFO [http-nio-8080-exec-265] org.apache.catalina.util.LifecycleBase.stop The stop() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/FakePonisha]] after stop() had already been called. The second call will be ignored.
+14-May-2016 02:55:33.568 INFO [http-nio-8080-exec-265] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/FakePonisha]
+14-May-2016 02:55:33.595 INFO [http-nio-8080-exec-262] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/conf/Catalina/localhost/FakePonisha.xml
+14-May-2016 02:55:33.597 WARNING [http-nio-8080-exec-262] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+14-May-2016 02:55:34.544 INFO [http-nio-8080-exec-262] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+14-May-2016 02:55:34.547 INFO [http-nio-8080-exec-262] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/conf/Catalina/localhost/FakePonisha.xml has finished in 952 ms
+14-May-2016 02:55:34.565 INFO [http-nio-8080-exec-253] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/FakePonisha]] after start() had already been called. The second call will be ignored.
+14-May-2016 02:55:41.681 INFO [http-nio-8080-exec-260] org.hibernate.annotations.common.Version.<clinit> HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+14-May-2016 02:55:41.687 INFO [http-nio-8080-exec-260] org.hibernate.Version.logVersion HHH000412: Hibernate Core {4.2.8.Final}
+14-May-2016 02:55:41.689 INFO [http-nio-8080-exec-260] org.hibernate.cfg.Environment.<clinit> HHH000206: hibernate.properties not found
+14-May-2016 02:55:41.691 INFO [http-nio-8080-exec-260] org.hibernate.cfg.Environment.buildBytecodeProvider HHH000021: Bytecode provider name : javassist
+14-May-2016 02:55:41.826 INFO [http-nio-8080-exec-260] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000402: Using Hibernate built-in connection pool (not for production use!)
+14-May-2016 02:55:41.830 INFO [http-nio-8080-exec-260] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000115: Hibernate connection pool size: 20
+14-May-2016 02:55:41.830 INFO [http-nio-8080-exec-260] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000006: Autocommit mode: true
+14-May-2016 02:55:41.830 INFO [http-nio-8080-exec-260] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ponisha?zeroDateTimeBehavior=convertToNull]
+14-May-2016 02:55:41.830 INFO [http-nio-8080-exec-260] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+14-May-2016 02:55:42.085 INFO [http-nio-8080-exec-260] org.hibernate.dialect.Dialect.<init> HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+14-May-2016 02:55:42.230 INFO [http-nio-8080-exec-260] org.hibernate.engine.transaction.internal.TransactionFactoryInitiator.initiateService HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+14-May-2016 02:55:42.235 INFO [http-nio-8080-exec-260] org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory.<init> HHH000397: Using ASTQueryTranslatorFactory
+14-May-2016 02:55:42.661 WARN [http-nio-8080-exec-260] org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions SQL Error: 1146, SQLState: 42S02
+14-May-2016 02:55:42.661 ERROR [http-nio-8080-exec-260] org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions Table 'ponisha.users' doesn't exist
+14-May-2016 02:56:23.408 WARNING [http-nio-8080-exec-268] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [FakePonisha] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+14-May-2016 02:56:23.409 WARNING [http-nio-8080-exec-268] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [FakePonisha] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+ com.mysql.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:40)
+14-May-2016 02:56:23.912 INFO [http-nio-8080-exec-268] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/FakePonisha]
+14-May-2016 02:56:23.941 INFO [http-nio-8080-exec-267] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/conf/Catalina/localhost/FakePonisha.xml
+14-May-2016 02:56:23.945 WARNING [http-nio-8080-exec-267] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+14-May-2016 02:56:24.926 INFO [http-nio-8080-exec-267] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+14-May-2016 02:56:24.929 INFO [http-nio-8080-exec-267] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/conf/Catalina/localhost/FakePonisha.xml has finished in 987 ms
+14-May-2016 02:56:24.942 INFO [http-nio-8080-exec-259] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/FakePonisha]] after start() had already been called. The second call will be ignored.
+14-May-2016 02:56:31.546 INFO [http-nio-8080-exec-253] org.hibernate.annotations.common.Version.<clinit> HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+14-May-2016 02:56:31.553 INFO [http-nio-8080-exec-253] org.hibernate.Version.logVersion HHH000412: Hibernate Core {4.2.8.Final}
+14-May-2016 02:56:31.555 INFO [http-nio-8080-exec-253] org.hibernate.cfg.Environment.<clinit> HHH000206: hibernate.properties not found
+14-May-2016 02:56:31.556 INFO [http-nio-8080-exec-253] org.hibernate.cfg.Environment.buildBytecodeProvider HHH000021: Bytecode provider name : javassist
+14-May-2016 02:56:31.687 INFO [http-nio-8080-exec-253] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000402: Using Hibernate built-in connection pool (not for production use!)
+14-May-2016 02:56:31.690 INFO [http-nio-8080-exec-253] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000115: Hibernate connection pool size: 20
+14-May-2016 02:56:31.690 INFO [http-nio-8080-exec-253] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000006: Autocommit mode: true
+14-May-2016 02:56:31.690 INFO [http-nio-8080-exec-253] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ponisha?zeroDateTimeBehavior=convertToNull]
+14-May-2016 02:56:31.690 INFO [http-nio-8080-exec-253] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+14-May-2016 02:56:31.938 INFO [http-nio-8080-exec-253] org.hibernate.dialect.Dialect.<init> HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+14-May-2016 02:56:32.068 INFO [http-nio-8080-exec-253] org.hibernate.engine.transaction.internal.TransactionFactoryInitiator.initiateService HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+14-May-2016 02:56:32.072 INFO [http-nio-8080-exec-253] org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory.<init> HHH000397: Using ASTQueryTranslatorFactory
+14-May-2016 02:56:32.485 WARN [http-nio-8080-exec-253] org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions SQL Error: 1146, SQLState: 42S02
+14-May-2016 02:56:32.485 ERROR [http-nio-8080-exec-253] org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions Table 'ponisha.users' doesn't exist
+14-May-2016 02:57:06.213 WARNING [http-nio-8080-exec-269] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [FakePonisha] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+14-May-2016 02:57:06.214 WARNING [http-nio-8080-exec-269] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [FakePonisha] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+ com.mysql.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:40)
+14-May-2016 02:57:11.741 INFO [http-nio-8080-exec-265] org.apache.catalina.util.LifecycleBase.stop The stop() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/FakePonisha]] after stop() had already been called. The second call will be ignored.
+14-May-2016 02:57:12.245 INFO [http-nio-8080-exec-265] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/FakePonisha]
+14-May-2016 02:57:20.788 INFO [http-nio-8080-exec-276] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/conf/Catalina/localhost/FakePonisha.xml
+14-May-2016 02:57:20.789 WARNING [http-nio-8080-exec-276] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+14-May-2016 02:57:21.657 INFO [http-nio-8080-exec-276] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+14-May-2016 02:57:21.660 INFO [http-nio-8080-exec-276] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/conf/Catalina/localhost/FakePonisha.xml has finished in 872 ms
+14-May-2016 02:57:21.675 INFO [http-nio-8080-exec-272] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/FakePonisha]] after start() had already been called. The second call will be ignored.
+14-May-2016 02:57:27.503 INFO [http-nio-8080-exec-265] org.hibernate.annotations.common.Version.<clinit> HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+14-May-2016 02:57:27.510 INFO [http-nio-8080-exec-265] org.hibernate.Version.logVersion HHH000412: Hibernate Core {4.2.8.Final}
+14-May-2016 02:57:27.512 INFO [http-nio-8080-exec-265] org.hibernate.cfg.Environment.<clinit> HHH000206: hibernate.properties not found
+14-May-2016 02:57:27.515 INFO [http-nio-8080-exec-265] org.hibernate.cfg.Environment.buildBytecodeProvider HHH000021: Bytecode provider name : javassist
+14-May-2016 02:57:27.642 INFO [http-nio-8080-exec-265] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000402: Using Hibernate built-in connection pool (not for production use!)
+14-May-2016 02:57:27.645 INFO [http-nio-8080-exec-265] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000115: Hibernate connection pool size: 20
+14-May-2016 02:57:27.645 INFO [http-nio-8080-exec-265] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000006: Autocommit mode: true
+14-May-2016 02:57:27.646 INFO [http-nio-8080-exec-265] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ponisha?zeroDateTimeBehavior=convertToNull]
+14-May-2016 02:57:27.646 INFO [http-nio-8080-exec-265] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+14-May-2016 02:57:27.893 INFO [http-nio-8080-exec-265] org.hibernate.dialect.Dialect.<init> HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+14-May-2016 02:57:28.032 INFO [http-nio-8080-exec-265] org.hibernate.engine.transaction.internal.TransactionFactoryInitiator.initiateService HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+14-May-2016 02:57:28.037 INFO [http-nio-8080-exec-265] org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory.<init> HHH000397: Using ASTQueryTranslatorFactory
+14-May-2016 02:57:28.442 WARN [http-nio-8080-exec-265] org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions SQL Error: 1146, SQLState: 42S02
+14-May-2016 02:57:28.442 ERROR [http-nio-8080-exec-265] org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions Table 'ponisha.users' doesn't exist
+14-May-2016 02:57:58.153 INFO [http-nio-8080-exec-274] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FakePonisha] has started
+14-May-2016 02:57:58.158 WARNING [http-nio-8080-exec-274] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [FakePonisha] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+14-May-2016 02:57:58.158 WARNING [http-nio-8080-exec-274] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [FakePonisha] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+ com.mysql.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:40)
+14-May-2016 02:57:59.349 INFO [http-nio-8080-exec-274] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+14-May-2016 02:57:59.352 INFO [http-nio-8080-exec-274] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FakePonisha] is completed
+14-May-2016 02:58:50.086 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+14-May-2016 02:58:50.086 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+14-May-2016 02:58:50.139 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+14-May-2016 02:58:50.193 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service Catalina
+14-May-2016 02:58:50.211 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+14-May-2016 02:58:50.214 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+14-May-2016 02:58:50.215 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+14-May-2016 02:58:50.216 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
+14-May-2016 02:59:44.180 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.0.33
+14-May-2016 02:59:44.183 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Mar 18 2016 20:31:49 UTC
+14-May-2016 02:59:44.183 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.0.33.0
+14-May-2016 02:59:44.184 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+14-May-2016 02:59:44.184 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.11.4
+14-May-2016 02:59:44.185 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          x86_64
+14-May-2016 02:59:44.186 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/jre
+14-May-2016 02:59:44.187 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_91-b14
+14-May-2016 02:59:44.187 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+14-May-2016 02:59:44.187 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33
+14-May-2016 02:59:44.187 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33
+14-May-2016 02:59:44.189 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/conf/logging.properties
+14-May-2016 02:59:44.189 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+14-May-2016 02:59:44.189 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dhttp.nonProxyHosts=localhost|127.0.0.1|apples-MacBook-Pro.local
+14-May-2016 02:59:44.190 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.endorsed.dirs=/Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/endorsed
+14-May-2016 02:59:44.190 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33
+14-May-2016 02:59:44.190 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33
+14-May-2016 02:59:44.190 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/temp
+14-May-2016 02:59:44.190 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /Users/apple/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+14-May-2016 02:59:44.552 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+14-May-2016 02:59:44.602 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+14-May-2016 02:59:44.609 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+14-May-2016 02:59:44.614 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+14-May-2016 02:59:44.615 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 1710 ms
+14-May-2016 02:59:44.680 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service Catalina
+14-May-2016 02:59:44.680 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.0.33
+14-May-2016 02:59:44.694 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/conf/Catalina/localhost/FakePonisha.xml
+14-May-2016 02:59:44.778 WARNING [localhost-startStop-1] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+14-May-2016 02:59:47.266 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+14-May-2016 02:59:47.543 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/conf/Catalina/localhost/FakePonisha.xml has finished in 2,848 ms
+14-May-2016 02:59:47.543 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/conf/Catalina/localhost/SqlTestMaven2.xml
+14-May-2016 02:59:47.549 WARNING [localhost-startStop-1] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+14-May-2016 02:59:48.801 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+14-May-2016 02:59:48.833 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/conf/Catalina/localhost/SqlTestMaven2.xml has finished in 1,290 ms
+14-May-2016 02:59:48.834 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/conf/Catalina/localhost/TestSimpleSql2.xml
+14-May-2016 02:59:48.840 WARNING [localhost-startStop-1] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+14-May-2016 02:59:48.905 SEVERE [localhost-startStop-1] org.apache.tomcat.util.digester.Digester.fatalError Parse Fatal Error at line 2 column 6: The processing instruction target matching "[xX][mM][lL]" is not allowed.
+ org.xml.sax.SAXParseException; systemId: file:/Users/apple/Desktop/Ponisha/Source%20Code/TestSimpleSql2/target/TestSimpleSql2-1.0-SNAPSHOT/WEB-INF/web.xml; lineNumber: 2; columnNumber: 6; The processing instruction target matching "[xX][mM][lL]" is not allowed.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:203)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:177)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1438)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.scanPIData(XMLScanner.java:723)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanPIData(XMLDocumentFragmentScannerImpl.java:1019)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.scanPI(XMLScanner.java:691)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:912)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:510)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1451)
+	at org.apache.tomcat.util.descriptor.web.WebXmlParser.parseWebXml(WebXmlParser.java:120)
+	at org.apache.catalina.startup.ContextConfig.webConfig(ContextConfig.java:1115)
+	at org.apache.catalina.startup.ContextConfig.configureStart(ContextConfig.java:779)
+	at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:306)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:95)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5150)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:147)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:725)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:701)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:717)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:587)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1798)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+14-May-2016 02:59:48.909 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.WebXmlParser.parseWebXml Parse error in application web.xml file at file:/Users/apple/Desktop/Ponisha/Source%20Code/TestSimpleSql2/target/TestSimpleSql2-1.0-SNAPSHOT/WEB-INF/web.xml
+ org.xml.sax.SAXParseException; systemId: file:/Users/apple/Desktop/Ponisha/Source%20Code/TestSimpleSql2/target/TestSimpleSql2-1.0-SNAPSHOT/WEB-INF/web.xml; lineNumber: 2; columnNumber: 6; The processing instruction target matching "[xX][mM][lL]" is not allowed.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:203)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:177)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1438)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.scanPIData(XMLScanner.java:723)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanPIData(XMLDocumentFragmentScannerImpl.java:1019)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.scanPI(XMLScanner.java:691)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:912)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:510)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1451)
+	at org.apache.tomcat.util.descriptor.web.WebXmlParser.parseWebXml(WebXmlParser.java:120)
+	at org.apache.catalina.startup.ContextConfig.webConfig(ContextConfig.java:1115)
+	at org.apache.catalina.startup.ContextConfig.configureStart(ContextConfig.java:779)
+	at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:306)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:95)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5150)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:147)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:725)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:701)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:717)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:587)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1798)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+14-May-2016 02:59:48.910 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.WebXmlParser.parseWebXml Occurred at line 2 column 6
+14-May-2016 02:59:48.917 SEVERE [localhost-startStop-1] org.apache.catalina.startup.ContextConfig.configureStart Marking this application unavailable due to previous error(s)
+14-May-2016 02:59:48.917 SEVERE [localhost-startStop-1] org.apache.catalina.core.StandardContext.startInternal One or more components marked the context as not correctly configured
+14-May-2016 02:59:48.918 SEVERE [localhost-startStop-1] org.apache.catalina.core.StandardContext.startInternal Context [/TestSimpleSql2] startup failed due to previous errors
+14-May-2016 02:59:48.928 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/conf/Catalina/localhost/TestSimpleSql2.xml has finished in 94 ms
+14-May-2016 02:59:48.929 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/webapps/docs
+14-May-2016 02:59:48.956 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/webapps/docs has finished in 27 ms
+14-May-2016 02:59:48.957 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/webapps/examples
+14-May-2016 02:59:49.747 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/webapps/examples has finished in 789 ms
+14-May-2016 02:59:49.750 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/webapps/host-manager
+14-May-2016 02:59:49.845 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/webapps/host-manager has finished in 96 ms
+14-May-2016 02:59:49.846 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/webapps/manager
+14-May-2016 02:59:49.930 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/webapps/manager has finished in 83 ms
+14-May-2016 02:59:49.931 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/webapps/ROOT
+14-May-2016 02:59:50.021 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/webapps/ROOT has finished in 90 ms
+14-May-2016 02:59:50.029 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+14-May-2016 02:59:50.039 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+14-May-2016 02:59:50.040 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 5424 ms
+14-May-2016 02:59:51.482 INFO [http-nio-8080-exec-5] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/FakePonisha]
+14-May-2016 02:59:51.551 INFO [http-nio-8080-exec-9] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/conf/Catalina/localhost/FakePonisha.xml
+14-May-2016 02:59:51.557 WARNING [http-nio-8080-exec-9] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+14-May-2016 02:59:53.123 INFO [http-nio-8080-exec-9] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/conf/Catalina/localhost/FakePonisha.xml has finished in 1,572 ms
+14-May-2016 02:59:53.156 INFO [http-nio-8080-exec-10] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/FakePonisha]] after start() had already been called. The second call will be ignored.
+14-May-2016 02:59:59.494 INFO [http-nio-8080-exec-7] org.hibernate.annotations.common.Version.<clinit> HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+14-May-2016 02:59:59.501 INFO [http-nio-8080-exec-7] org.hibernate.Version.logVersion HHH000412: Hibernate Core {4.2.8.Final}
+14-May-2016 02:59:59.503 INFO [http-nio-8080-exec-7] org.hibernate.cfg.Environment.<clinit> HHH000206: hibernate.properties not found
+14-May-2016 02:59:59.504 INFO [http-nio-8080-exec-7] org.hibernate.cfg.Environment.buildBytecodeProvider HHH000021: Bytecode provider name : javassist
+14-May-2016 02:59:59.754 INFO [http-nio-8080-exec-7] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000402: Using Hibernate built-in connection pool (not for production use!)
+14-May-2016 02:59:59.760 INFO [http-nio-8080-exec-7] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000115: Hibernate connection pool size: 20
+14-May-2016 02:59:59.761 INFO [http-nio-8080-exec-7] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000006: Autocommit mode: true
+14-May-2016 02:59:59.761 INFO [http-nio-8080-exec-7] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ponisha?zeroDateTimeBehavior=convertToNull]
+14-May-2016 02:59:59.762 INFO [http-nio-8080-exec-7] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+14-May-2016 03:00:00.337 INFO [http-nio-8080-exec-7] org.hibernate.dialect.Dialect.<init> HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+14-May-2016 03:00:00.606 INFO [http-nio-8080-exec-7] org.hibernate.engine.transaction.internal.TransactionFactoryInitiator.initiateService HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+14-May-2016 03:00:00.617 INFO [http-nio-8080-exec-7] org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory.<init> HHH000397: Using ASTQueryTranslatorFactory
+14-May-2016 03:00:01.410 WARN [http-nio-8080-exec-7] org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions SQL Error: 1146, SQLState: 42S02
+14-May-2016 03:00:01.410 ERROR [http-nio-8080-exec-7] org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions Table 'ponisha.users' doesn't exist
+14-May-2016 03:02:09.801 INFO [http-nio-8080-exec-14] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FakePonisha] has started
+14-May-2016 03:02:09.814 WARNING [http-nio-8080-exec-14] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [FakePonisha] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+14-May-2016 03:02:09.817 WARNING [http-nio-8080-exec-14] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [FakePonisha] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+ com.mysql.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:40)
+14-May-2016 03:02:09.964 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+14-May-2016 03:02:09.965 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+14-May-2016 03:02:10.029 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+14-May-2016 03:02:10.082 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service Catalina
+14-May-2016 03:02:11.791 INFO [http-nio-8080-exec-14] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FakePonisha] is completed
+14-May-2016 03:02:11.843 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+14-May-2016 03:02:11.927 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+14-May-2016 03:02:11.961 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+14-May-2016 03:02:11.962 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
+14-May-2016 03:02:18.874 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.0.33
+14-May-2016 03:02:18.878 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Mar 18 2016 20:31:49 UTC
+14-May-2016 03:02:18.878 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.0.33.0
+14-May-2016 03:02:18.878 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+14-May-2016 03:02:18.878 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.11.4
+14-May-2016 03:02:18.879 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          x86_64
+14-May-2016 03:02:18.879 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/jre
+14-May-2016 03:02:18.880 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_91-b14
+14-May-2016 03:02:18.880 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+14-May-2016 03:02:18.881 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33
+14-May-2016 03:02:18.881 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33
+14-May-2016 03:02:18.882 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/conf/logging.properties
+14-May-2016 03:02:18.882 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+14-May-2016 03:02:18.882 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dhttp.nonProxyHosts=localhost|127.0.0.1|apples-MacBook-Pro.local
+14-May-2016 03:02:18.882 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -agentlib:jdwp=transport=dt_socket,address=11550,server=y,suspend=n
+14-May-2016 03:02:18.883 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.endorsed.dirs=/Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/endorsed
+14-May-2016 03:02:18.883 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33
+14-May-2016 03:02:18.883 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33
+14-May-2016 03:02:18.884 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/temp
+14-May-2016 03:02:18.884 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /Users/apple/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+14-May-2016 03:02:19.328 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+14-May-2016 03:02:19.387 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+14-May-2016 03:02:19.395 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+14-May-2016 03:02:19.400 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+14-May-2016 03:02:19.401 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 1656 ms
+14-May-2016 03:02:19.473 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service Catalina
+14-May-2016 03:02:19.473 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.0.33
+14-May-2016 03:02:19.494 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/conf/Catalina/localhost/FakePonisha.xml
+14-May-2016 03:02:19.590 WARNING [localhost-startStop-1] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+14-May-2016 03:02:21.900 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+14-May-2016 03:02:22.255 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/conf/Catalina/localhost/FakePonisha.xml has finished in 2,759 ms
+14-May-2016 03:02:22.257 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/conf/Catalina/localhost/SqlTestMaven2.xml
+14-May-2016 03:02:22.269 WARNING [localhost-startStop-1] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+14-May-2016 03:02:23.390 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+14-May-2016 03:02:23.425 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/conf/Catalina/localhost/SqlTestMaven2.xml has finished in 1,167 ms
+14-May-2016 03:02:23.425 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/conf/Catalina/localhost/TestSimpleSql2.xml
+14-May-2016 03:02:23.433 WARNING [localhost-startStop-1] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+14-May-2016 03:02:23.491 SEVERE [localhost-startStop-1] org.apache.tomcat.util.digester.Digester.fatalError Parse Fatal Error at line 2 column 6: The processing instruction target matching "[xX][mM][lL]" is not allowed.
+ org.xml.sax.SAXParseException; systemId: file:/Users/apple/Desktop/Ponisha/Source%20Code/TestSimpleSql2/target/TestSimpleSql2-1.0-SNAPSHOT/WEB-INF/web.xml; lineNumber: 2; columnNumber: 6; The processing instruction target matching "[xX][mM][lL]" is not allowed.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:203)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:177)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1438)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.scanPIData(XMLScanner.java:723)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanPIData(XMLDocumentFragmentScannerImpl.java:1019)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.scanPI(XMLScanner.java:691)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:912)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:510)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1451)
+	at org.apache.tomcat.util.descriptor.web.WebXmlParser.parseWebXml(WebXmlParser.java:120)
+	at org.apache.catalina.startup.ContextConfig.webConfig(ContextConfig.java:1115)
+	at org.apache.catalina.startup.ContextConfig.configureStart(ContextConfig.java:779)
+	at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:306)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:95)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5150)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:147)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:725)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:701)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:717)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:587)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1798)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+14-May-2016 03:02:23.495 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.WebXmlParser.parseWebXml Parse error in application web.xml file at file:/Users/apple/Desktop/Ponisha/Source%20Code/TestSimpleSql2/target/TestSimpleSql2-1.0-SNAPSHOT/WEB-INF/web.xml
+ org.xml.sax.SAXParseException; systemId: file:/Users/apple/Desktop/Ponisha/Source%20Code/TestSimpleSql2/target/TestSimpleSql2-1.0-SNAPSHOT/WEB-INF/web.xml; lineNumber: 2; columnNumber: 6; The processing instruction target matching "[xX][mM][lL]" is not allowed.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:203)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:177)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1438)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.scanPIData(XMLScanner.java:723)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanPIData(XMLDocumentFragmentScannerImpl.java:1019)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.scanPI(XMLScanner.java:691)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:912)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:510)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1451)
+	at org.apache.tomcat.util.descriptor.web.WebXmlParser.parseWebXml(WebXmlParser.java:120)
+	at org.apache.catalina.startup.ContextConfig.webConfig(ContextConfig.java:1115)
+	at org.apache.catalina.startup.ContextConfig.configureStart(ContextConfig.java:779)
+	at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:306)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:95)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5150)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:147)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:725)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:701)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:717)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:587)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1798)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+14-May-2016 03:02:23.496 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.WebXmlParser.parseWebXml Occurred at line 2 column 6
+14-May-2016 03:02:23.548 SEVERE [localhost-startStop-1] org.apache.catalina.startup.ContextConfig.configureStart Marking this application unavailable due to previous error(s)
+14-May-2016 03:02:23.555 SEVERE [localhost-startStop-1] org.apache.catalina.core.StandardContext.startInternal One or more components marked the context as not correctly configured
+14-May-2016 03:02:23.557 SEVERE [localhost-startStop-1] org.apache.catalina.core.StandardContext.startInternal Context [/TestSimpleSql2] startup failed due to previous errors
+14-May-2016 03:02:23.572 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/conf/Catalina/localhost/TestSimpleSql2.xml has finished in 147 ms
+14-May-2016 03:02:23.593 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/webapps/docs
+14-May-2016 03:02:23.708 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/webapps/docs has finished in 115 ms
+14-May-2016 03:02:23.712 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/webapps/examples
+14-May-2016 03:02:24.339 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/webapps/examples has finished in 628 ms
+14-May-2016 03:02:24.339 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/webapps/host-manager
+14-May-2016 03:02:24.387 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/webapps/host-manager has finished in 48 ms
+14-May-2016 03:02:24.388 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/webapps/manager
+14-May-2016 03:02:24.516 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/webapps/manager has finished in 127 ms
+14-May-2016 03:02:24.519 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/webapps/ROOT
+14-May-2016 03:02:24.624 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/webapps/ROOT has finished in 102 ms
+14-May-2016 03:02:24.704 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+14-May-2016 03:02:24.716 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+14-May-2016 03:02:24.717 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 5315 ms
+14-May-2016 03:02:25.226 INFO [http-nio-8080-exec-4] org.apache.coyote.http11.AbstractHttp11Processor.process Error parsing HTTP request header
+ Note: further occurrences of HTTP header parsing errors will be logged at DEBUG level.
+ java.lang.IllegalArgumentException: Invalid character (CR or LF) found in method name
+	at org.apache.coyote.http11.AbstractNioInputBuffer.parseRequestLine(AbstractNioInputBuffer.java:228)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1009)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:672)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1502)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1458)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+14-May-2016 03:02:26.835 INFO [http-nio-8080-exec-8] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/FakePonisha]
+14-May-2016 03:02:26.892 INFO [http-nio-8080-exec-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/conf/Catalina/localhost/FakePonisha.xml
+14-May-2016 03:02:26.898 WARNING [http-nio-8080-exec-1] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+14-May-2016 03:02:28.808 INFO [http-nio-8080-exec-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/conf/Catalina/localhost/FakePonisha.xml has finished in 1,916 ms
+14-May-2016 03:02:28.840 INFO [http-nio-8080-exec-6] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/FakePonisha]] after start() had already been called. The second call will be ignored.
+14-May-2016 03:02:35.624 INFO [http-nio-8080-exec-5] org.hibernate.annotations.common.Version.<clinit> HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+14-May-2016 03:02:35.631 INFO [http-nio-8080-exec-5] org.hibernate.Version.logVersion HHH000412: Hibernate Core {4.2.8.Final}
+14-May-2016 03:02:35.634 INFO [http-nio-8080-exec-5] org.hibernate.cfg.Environment.<clinit> HHH000206: hibernate.properties not found
+14-May-2016 03:02:35.636 INFO [http-nio-8080-exec-5] org.hibernate.cfg.Environment.buildBytecodeProvider HHH000021: Bytecode provider name : javassist
+14-May-2016 03:02:35.858 INFO [http-nio-8080-exec-5] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000402: Using Hibernate built-in connection pool (not for production use!)
+14-May-2016 03:02:35.861 INFO [http-nio-8080-exec-5] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000115: Hibernate connection pool size: 20
+14-May-2016 03:02:35.862 INFO [http-nio-8080-exec-5] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000006: Autocommit mode: true
+14-May-2016 03:02:35.862 INFO [http-nio-8080-exec-5] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ponisha?zeroDateTimeBehavior=convertToNull]
+14-May-2016 03:02:35.862 INFO [http-nio-8080-exec-5] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+14-May-2016 03:02:36.239 INFO [http-nio-8080-exec-5] org.hibernate.dialect.Dialect.<init> HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+14-May-2016 03:02:36.526 INFO [http-nio-8080-exec-5] org.hibernate.engine.transaction.internal.TransactionFactoryInitiator.initiateService HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+14-May-2016 03:02:36.534 INFO [http-nio-8080-exec-5] org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory.<init> HHH000397: Using ASTQueryTranslatorFactory
+14-May-2016 03:02:37.495 WARN [http-nio-8080-exec-5] org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions SQL Error: 1146, SQLState: 42S02
+14-May-2016 03:02:37.495 ERROR [http-nio-8080-exec-5] org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions Table 'ponisha.users' doesn't exist
+14-May-2016 03:03:25.472 WARNING [http-nio-8080-exec-16] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [FakePonisha] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+14-May-2016 03:03:25.474 WARNING [http-nio-8080-exec-16] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [FakePonisha] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+ com.mysql.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:40)
+14-May-2016 03:03:25.987 INFO [http-nio-8080-exec-16] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/FakePonisha]
+14-May-2016 03:03:26.038 INFO [http-nio-8080-exec-13] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/conf/Catalina/localhost/FakePonisha.xml
+14-May-2016 03:03:26.050 WARNING [http-nio-8080-exec-13] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+14-May-2016 03:03:27.227 INFO [http-nio-8080-exec-13] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/conf/Catalina/localhost/FakePonisha.xml has finished in 1,188 ms
+14-May-2016 03:03:27.255 INFO [http-nio-8080-exec-12] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/FakePonisha]] after start() had already been called. The second call will be ignored.
+14-May-2016 03:03:34.899 INFO [http-nio-8080-exec-18] org.hibernate.annotations.common.Version.<clinit> HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+14-May-2016 03:03:34.906 INFO [http-nio-8080-exec-18] org.hibernate.Version.logVersion HHH000412: Hibernate Core {4.2.8.Final}
+14-May-2016 03:03:34.910 INFO [http-nio-8080-exec-18] org.hibernate.cfg.Environment.<clinit> HHH000206: hibernate.properties not found
+14-May-2016 03:03:34.913 INFO [http-nio-8080-exec-18] org.hibernate.cfg.Environment.buildBytecodeProvider HHH000021: Bytecode provider name : javassist
+14-May-2016 03:03:35.102 INFO [http-nio-8080-exec-18] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000402: Using Hibernate built-in connection pool (not for production use!)
+14-May-2016 03:03:35.107 INFO [http-nio-8080-exec-18] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000115: Hibernate connection pool size: 20
+14-May-2016 03:03:35.107 INFO [http-nio-8080-exec-18] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000006: Autocommit mode: true
+14-May-2016 03:03:35.108 INFO [http-nio-8080-exec-18] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ponisha?zeroDateTimeBehavior=convertToNull]
+14-May-2016 03:03:35.108 INFO [http-nio-8080-exec-18] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+14-May-2016 03:03:35.452 INFO [http-nio-8080-exec-18] org.hibernate.dialect.Dialect.<init> HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+14-May-2016 03:03:35.638 INFO [http-nio-8080-exec-18] org.hibernate.engine.transaction.internal.TransactionFactoryInitiator.initiateService HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+14-May-2016 03:03:35.645 INFO [http-nio-8080-exec-18] org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory.<init> HHH000397: Using ASTQueryTranslatorFactory
+14-May-2016 03:03:36.198 WARN [http-nio-8080-exec-18] org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions SQL Error: 1146, SQLState: 42S02
+14-May-2016 03:03:36.198 ERROR [http-nio-8080-exec-18] org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions Table 'ponisha.users' doesn't exist
+14-May-2016 03:04:21.121 INFO [http-nio-8080-exec-4] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FakePonisha] has started
+14-May-2016 03:04:21.127 WARNING [http-nio-8080-exec-4] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [FakePonisha] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+14-May-2016 03:04:21.128 WARNING [http-nio-8080-exec-4] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [FakePonisha] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+ com.mysql.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:40)
+14-May-2016 03:04:23.342 INFO [http-nio-8080-exec-4] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FakePonisha] is completed
+14-May-2016 03:04:25.955 INFO [http-nio-8080-exec-19] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FakePonisha] has started
+14-May-2016 03:04:27.679 INFO [http-nio-8080-exec-19] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FakePonisha] is completed
+14-May-2016 03:04:35.955 INFO [http-nio-8080-exec-25] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/FakePonisha]
+14-May-2016 03:04:35.983 INFO [http-nio-8080-exec-16] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/conf/Catalina/localhost/FakePonisha.xml
+14-May-2016 03:04:35.990 WARNING [http-nio-8080-exec-16] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+14-May-2016 03:04:37.130 INFO [http-nio-8080-exec-16] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/conf/Catalina/localhost/FakePonisha.xml has finished in 1,147 ms
+14-May-2016 03:04:37.169 INFO [http-nio-8080-exec-23] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/FakePonisha]] after start() had already been called. The second call will be ignored.
+14-May-2016 03:04:47.882 INFO [http-nio-8080-exec-6] org.hibernate.annotations.common.Version.<clinit> HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+14-May-2016 03:04:47.889 INFO [http-nio-8080-exec-6] org.hibernate.Version.logVersion HHH000412: Hibernate Core {4.2.8.Final}
+14-May-2016 03:04:47.892 INFO [http-nio-8080-exec-6] org.hibernate.cfg.Environment.<clinit> HHH000206: hibernate.properties not found
+14-May-2016 03:04:47.894 INFO [http-nio-8080-exec-6] org.hibernate.cfg.Environment.buildBytecodeProvider HHH000021: Bytecode provider name : javassist
+14-May-2016 03:04:48.048 INFO [http-nio-8080-exec-6] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000402: Using Hibernate built-in connection pool (not for production use!)
+14-May-2016 03:04:48.052 INFO [http-nio-8080-exec-6] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000115: Hibernate connection pool size: 20
+14-May-2016 03:04:48.052 INFO [http-nio-8080-exec-6] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000006: Autocommit mode: true
+14-May-2016 03:04:48.053 INFO [http-nio-8080-exec-6] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ponisha?zeroDateTimeBehavior=convertToNull]
+14-May-2016 03:04:48.053 INFO [http-nio-8080-exec-6] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+14-May-2016 03:04:48.324 INFO [http-nio-8080-exec-6] org.hibernate.dialect.Dialect.<init> HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+14-May-2016 03:04:48.534 INFO [http-nio-8080-exec-6] org.hibernate.engine.transaction.internal.TransactionFactoryInitiator.initiateService HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+14-May-2016 03:04:48.541 INFO [http-nio-8080-exec-6] org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory.<init> HHH000397: Using ASTQueryTranslatorFactory
+14-May-2016 03:04:49.071 WARN [http-nio-8080-exec-6] org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions SQL Error: 1146, SQLState: 42S02
+14-May-2016 03:04:49.071 ERROR [http-nio-8080-exec-6] org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions Table 'ponisha.users' doesn't exist
+14-May-2016 03:05:54.591 WARNING [http-nio-8080-exec-27] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [FakePonisha] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+14-May-2016 03:05:54.592 WARNING [http-nio-8080-exec-27] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [FakePonisha] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+ com.mysql.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:40)
+14-May-2016 03:05:55.098 INFO [http-nio-8080-exec-27] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/FakePonisha]
+14-May-2016 03:05:55.145 INFO [http-nio-8080-exec-33] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/conf/Catalina/localhost/FakePonisha.xml
+14-May-2016 03:05:55.155 WARNING [http-nio-8080-exec-33] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+14-May-2016 03:05:55.958 INFO [http-nio-8080-exec-33] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/conf/Catalina/localhost/FakePonisha.xml has finished in 813 ms
+14-May-2016 03:05:55.980 INFO [http-nio-8080-exec-32] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/FakePonisha]] after start() had already been called. The second call will be ignored.
+14-May-2016 03:06:01.345 INFO [http-nio-8080-exec-30] org.hibernate.annotations.common.Version.<clinit> HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+14-May-2016 03:06:01.355 INFO [http-nio-8080-exec-30] org.hibernate.Version.logVersion HHH000412: Hibernate Core {4.2.8.Final}
+14-May-2016 03:06:01.359 INFO [http-nio-8080-exec-30] org.hibernate.cfg.Environment.<clinit> HHH000206: hibernate.properties not found
+14-May-2016 03:06:01.361 INFO [http-nio-8080-exec-30] org.hibernate.cfg.Environment.buildBytecodeProvider HHH000021: Bytecode provider name : javassist
+14-May-2016 03:06:01.564 INFO [http-nio-8080-exec-30] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000402: Using Hibernate built-in connection pool (not for production use!)
+14-May-2016 03:06:01.567 INFO [http-nio-8080-exec-30] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000115: Hibernate connection pool size: 20
+14-May-2016 03:06:01.567 INFO [http-nio-8080-exec-30] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000006: Autocommit mode: true
+14-May-2016 03:06:01.568 INFO [http-nio-8080-exec-30] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ponisha?zeroDateTimeBehavior=convertToNull]
+14-May-2016 03:06:01.568 INFO [http-nio-8080-exec-30] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+14-May-2016 03:06:01.842 INFO [http-nio-8080-exec-30] org.hibernate.dialect.Dialect.<init> HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+14-May-2016 03:06:02.045 INFO [http-nio-8080-exec-30] org.hibernate.engine.transaction.internal.TransactionFactoryInitiator.initiateService HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+14-May-2016 03:06:02.051 INFO [http-nio-8080-exec-30] org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory.<init> HHH000397: Using ASTQueryTranslatorFactory
+14-May-2016 03:06:02.545 WARN [http-nio-8080-exec-30] org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions SQL Error: 1146, SQLState: 42S02
+14-May-2016 03:06:02.545 ERROR [http-nio-8080-exec-30] org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions Table 'ponisha.users' doesn't exist
+14-May-2016 03:06:29.834 WARNING [http-nio-8080-exec-32] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [FakePonisha] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+14-May-2016 03:06:29.835 WARNING [http-nio-8080-exec-32] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [FakePonisha] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+ com.mysql.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:40)
+14-May-2016 03:06:30.340 INFO [http-nio-8080-exec-32] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/FakePonisha]
+14-May-2016 03:07:03.679 INFO [http-nio-8080-exec-40] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/conf/Catalina/localhost/FakePonisha.xml
+14-May-2016 03:07:03.686 WARNING [http-nio-8080-exec-40] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+14-May-2016 03:07:04.502 INFO [http-nio-8080-exec-40] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/conf/Catalina/localhost/FakePonisha.xml has finished in 823 ms
+14-May-2016 03:07:04.521 INFO [http-nio-8080-exec-31] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/FakePonisha]] after start() had already been called. The second call will be ignored.
+14-May-2016 03:08:33.303 INFO [http-nio-8080-exec-40] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/FakePonisha]
+14-May-2016 03:08:33.392 INFO [http-nio-8080-exec-47] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/conf/Catalina/localhost/FakePonisha.xml
+14-May-2016 03:08:33.396 WARNING [http-nio-8080-exec-47] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+14-May-2016 03:08:34.524 INFO [http-nio-8080-exec-47] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/conf/Catalina/localhost/FakePonisha.xml has finished in 1,131 ms
+14-May-2016 03:08:34.541 INFO [http-nio-8080-exec-41] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/FakePonisha]] after start() had already been called. The second call will be ignored.
+14-May-2016 03:08:45.335 INFO [http-nio-8080-exec-40] org.hibernate.annotations.common.Version.<clinit> HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+14-May-2016 03:08:45.342 INFO [http-nio-8080-exec-40] org.hibernate.Version.logVersion HHH000412: Hibernate Core {4.2.8.Final}
+14-May-2016 03:08:45.344 INFO [http-nio-8080-exec-40] org.hibernate.cfg.Environment.<clinit> HHH000206: hibernate.properties not found
+14-May-2016 03:08:45.347 INFO [http-nio-8080-exec-40] org.hibernate.cfg.Environment.buildBytecodeProvider HHH000021: Bytecode provider name : javassist
+14-May-2016 03:08:45.469 INFO [http-nio-8080-exec-40] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000402: Using Hibernate built-in connection pool (not for production use!)
+14-May-2016 03:08:45.472 INFO [http-nio-8080-exec-40] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000115: Hibernate connection pool size: 20
+14-May-2016 03:08:45.473 INFO [http-nio-8080-exec-40] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000006: Autocommit mode: true
+14-May-2016 03:08:45.473 INFO [http-nio-8080-exec-40] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ponisha?zeroDateTimeBehavior=convertToNull]
+14-May-2016 03:08:45.473 INFO [http-nio-8080-exec-40] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+14-May-2016 03:08:45.729 INFO [http-nio-8080-exec-40] org.hibernate.dialect.Dialect.<init> HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+14-May-2016 03:08:45.857 INFO [http-nio-8080-exec-40] org.hibernate.engine.transaction.internal.TransactionFactoryInitiator.initiateService HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+14-May-2016 03:08:45.862 INFO [http-nio-8080-exec-40] org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory.<init> HHH000397: Using ASTQueryTranslatorFactory
+14-May-2016 03:09:13.844 WARNING [http-nio-8080-exec-52] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [FakePonisha] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+14-May-2016 03:09:13.845 WARNING [http-nio-8080-exec-52] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [FakePonisha] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+ com.mysql.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:40)
+14-May-2016 03:09:14.349 INFO [http-nio-8080-exec-52] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/FakePonisha]
+14-May-2016 03:09:14.400 INFO [http-nio-8080-exec-51] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/conf/Catalina/localhost/FakePonisha.xml
+14-May-2016 03:09:14.408 WARNING [http-nio-8080-exec-51] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+14-May-2016 03:09:15.474 INFO [http-nio-8080-exec-51] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/conf/Catalina/localhost/FakePonisha.xml has finished in 1,069 ms
+14-May-2016 03:09:15.494 INFO [http-nio-8080-exec-42] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/FakePonisha]] after start() had already been called. The second call will be ignored.
+14-May-2016 03:09:21.293 INFO [http-nio-8080-exec-52] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/FakePonisha]
+14-May-2016 03:10:25.099 INFO [http-nio-8080-exec-60] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/conf/Catalina/localhost/FakePonisha.xml
+14-May-2016 03:10:25.105 WARNING [http-nio-8080-exec-60] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+14-May-2016 03:10:25.683 INFO [http-nio-8080-exec-60] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/conf/Catalina/localhost/FakePonisha.xml has finished in 583 ms
+14-May-2016 03:10:25.703 INFO [http-nio-8080-exec-61] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/FakePonisha]] after start() had already been called. The second call will be ignored.
+14-May-2016 03:10:32.828 INFO [http-nio-8080-exec-58] org.hibernate.annotations.common.Version.<clinit> HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+14-May-2016 03:10:32.834 INFO [http-nio-8080-exec-58] org.hibernate.Version.logVersion HHH000412: Hibernate Core {4.2.8.Final}
+14-May-2016 03:10:32.837 INFO [http-nio-8080-exec-58] org.hibernate.cfg.Environment.<clinit> HHH000206: hibernate.properties not found
+14-May-2016 03:10:32.839 INFO [http-nio-8080-exec-58] org.hibernate.cfg.Environment.buildBytecodeProvider HHH000021: Bytecode provider name : javassist
+14-May-2016 03:10:32.958 INFO [http-nio-8080-exec-58] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000402: Using Hibernate built-in connection pool (not for production use!)
+14-May-2016 03:10:32.961 INFO [http-nio-8080-exec-58] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000115: Hibernate connection pool size: 20
+14-May-2016 03:10:32.961 INFO [http-nio-8080-exec-58] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000006: Autocommit mode: true
+14-May-2016 03:10:32.962 INFO [http-nio-8080-exec-58] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ponisha?zeroDateTimeBehavior=convertToNull]
+14-May-2016 03:10:32.962 INFO [http-nio-8080-exec-58] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+14-May-2016 03:10:33.230 INFO [http-nio-8080-exec-58] org.hibernate.dialect.Dialect.<init> HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+14-May-2016 03:10:33.376 INFO [http-nio-8080-exec-58] org.hibernate.engine.transaction.internal.TransactionFactoryInitiator.initiateService HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+14-May-2016 03:10:33.381 INFO [http-nio-8080-exec-58] org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory.<init> HHH000397: Using ASTQueryTranslatorFactory
+14-May-2016 03:10:57.997 WARNING [http-nio-8080-exec-61] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [FakePonisha] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+14-May-2016 03:10:57.998 WARNING [http-nio-8080-exec-61] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [FakePonisha] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+ com.mysql.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:40)
+14-May-2016 03:10:58.505 INFO [http-nio-8080-exec-61] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/FakePonisha]
+14-May-2016 03:11:20.956 INFO [http-nio-8080-exec-62] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/conf/Catalina/localhost/FakePonisha.xml
+14-May-2016 03:11:20.960 WARNING [http-nio-8080-exec-62] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+14-May-2016 03:11:21.633 INFO [http-nio-8080-exec-62] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/conf/Catalina/localhost/FakePonisha.xml has finished in 677 ms
+14-May-2016 03:11:21.655 INFO [http-nio-8080-exec-67] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/FakePonisha]] after start() had already been called. The second call will be ignored.
+14-May-2016 03:11:32.000 INFO [http-nio-8080-exec-63] org.hibernate.annotations.common.Version.<clinit> HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+14-May-2016 03:11:32.006 INFO [http-nio-8080-exec-63] org.hibernate.Version.logVersion HHH000412: Hibernate Core {4.2.8.Final}
+14-May-2016 03:11:32.008 INFO [http-nio-8080-exec-63] org.hibernate.cfg.Environment.<clinit> HHH000206: hibernate.properties not found
+14-May-2016 03:11:32.010 INFO [http-nio-8080-exec-63] org.hibernate.cfg.Environment.buildBytecodeProvider HHH000021: Bytecode provider name : javassist
+14-May-2016 03:11:32.160 INFO [http-nio-8080-exec-63] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000402: Using Hibernate built-in connection pool (not for production use!)
+14-May-2016 03:11:32.164 INFO [http-nio-8080-exec-63] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000115: Hibernate connection pool size: 20
+14-May-2016 03:11:32.164 INFO [http-nio-8080-exec-63] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000006: Autocommit mode: true
+14-May-2016 03:11:32.164 INFO [http-nio-8080-exec-63] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ponisha?zeroDateTimeBehavior=convertToNull]
+14-May-2016 03:11:32.164 INFO [http-nio-8080-exec-63] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+14-May-2016 03:11:32.433 INFO [http-nio-8080-exec-63] org.hibernate.dialect.Dialect.<init> HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+14-May-2016 03:11:32.575 INFO [http-nio-8080-exec-63] org.hibernate.engine.transaction.internal.TransactionFactoryInitiator.initiateService HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+14-May-2016 03:11:32.580 INFO [http-nio-8080-exec-63] org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory.<init> HHH000397: Using ASTQueryTranslatorFactory
+14-May-2016 03:11:32.988 INFO [http-nio-8080-exec-63] org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.stop HHH000030: Cleaning up connection pool [jdbc:mysql://localhost:3306/ponisha?zeroDateTimeBehavior=convertToNull]
+14-May-2016 03:39:32.554 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+14-May-2016 03:39:32.556 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+14-May-2016 03:39:32.611 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+14-May-2016 03:39:32.665 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service Catalina
+14-May-2016 03:39:32.715 WARNING [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [SqlTestMaven2] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+ com.mysql.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:40)
+14-May-2016 03:39:32.730 WARNING [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [FakePonisha] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+14-May-2016 03:39:32.730 WARNING [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [FakePonisha] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+ com.mysql.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:40)
+14-May-2016 03:39:32.743 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+14-May-2016 03:39:32.746 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+14-May-2016 03:39:32.748 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+14-May-2016 03:39:32.749 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]

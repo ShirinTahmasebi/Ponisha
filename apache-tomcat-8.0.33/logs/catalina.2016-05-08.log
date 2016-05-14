@@ -1,0 +1,70 @@
+08-May-2016 19:47:39.933 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.0.33
+08-May-2016 19:47:39.935 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Mar 18 2016 20:31:49 UTC
+08-May-2016 19:47:39.935 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.0.33.0
+08-May-2016 19:47:39.935 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+08-May-2016 19:47:39.935 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.11.4
+08-May-2016 19:47:39.935 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          x86_64
+08-May-2016 19:47:39.935 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/jre
+08-May-2016 19:47:39.935 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_91-b14
+08-May-2016 19:47:39.936 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+08-May-2016 19:47:39.936 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33
+08-May-2016 19:47:39.936 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33
+08-May-2016 19:47:39.936 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/conf/logging.properties
+08-May-2016 19:47:39.937 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+08-May-2016 19:47:39.937 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dhttp.nonProxyHosts=localhost|127.0.0.1|apples-MacBook-Pro.local
+08-May-2016 19:47:39.937 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.endorsed.dirs=/Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/endorsed
+08-May-2016 19:47:39.937 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33
+08-May-2016 19:47:39.937 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33
+08-May-2016 19:47:39.937 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/temp
+08-May-2016 19:47:39.938 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /Users/apple/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+08-May-2016 19:47:40.485 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+08-May-2016 19:47:40.549 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+08-May-2016 19:47:40.554 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+08-May-2016 19:47:40.558 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+08-May-2016 19:47:40.560 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 1831 ms
+08-May-2016 19:47:40.686 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service Catalina
+08-May-2016 19:47:40.687 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.0.33
+08-May-2016 19:47:40.703 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/webapps/docs
+08-May-2016 19:47:41.324 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/webapps/docs has finished in 620 ms
+08-May-2016 19:47:41.325 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/webapps/examples
+08-May-2016 19:47:42.180 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/webapps/examples has finished in 855 ms
+08-May-2016 19:47:42.180 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/webapps/host-manager
+08-May-2016 19:47:42.242 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/webapps/host-manager has finished in 61 ms
+08-May-2016 19:47:42.243 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/webapps/manager
+08-May-2016 19:47:42.330 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/webapps/manager has finished in 88 ms
+08-May-2016 19:47:42.331 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/webapps/ROOT
+08-May-2016 19:47:42.389 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/webapps/ROOT has finished in 58 ms
+08-May-2016 19:47:42.396 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+08-May-2016 19:47:42.409 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+08-May-2016 19:47:42.411 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 1850 ms
+08-May-2016 19:47:42.984 INFO [http-nio-8080-exec-2] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/conf/Catalina/localhost/JspMavenProject.xml
+08-May-2016 19:47:42.991 WARNING [http-nio-8080-exec-2] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+08-May-2016 19:47:43.035 INFO [http-nio-8080-exec-2] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/conf/Catalina/localhost/JspMavenProject.xml has finished in 50 ms
+08-May-2016 19:47:43.066 INFO [http-nio-8080-exec-3] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/JspMavenProject]] after start() had already been called. The second call will be ignored.
+08-May-2016 19:52:59.358 INFO [http-nio-8080-exec-6] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/conf/Catalina/localhost/FakePonisha.xml
+08-May-2016 19:52:59.362 WARNING [http-nio-8080-exec-6] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+08-May-2016 19:52:59.409 INFO [http-nio-8080-exec-6] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/conf/Catalina/localhost/FakePonisha.xml has finished in 50 ms
+08-May-2016 19:52:59.441 INFO [http-nio-8080-exec-8] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/FakePonisha]] after start() had already been called. The second call will be ignored.
+08-May-2016 19:53:32.665 INFO [http-nio-8080-exec-10] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/FakePonisha]
+08-May-2016 19:53:32.697 INFO [http-nio-8080-exec-7] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/conf/Catalina/localhost/FakePonisha.xml
+08-May-2016 19:53:32.700 WARNING [http-nio-8080-exec-7] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+08-May-2016 19:53:32.733 INFO [http-nio-8080-exec-7] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/conf/Catalina/localhost/FakePonisha.xml has finished in 37 ms
+08-May-2016 19:53:32.763 INFO [http-nio-8080-exec-4] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/FakePonisha]] after start() had already been called. The second call will be ignored.
+08-May-2016 19:53:57.717 INFO [http-nio-8080-exec-13] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/FakePonisha]
+08-May-2016 19:53:57.751 INFO [http-nio-8080-exec-7] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/conf/Catalina/localhost/FakePonisha.xml
+08-May-2016 19:53:57.754 WARNING [http-nio-8080-exec-7] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+08-May-2016 19:53:57.774 INFO [http-nio-8080-exec-7] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/conf/Catalina/localhost/FakePonisha.xml has finished in 24 ms
+08-May-2016 19:53:57.801 INFO [http-nio-8080-exec-12] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/FakePonisha]] after start() had already been called. The second call will be ignored.
+08-May-2016 20:08:05.655 INFO [http-nio-8080-exec-18] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/FakePonisha]
+08-May-2016 20:08:05.687 INFO [http-nio-8080-exec-20] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/conf/Catalina/localhost/FakePonisha.xml
+08-May-2016 20:08:05.693 WARNING [http-nio-8080-exec-20] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+08-May-2016 20:08:05.715 INFO [http-nio-8080-exec-20] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor /Users/apple/Desktop/Ponisha/apache-tomcat-8.0.33/conf/Catalina/localhost/FakePonisha.xml has finished in 28 ms
+08-May-2016 20:08:05.735 INFO [http-nio-8080-exec-22] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/FakePonisha]] after start() had already been called. The second call will be ignored.
+08-May-2016 20:36:51.198 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+08-May-2016 20:36:51.199 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+08-May-2016 20:36:51.254 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+08-May-2016 20:36:51.309 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service Catalina
+08-May-2016 20:36:51.346 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+08-May-2016 20:36:51.349 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+08-May-2016 20:36:51.349 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+08-May-2016 20:36:51.350 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]

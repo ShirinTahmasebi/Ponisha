@@ -1,0 +1,15 @@
+127.0.0.1 - - [11/May/2016:13:29:39 +0430] "HEAD /netbeans-tomcat-status-test HTTP/1.1" 404 -
+127.0.0.1 - - [11/May/2016:13:29:39 +0430] "HEAD /netbeans-tomcat-status-test HTTP/1.1" 404 -
+127.0.0.1 - - [11/May/2016:13:29:39 +0430] "HEAD /netbeans-tomcat-status-test HTTP/1.1" 404 -
+127.0.0.1 - - [11/May/2016:13:29:39 +0430] "HEAD /netbeans-tomcat-status-test HTTP/1.1" 404 -
+127.0.0.1 - shirin [11/May/2016:13:29:40 +0430] "GET /manager/text/list HTTP/1.1" 200 412
+127.0.0.1 - shirin [11/May/2016:13:29:40 +0430] "GET /manager/text/list HTTP/1.1" 200 412
+127.0.0.1 - shirin [11/May/2016:13:29:40 +0430] "GET /manager/text/undeploy?path=/JspMavenProject HTTP/1.1" 200 72
+127.0.0.1 - shirin [11/May/2016:13:29:40 +0430] "GET /manager/text/deploy?config=file%3A%2Fvar%2Ffolders%2Fv4%2Fztg__nh11656g4_ddhfmgzrh0000gn%2FT%2Fcontext8738388810439131936.xml&path=/JspMavenProject HTTP/1.1" 200 70
+127.0.0.1 - shirin [11/May/2016:13:29:40 +0430] "GET /manager/text/start?path=/JspMavenProject HTTP/1.1" 200 69
+0:0:0:0:0:0:0:1 - - [11/May/2016:13:29:41 +0430] "GET /JspMavenProject HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [11/May/2016:13:29:41 +0430] "GET /JspMavenProject/ HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [11/May/2016:13:29:41 +0430] "GET /favicon.ico HTTP/1.1" 200 21630
+127.0.0.1 - - [11/May/2016:14:10:21 +0430] "HEAD /netbeans-tomcat-status-test HTTP/1.1" 404 -
+127.0.0.1 - - [11/May/2016:14:10:21 +0430] "HEAD /netbeans-tomcat-status-test HTTP/1.1" 404 -
+127.0.0.1 - - [11/May/2016:14:10:21 +0430] "HEAD /netbeans-tomcat-status-test HTTP/1.1" 404 -
