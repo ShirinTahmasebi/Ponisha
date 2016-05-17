@@ -73,8 +73,8 @@ public class RegisterController extends HttpServlet {
         Response.initialize(response);
         HttpSession session = request.getSession();
         String userName = new String(request.getParameter(Tag.USER_NAME).getBytes("8859_1"), "UTF-8");
-        String password = request.getParameter(Tag.PASSWORD);
-        String email = request.getParameter(Tag.EMAIL);
+        String password = new String(request.getParameter(Tag.PASSWORD).getBytes("8859_1"), "UTF-8");
+        String email = new String(request.getParameter(Tag.EMAIL).getBytes("8859_1"), "UTF-8");
 
         User user = new User();
         user.setUsername(userName);
@@ -82,8 +82,11 @@ public class RegisterController extends HttpServlet {
 
         response.setContentType("text/html;charset=UTF-8");
         String forwardPage = checkInsertUser(user);
-//        request.setAttribute(Tag.USER, user);
-//        session.setAttribute(Tag.USER, user);
+
+        if (!forwardPage.equals(Tag.REGISTER_PAGE)) {
+            request.setAttribute(Tag.USER, user);
+            session.setAttribute(Tag.USER, user);
+        }
 
         RequestDispatcher rd = request.getRequestDispatcher(forwardPage);
         rd.forward(request, response);
