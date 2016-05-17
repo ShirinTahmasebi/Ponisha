@@ -101,7 +101,8 @@ public class RegisterController extends HttpServlet {
 
     private String checkInsertUser(User user) {
         UserDao userDao = new UserDaoImplementation();
-        User u = userDao.getUser(user.getUsername());
+        User u;
+        u = userDao.getUser(user.getUsername());
         if (u == null) {
             userDao.insertUser(user);
             return Tag.FIRST_PAGE;

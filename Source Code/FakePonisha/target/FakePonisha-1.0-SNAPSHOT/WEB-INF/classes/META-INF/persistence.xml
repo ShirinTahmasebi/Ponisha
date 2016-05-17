@@ -7,6 +7,7 @@
     <class>ir.ac.sbu.fakeponisha.model.Resume</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/ponisha?zeroDateTimeBehavior=convertToNull"/>
+      <!--<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/ponisha?useUnicode=yes&characterEncoding=UTF-8"/>-->
       <property name="javax.persistence.jdbc.user" value="root"/>
       <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
       <property name="javax.persistence.jdbc.password" value="9473"/>

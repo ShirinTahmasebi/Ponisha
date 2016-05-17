@@ -31,7 +31,6 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Resume.findByResumeId", query = "SELECT r FROM Resume r WHERE r.resumeId = :resumeId"),
     @NamedQuery(name = "Resume.findByResumeDescription", query = "SELECT r FROM Resume r WHERE r.resumeDescription = :resumeDescription")})
 public class Resume implements Serializable {
-
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -99,5 +98,5 @@ public class Resume implements Serializable {
     public String toString() {
         return "ir.ac.sbu.fakeponisha.model.Resume[ resumeId=" + resumeId + " ]";
     }
-
+    
 }

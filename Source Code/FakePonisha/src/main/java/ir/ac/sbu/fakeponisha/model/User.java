@@ -34,7 +34,6 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "User.findByPassword", query = "SELECT u FROM User u WHERE u.password = :password"),
     @NamedQuery(name = "User.findByEmail", query = "SELECT u FROM User u WHERE u.email = :email")})
 public class User implements Serializable {
-
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -124,12 +123,7 @@ public class User implements Serializable {
 
     @Override
     public String toString() {
-        return "ir.ac.sbu.fakeponisha.model.User[" +
-                " userId=" + userId +
-                " userName=" + username +
-                " email=" + email +
-                " password=" + password +
-                " ]";
+        return "ir.ac.sbu.fakeponisha.model.User[ userId=" + userId + " ]";
     }
-
+    
 }
