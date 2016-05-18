@@ -50,8 +50,9 @@ public class RegisterController extends HttpServlet {
             session.setAttribute(Tag.USER, user);
         }
 
-        RequestDispatcher rd = request.getRequestDispatcher(forwardPage);
-        rd.forward(request, response);
+        response.sendRedirect(forwardPage);
+//        RequestDispatcher rd = request.getRequestDispatcher(forwardPage);
+//        rd.forward(request, response);
     }
 
     /**
