@@ -58,4 +58,22 @@ public class UserDaoImplementation implements UserDao {
             return user.getResultList().get(0);
         }
     }
+
+    @Override
+    public User getUser(String userName, String password) {
+        EntityManagerFactory emf;
+        emf = Persistence.createEntityManagerFactory(Tag.PERSISTANCE_UNIT_NAME);
+        em = emf.createEntityManager();
+        TypedQuery<User> user = em.createNamedQuery("User.findByUsernamePassword", User.class);
+        user.setParameter(1, userName);
+        user.setParameter(2, password);
+        try {
+            return user.getSingleResult();
+        } catch (NoResultException e ) {
+            return null;
+        }catch(NonUniqueResultException e){
+            return user.getResultList().get(0);
+        }
+    }
+    
 }

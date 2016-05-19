@@ -1,31 +1,22 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package ir.ac.sbu.fakeponisha.business;
 
 import ir.ac.sbu.fakeponisha.model.User;
-import ir.ac.sbu.fakeponisha.model.Users;
+import ir.ac.sbu.fakeponisha.persistance.UserDao;
+import ir.ac.sbu.fakeponisha.persistance.UserDaoImplementation;
+import ir.ac.sbu.fakeponisha.utils.Helper;
+import ir.ac.sbu.fakeponisha.utils.Response;
+import ir.ac.sbu.fakeponisha.utils.Tag;
 import java.io.IOException;
 import java.io.PrintWriter;
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
-/**
- *
- * @author Shirin
- */
 @WebServlet(name = "LoginController", urlPatterns = {"/LoginController"})
 public class LoginController extends HttpServlet {
-
-    private static EntityManager em;
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -50,63 +41,10 @@ public class LoginController extends HttpServlet {
             out.println("<h1>Servlet LoginController at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet LoginController</title>");
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet LoginController at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
-
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet LoginController</title>");
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet LoginController at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
         }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
-    /**
-     * Handles the HTTP <code>GET</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        PrintWriter printWriter = response.getWriter();
-        printWriter.write("WROTE!!");
-//        try{
-//            
-//            
-//            
-//            EntityManagerFactory emf;
-//            emf = Persistence.createEntityManagerFactory("UserService");
-//            em = emf.createEntityManager();
-//
-//            createEmployee(44, "Saint", "Peter", "Engineering");
-//            createEmployee(55, "Jack", " Dorsey", "Imaginea");
-//            createEmployee(99, "Sam", "Fox", "Imaginea");
-//        }
-//        catch(Exception e){
-//           
-//                PrintWriter out = response.getWriter();
-//                out.write("HERE IS THE EXCEPTIONS :" + e.toString());
-//            
-//        }
-        //processRequest(request, response);
-    }
-
     /**
      * Handles the HTTP <code>POST</code> method.
      *
@@ -118,25 +56,19 @@ public class LoginController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-//        PrintWriter out = response.getWriter();
-//        out.write("WROTE!!");
-        try {
+        Response.initialize(response);
+        HttpSession session = request.getSession();
 
-            EntityManagerFactory emf;
-            emf = Persistence.createEntityManagerFactory("UserService");
-            em = emf.createEntityManager();
+        String userName = Helper.getRequestString(request, Tag.USER_NAME);
+        String password = Helper.getRequestString(request, Tag.USER_PASSWORD);
+        User user = new User();
+        user.setUsername(userName);
+        user.setPassword(password);
 
-            createEmployee(44, "Saint", "Peter", "Engineering");
-            createEmployee(55, "Jack", " Dorsey", "Imaginea");
-            createEmployee(66, "Sam", "Fox", "Imaginea");
-            emf.close();
-        } catch (Exception e) {
+        response.setContentType("text/html;charset=UTF-8");
+        String forwardPage = checkUserAuthentication(user, request, session);
 
-            PrintWriter out = response.getWriter();
-            out.write("HERE IS THE EXCEPTIONS :" + e.toString());
-
-        }
-        processRequest(request, response);
+        response.sendRedirect(forwardPage);
     }
 
     /**
@@ -146,17 +78,18 @@ public class LoginController extends HttpServlet {
      */
     @Override
     public String getServletInfo() {
-        return "Short description";
+        return "This servlet is used to authenticate users in Ponisha site login process.";
     }// </editor-fold>
 
-    private static void createEmployee(int id, String firstName, String lastName, String dept) {
-        em.getTransaction().begin();
-        User emp = new User();
-        emp.setUsername(firstName);
-//        emp.set(lastName);
-//        emp.setPassword(dept);
-
-        em.persist(emp);
-        em.getTransaction().commit();
+    private String checkUserAuthentication(User user, HttpServletRequest request, HttpSession session) {
+        UserDao userDao = new UserDaoImplementation();
+        User userFound = userDao.getUser(user.getUsername(), user.getPassword());
+        if (userFound != null) {
+            request.setAttribute(Tag.USER, user);
+            session.setAttribute(Tag.USER, user);
+            return Tag.FIRST_PAGE;
+        }
+        return Tag.LOGIN_PAGE;
     }
+
 }

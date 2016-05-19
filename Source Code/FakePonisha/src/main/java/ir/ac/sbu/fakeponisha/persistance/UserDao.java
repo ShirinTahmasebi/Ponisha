@@ -24,6 +24,14 @@ public interface UserDao {
      * @return
      */
     public User getUser(String userName);
+    
+    /**
+     *
+     * @param userName
+     * @param password
+     * @return
+     */
+    public User getUser(String userName, String password);
 
     /**
      *

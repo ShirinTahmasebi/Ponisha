@@ -43,12 +43,7 @@ public class RegisterController extends HttpServlet {
         user.setEmail(email);
 
         response.setContentType("text/html;charset=UTF-8");
-        String forwardPage = checkInsertUser(user);
-
-        if (!forwardPage.equals(Tag.REGISTER_PAGE)) {
-            request.setAttribute(Tag.USER, user);
-            session.setAttribute(Tag.USER, user);
-        }
+        String forwardPage = checkInsertUser(user, request, session);
 
         response.sendRedirect(forwardPage);
 //        RequestDispatcher rd = request.getRequestDispatcher(forwardPage);
@@ -63,17 +58,6 @@ public class RegisterController extends HttpServlet {
     @Override
     public String getServletInfo() {
         return "This servlet is used to register users in Ponisha site.";
-    }
-
-    private String checkInsertUser(User user) {
-        boolean isUserValid = checkValidUserInfoFormat(user);
-        boolean isUserUnique = (isUserValid) ? checkUniqueUserInfo(user) : false;
-
-        if (isUserValid && isUserUnique) {
-            return Tag.FIRST_PAGE;
-        }
-        return Tag.REGISTER_PAGE;
-
     }
 
     private boolean checkValidUserInfoFormat(User user) {
@@ -91,6 +75,18 @@ public class RegisterController extends HttpServlet {
             return true;
         }
         return false;
+    }
+
+    private String checkInsertUser(User user, HttpServletRequest request, HttpSession session) {
+        boolean isUserValid = checkValidUserInfoFormat(user);
+        boolean isUserUnique = (isUserValid) ? checkUniqueUserInfo(user) : false;
+
+        if (isUserValid && isUserUnique) {
+            request.setAttribute(Tag.USER, user);
+            session.setAttribute(Tag.USER, user);
+            return Tag.FIRST_PAGE;
+        }
+        return Tag.REGISTER_PAGE;
     }
 
 }
