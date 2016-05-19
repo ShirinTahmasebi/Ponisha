@@ -20,7 +20,7 @@ pageEncoding="UTF-8"
 
      <div class = "row" >
 
-      <a href="edit_profile.html" class="btn  editProfileBtn btn-block" role="button">ویرایش پروفایل</a>
+      <a href="edit_profile.jsp" class="btn  editProfileBtn btn-block" role="button">ویرایش پروفایل</a>
    
     </div>
 		<hr>
@@ -63,7 +63,7 @@ pageEncoding="UTF-8"
       <hr>
 
     <div class = "row" >
-      <a href="creat_new_project.html" class="btn btn-info col-md-2 col-sm-2 col-xs-2" role="button">ایجاد شرکت جدید</a>
+      <a href="creat_new_project.jsp" class="btn btn-info col-md-2 col-sm-2 col-xs-2" role="button">ایجاد شرکت جدید</a>
       <div class = "col-md-7 col-sm-7 col-xs-7"></div>
       <div class = "col-md-3 col-sm-3 col-xs-3"><p style = "font-size:30px;">شرکت های ثبت شده:</p></div>
     </div>
@@ -84,14 +84,14 @@ pageEncoding="UTF-8"
                   <td>عمید رایانه شریف</td>  
                   <td>arsh.ir</td>  
                   <td>جنب مترو شریف</td>  
-                  <td><a href="user_profile.html" class="btn btn-default" role="button">ثبت آگهی استخدام برای شرکت</a></td>
+                  <td><a href="user_profile.jsp" class="btn btn-default" role="button">ثبت آگهی استخدام برای شرکت</a></td>
                 </tr> 
 
 <tr>  
                   <td>عمید رایانه شریف</td>  
                   <td>arsh.ir</td>  
                   <td>جنب مترو شریف</td>  
-                  <td><a href="user_profile.html" class="btn btn-default" role="button">ثبت آگهی استخدام برای شرکت</a></td>
+                  <td><a href="user_profile.jsp" class="btn btn-default" role="button">ثبت آگهی استخدام برای شرکت</a></td>
                 </tr> 
 
                  
@@ -103,7 +103,7 @@ pageEncoding="UTF-8"
     <hr>
 
     <div class = "row" >
-      <a href="creat_new_project.html" class="btn btn-info col-md-2 col-sm-2 col-xs-2" role="button">ایجاد پروژه جدید</a>
+      <a href="creat_new_project.jsp" class="btn btn-info col-md-2 col-sm-2 col-xs-2" role="button">ایجاد پروژه جدید</a>
       <div class = "col-md-7 col-sm-7 col-xs-7"></div>
       <div class = "col-md-3 col-sm-3 col-xs-3"><p style = "font-size:30px;">پروژه های ثبت شده:</p></div>
     </div>
@@ -514,7 +514,7 @@ $(document).ready(function (){
 
 
     $('#projctsTable').on( 'click', 'tbody tr', function () {
-        window.location.href = "project_details.html";
+        window.location.href = "project_details.jsp";
 } );
 });
  

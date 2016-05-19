@@ -3,6 +3,7 @@ package ir.ac.sbu.fakeponisha.business;
 import ir.ac.sbu.fakeponisha.model.User;
 import ir.ac.sbu.fakeponisha.persistance.UserDao;
 import ir.ac.sbu.fakeponisha.persistance.UserDaoImplementation;
+import ir.ac.sbu.fakeponisha.utils.GenderType;
 import ir.ac.sbu.fakeponisha.utils.Helper;
 import ir.ac.sbu.fakeponisha.utils.Regex;
 import ir.ac.sbu.fakeponisha.utils.Response;
@@ -41,6 +42,7 @@ public class RegisterController extends HttpServlet {
         user.setUsername(userName);
         user.setPassword(password);
         user.setEmail(email);
+        user.setGender(GenderType.getGender(GenderType.Gender.NOTDEFINED));
 
         response.setContentType("text/html;charset=UTF-8");
         String forwardPage = checkInsertUser(user, request, session);

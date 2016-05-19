@@ -6,7 +6,7 @@
 package ir.ac.sbu.fakeponisha.model;
 
 import java.io.Serializable;
-import java.util.Collection;
+import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -35,8 +35,13 @@ import javax.xml.bind.annotation.XmlTransient;
 @NamedQueries({
     @NamedQuery(name = "User.findAll", query = "SELECT u FROM User u"),
     @NamedQuery(name = "User.findByUserId", query = "SELECT u FROM User u WHERE u.userId = :userId"),
+//    @NamedQuery(name = "User.findByUsername", query = "SELECT u FROM User u WHERE u.username = :username"),
+    @NamedQuery(name = "User.findByUserFirstLastName", query = "SELECT u FROM User u WHERE u.userFirstLastName = :userFirstLastName"),
     @NamedQuery(name = "User.findByUsername", query = "SELECT u FROM User u WHERE u.username = ?"),
     @NamedQuery(name = "User.findByUsernamePassword", query = "SELECT u FROM User u WHERE u.username = ? and u.password = ?"),
+    @NamedQuery(name = "User.findByCity", query = "SELECT u FROM User u WHERE u.city = :city"),
+    @NamedQuery(name = "User.findByBirthDate", query = "SELECT u FROM User u WHERE u.birthDate = :birthDate"),
+    @NamedQuery(name = "User.findByGender", query = "SELECT u FROM User u WHERE u.gender = :gender"),
     @NamedQuery(name = "User.findByPassword", query = "SELECT u FROM User u WHERE u.password = :password"),
     @NamedQuery(name = "User.findByEmail", query = "SELECT u FROM User u WHERE u.email = :email")})
 public class User implements Serializable {
@@ -52,6 +57,17 @@ public class User implements Serializable {
     @Size(min = 1, max = 40)
     @Column(name = "username")
     private String username;
+    @Size(max = 100)
+    @Column(name = "userFirstLastName")
+    private String userFirstLastName;
+    @Size(max = 30)
+    @Column(name = "city")
+    private String city;
+    @Size(max = 30)
+    @Column(name = "birthDate")
+    private String birthDate;
+    @Column(name = "gender", columnDefinition = "int default 0")
+    private Integer gender;
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 20)
@@ -64,7 +80,7 @@ public class User implements Serializable {
     @Column(name = "email")
     private String email;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "userCreator")
-    private Collection<Project> projectCollection;
+    private List<Project> projectList;
     @JoinColumn(name = "resumeId", referencedColumnName = "resumeId")
     @OneToOne
     private Resume resumeId;
@@ -99,6 +115,38 @@ public class User implements Serializable {
         this.username = username;
     }
 
+    public String getUserFirstLastName() {
+        return userFirstLastName;
+    }
+
+    public void setUserFirstLastName(String userFirstLastName) {
+        this.userFirstLastName = userFirstLastName;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getBirthDate() {
+        return birthDate;
+    }
+
+    public void setBirthDate(String birthDate) {
+        this.birthDate = birthDate;
+    }
+
+    public Integer getGender() {
+        return gender;
+    }
+
+    public void setGender(Integer gender) {
+        this.gender = gender;
+    }
+
     public String getPassword() {
         return password;
     }
@@ -116,12 +164,12 @@ public class User implements Serializable {
     }
 
     @XmlTransient
-    public Collection<Project> getProjectCollection() {
-        return projectCollection;
+    public List<Project> getProjectList() {
+        return projectList;
     }
 
-    public void setProjectCollection(Collection<Project> projectCollection) {
-        this.projectCollection = projectCollection;
+    public void setProjectList(List<Project> projectList) {
+        this.projectList = projectList;
     }
 
     public Resume getResumeId() {
@@ -146,10 +194,7 @@ public class User implements Serializable {
             return false;
         }
         User other = (User) object;
-        if ((this.userId == null && other.userId != null) || (this.userId != null && !this.userId.equals(other.userId))) {
-            return false;
-        }
-        return true;
+        return !((this.userId == null && other.userId != null) || (this.userId != null && !this.userId.equals(other.userId)));
     }
 
     @Override

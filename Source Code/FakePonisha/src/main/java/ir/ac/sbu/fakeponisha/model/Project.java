@@ -156,10 +156,7 @@ public class Project implements Serializable {
             return false;
         }
         Project other = (Project) object;
-        if ((this.projectId == null && other.projectId != null) || (this.projectId != null && !this.projectId.equals(other.projectId))) {
-            return false;
-        }
-        return true;
+        return !((this.projectId == null && other.projectId != null) || (this.projectId != null && !this.projectId.equals(other.projectId)));
     }
 
     @Override
