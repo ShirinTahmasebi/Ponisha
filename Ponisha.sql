@@ -15,6 +15,10 @@ create table resume(
 create table user(
 	userId INTEGER NOT NULL AUTO_INCREMENT,
     username NVARCHAR(40) NOT NULL,
+    userFirstLastName nvarchar(100),
+    city nvarchar(30),
+    birthDate nvarchar(30),
+    gender INTEGER default 0, -- default is unknown
     password varchar(20) NOT NULL,
     email varchar(50) NOT NULL,
     resumeId INTEGER UNIQUE,
