@@ -49,7 +49,7 @@ public class CreateProjectController extends HttpServlet {
         User user = userDao.getUser(((User) session.getAttribute(Tag.USER)).getUsername());
         project.setUserCreator(user);
         response.setContentType("text/html;charset=UTF-8");
-        String forwardPage = checkInsertProject(project);
+        String forwardPage = checkInsertProject(project, user, session);
         response.sendRedirect(forwardPage);
     }
 
@@ -63,7 +63,7 @@ public class CreateProjectController extends HttpServlet {
         return "This servlet is used to create projects in Ponisha site.";
     }// </editor-fold>
 
-    private String checkInsertProject(Project project) {
+    private String checkInsertProject(Project project, User user, HttpSession session) {
         if (project == null
                 || project.getBudget() == null
                 || project.getProjectName() == null
@@ -74,6 +74,8 @@ public class CreateProjectController extends HttpServlet {
         }
         ProjectDao projectDao = new ProjectDaoImplementation();
         projectDao.insertProject(project);
+        //َ Update user attribute in session
+        session.setAttribute(Tag.USER, user);
         return Tag.FIRST_PAGE;
     }
 

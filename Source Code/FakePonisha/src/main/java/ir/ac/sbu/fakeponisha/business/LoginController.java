@@ -85,8 +85,8 @@ public class LoginController extends HttpServlet {
         UserDao userDao = new UserDaoImplementation();
         User userFound = userDao.getUser(user.getUsername(), user.getPassword());
         if (userFound != null) {
-            request.setAttribute(Tag.USER, user);
-            session.setAttribute(Tag.USER, user);
+            request.setAttribute(Tag.USER, userFound);
+            session.setAttribute(Tag.USER, userFound);
             return Tag.FIRST_PAGE;
         }
         return Tag.LOGIN_PAGE;

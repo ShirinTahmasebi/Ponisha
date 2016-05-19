@@ -42,7 +42,7 @@ public class RegisterController extends HttpServlet {
         user.setUsername(userName);
         user.setPassword(password);
         user.setEmail(email);
-        user.setGender(GenderType.getGender(GenderType.Gender.NOTDEFINED));
+        user.setGender(GenderType.getGenderCode(GenderType.Gender.NOTDEFINED));
 
         response.setContentType("text/html;charset=UTF-8");
         String forwardPage = checkInsertUser(user, request, session);
@@ -84,8 +84,10 @@ public class RegisterController extends HttpServlet {
         boolean isUserUnique = (isUserValid) ? checkUniqueUserInfo(user) : false;
 
         if (isUserValid && isUserUnique) {
-            request.setAttribute(Tag.USER, user);
-            session.setAttribute(Tag.USER, user);
+            UserDao userDao = new UserDaoImplementation();
+            User foundUser = userDao.getUser(user.getUsername());
+            request.setAttribute(Tag.USER, foundUser);
+            session.setAttribute(Tag.USER, foundUser);
             return Tag.FIRST_PAGE;
         }
         return Tag.REGISTER_PAGE;
