@@ -6,17 +6,18 @@
 package ir.ac.sbu.fakeponisha.model;
 
 import java.io.Serializable;
-import java.util.List;
+import java.util.Collection;
 import javax.persistence.Basic;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToMany;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
@@ -38,6 +39,7 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "User.findByPassword", query = "SELECT u FROM User u WHERE u.password = :password"),
     @NamedQuery(name = "User.findByEmail", query = "SELECT u FROM User u WHERE u.email = :email")})
 public class User implements Serializable {
+
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -60,8 +62,8 @@ public class User implements Serializable {
     @Size(min = 1, max = 50)
     @Column(name = "email")
     private String email;
-    @ManyToMany(mappedBy = "userList")
-    private List<Project> projectList;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "userCreator")
+    private Collection<Project> projectCollection;
     @JoinColumn(name = "resumeId", referencedColumnName = "resumeId")
     @OneToOne
     private Resume resumeId;
@@ -113,12 +115,12 @@ public class User implements Serializable {
     }
 
     @XmlTransient
-    public List<Project> getProjectList() {
-        return projectList;
+    public Collection<Project> getProjectCollection() {
+        return projectCollection;
     }
 
-    public void setProjectList(List<Project> projectList) {
-        this.projectList = projectList;
+    public void setProjectCollection(Collection<Project> projectCollection) {
+        this.projectCollection = projectCollection;
     }
 
     public Resume getResumeId() {
@@ -151,7 +153,11 @@ public class User implements Serializable {
 
     @Override
     public String toString() {
-        return "ir.ac.sbu.fakeponisha.model.User[ userId=" + userId + " ]";
+        return "ir.ac.sbu.fakeponisha.model.User[ userId=" + userId
+                + " userName=" + username
+                + " userEmail=" + email
+                + " userPassword=" + password
+                + "]";
     }
-    
+
 }

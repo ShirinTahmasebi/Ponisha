@@ -34,8 +34,8 @@ public class RegisterController extends HttpServlet {
         Response.initialize(response);
         HttpSession session = request.getSession();
         String userName = Helper.getRequestString(request, Tag.USER_NAME);
-        String password = Helper.getRequestString(request, Tag.PASSWORD);
-        String email = Helper.getRequestString(request, Tag.EMAIL);
+        String password = Helper.getRequestString(request, Tag.USER_PASSWORD);
+        String email = Helper.getRequestString(request, Tag.USER_EMAIL);
 
         User user = new User();
         user.setUsername(userName);

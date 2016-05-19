@@ -22,7 +22,7 @@
                     <div class = "row" >
                         <div class = "col-md-9 col-sm-9 col-xs-9">
                             <p class="text" >
-                                <input name="deadline" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="مدت زمان تخمینی شما" id="deadline" />
+                                <input name="projectName" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="مدت زمان تخمینی شما" id="deadline" />
                             </p>
                         </div>
                         <div class = "col-md-3 col-sm-3 col-xs-3 lables">نام پروژه:</div>
@@ -33,7 +33,7 @@
                     <div class = "row" >
                         <div class = "col-md-9 col-sm-9 col-xs-9">
                             <p class="text" >
-                                <input name="deadline" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="برای مثال 20000000 ریال" id="deadline" />
+                                <input name="budget" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="برای مثال 20000000 ریال" id="deadline" />
                             </p>
                         </div>
                         <div class = "col-md-3 col-sm-3 col-xs-3 lables">بودجه تقریبی:</div>
@@ -56,7 +56,7 @@
                     <div class = "row" >
                         <div class = "col-md-9 col-sm-9 col-xs-9">
                             <p class="text" >
-                                <input name="deadline" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="برای مثال برنامه نویسی وب، برنامه نویسی اندروید" id="deadline" />
+                                <input name="neededSkills" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="برای مثال برنامه نویسی وب، برنامه نویسی اندروید" id="deadline" />
                             </p>
                         </div>
                         <div class = "col-md-3 col-sm-3 col-xs-3 lables">مهارت های مورد نیاز:</div>
@@ -68,7 +68,7 @@
                         <div class = "col-md-9 col-sm-9 col-xs-9">
                             <p class="text" >
 
-                                <textarea name="text" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="توضیحاتی که به روشن شدن محتوای پروژه کمک میکند را بنویسید"></textarea>
+                                <textarea name="description" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="توضیحاتی که به روشن شدن محتوای پروژه کمک میکند را بنویسید"></textarea>
                             </p>
                         </div>
                         <div class = "col-md-3 col-sm-3 col-xs-3 lables">توضیحات شما:</div>

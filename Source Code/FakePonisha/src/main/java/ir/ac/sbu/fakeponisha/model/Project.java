@@ -6,7 +6,6 @@
 package ir.ac.sbu.fakeponisha.model;
 
 import java.io.Serializable;
-import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -14,15 +13,13 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -40,6 +37,7 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "Project.findByNeededSkills", query = "SELECT p FROM Project p WHERE p.neededSkills = :neededSkills"),
     @NamedQuery(name = "Project.findByProjectDescription", query = "SELECT p FROM Project p WHERE p.projectDescription = :projectDescription")})
 public class Project implements Serializable {
+
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -69,11 +67,9 @@ public class Project implements Serializable {
     @Size(max = 255)
     @Column(name = "projectDescription")
     private String projectDescription;
-    @JoinTable(name = "createdProjects", joinColumns = {
-        @JoinColumn(name = "projectId", referencedColumnName = "projectId")}, inverseJoinColumns = {
-        @JoinColumn(name = "userId", referencedColumnName = "userId")})
-    @ManyToMany
-    private List<User> userList;
+    @JoinColumn(name = "userCreator", referencedColumnName = "userId")
+    @ManyToOne(optional = false)
+    private User userCreator;
 
     public Project() {
     }
@@ -138,13 +134,12 @@ public class Project implements Serializable {
         this.projectDescription = projectDescription;
     }
 
-    @XmlTransient
-    public List<User> getUserList() {
-        return userList;
+    public User getUserCreator() {
+        return userCreator;
     }
 
-    public void setUserList(List<User> userList) {
-        this.userList = userList;
+    public void setUserCreator(User userCreator) {
+        this.userCreator = userCreator;
     }
 
     @Override
@@ -169,7 +164,14 @@ public class Project implements Serializable {
 
     @Override
     public String toString() {
-        return "ir.ac.sbu.fakeponisha.model.Project[ projectId=" + projectId + " ]";
+        return "ir.ac.sbu.fakeponisha.model.Project[ projectId=" + projectId
+                + " projectName=" + projectName
+                + " projectDeadline=" + deadline
+                + " projectBudget=" + budget
+                + " prjectNeededSkills=" + neededSkills
+                + " projectDescription=" + projectDescription
+                + " CreatorUser=" + (userCreator == null ? "NULL" : userCreator.toString())
+                + " ]";
     }
-    
+
 }
