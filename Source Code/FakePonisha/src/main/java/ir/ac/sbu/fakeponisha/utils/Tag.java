@@ -26,6 +26,7 @@ public class Tag {
     final public static String LOGIN_PAGE = "login.jsp";
     final public static String REGISTER_PAGE = "register.jsp";
     final public static String FIRST_PAGE = "first_page.jsp";
+    final public static String CREATE_NEW_PROJECT = "creat_new_project.jsp";
 
     final public static String PERSISTANCE_UNIT_NAME = "UserService";
 }
