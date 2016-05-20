@@ -69,6 +69,10 @@ body {
     padding-top: 200px;
 }
 
+.sidenav .sixthitem{
+    z-index: 5;
+    padding-top: 240px;
+}
 
 .sidenav .menu-item-line:hover, .offcanvas .menu-item-line:focus{
     color: #ED1C3B;
@@ -85,8 +89,8 @@ body {
 }
 
 @media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav .menu-item-line {font-size: 18px;}
+    .sidenav {padding-top: 15px;}
+    .sidenav .menu-item-line {font-size: 18px;}
 }
 
 #header{
@@ -96,12 +100,12 @@ body {
 }
 
 #logo {
-  background-image: url(../img/logo.png);
-  display: block;
-  margin: 0 auto;
-  text-indent: -9999px;
-  width: 90px;
-  height: 90px;
+    background-image: url(../img/logo.png);
+    display: block;
+    margin: 0 auto;
+    text-indent: -9999px;
+    width: 90px;
+    height: 90px;
 }
 
 #header_text{

@@ -14,6 +14,7 @@ ir/ac/sbu/fakeponisha/persistance/ResumeDaoImplementation.class
 ir/ac/sbu/fakeponisha/persistance/ProjectDao.class
 ir/ac/sbu/fakeponisha/utils/Regex.class
 ir/ac/sbu/fakeponisha/utils/Helper.class
+ir/ac/sbu/fakeponisha/business/LogoutController.class
 ir/ac/sbu/fakeponisha/model/User_.class
 ir/ac/sbu/fakeponisha/business/LoginController.class
 ir/ac/sbu/fakeponisha/persistance/ProjectDaoImplementation.class

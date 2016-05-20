@@ -19,6 +19,10 @@
             <a href="contact-us.jsp" class="thirditem menu-item-line">ارتباط&nbsp;با&nbsp;ما</a>
             <a href="about_us.jsp" class="forthitem menu-item-line">درباره&nbsp;ما</a>
             <a href="creat_new_project.jsp" class="fifthitem menu-item-line">ایجاد&nbsp;پروژه</a>
+            <%if (session.getAttribute(Tag.USER) != null) {
+                    out.println("<a href='LogoutController' class='sixthitem menu-item-line'>خروج</a>");
+                }
+            %>
         </div>
         <div id="header">
             <span style="box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24); font-size:15px;cursor:pointer;position: absolute;right:10px;top:5px; border:1px solid black; margin: 5px; padding: 0px 8px 0px 8px; border-radius: 5px; background:#ffffff;" onclick="openNav()">

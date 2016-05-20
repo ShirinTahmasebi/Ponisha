@@ -11,6 +11,7 @@
 /Users/apple/Desktop/Ponishaa/Source Code/FakePonisha/src/main/java/ir/ac/sbu/fakeponisha/persistance/ProjectDao.java
 /Users/apple/Desktop/Ponishaa/Source Code/FakePonisha/src/main/java/ir/ac/sbu/fakeponisha/business/CreateProjectController.java
 /Users/apple/Desktop/Ponishaa/Source Code/FakePonisha/src/main/java/ir/ac/sbu/fakeponisha/business/CreateResumeItemController.java
+/Users/apple/Desktop/Ponishaa/Source Code/FakePonisha/src/main/java/ir/ac/sbu/fakeponisha/business/LogoutController.java
 /Users/apple/Desktop/Ponishaa/Source Code/FakePonisha/src/main/java/ir/ac/sbu/fakeponisha/persistance/ProjectDaoImplementation.java
 /Users/apple/Desktop/Ponishaa/Source Code/FakePonisha/src/main/java/ir/ac/sbu/fakeponisha/persistance/UserDaoImplementation.java
 /Users/apple/Desktop/Ponishaa/Source Code/FakePonisha/src/main/java/ir/ac/sbu/fakeponisha/utils/GenderType.java
