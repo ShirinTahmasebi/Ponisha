@@ -6,6 +6,7 @@ import ir.ac.sbu.fakeponisha.persistance.ProjectDao;
 import ir.ac.sbu.fakeponisha.persistance.ProjectDaoImplementation;
 import ir.ac.sbu.fakeponisha.persistance.UserDao;
 import ir.ac.sbu.fakeponisha.persistance.UserDaoImplementation;
+import ir.ac.sbu.fakeponisha.utils.GenderType;
 import ir.ac.sbu.fakeponisha.utils.Helper;
 import ir.ac.sbu.fakeponisha.utils.Response;
 import ir.ac.sbu.fakeponisha.utils.Tag;
@@ -46,10 +47,17 @@ public class CreateProjectController extends HttpServlet {
         project.setNeededSkills(Helper.getRequestString(request, Tag.PROJECT_NEEDED_SKILLS));
         project.setProjectDescription(Helper.getRequestString(request, Tag.PROJECT_DESCRIPTION));
         UserDao userDao = new UserDaoImplementation();
-        User user = userDao.getUser(((User) session.getAttribute(Tag.USER)).getUsername());
+        User user;
+        if (session.getAttribute(Tag.USER) != null) {
+            user = userDao.getUser(((User) session.getAttribute(Tag.USER)).getUsername());
+        } else {
+            user = null;
+        }
         project.setUserCreator(user);
         response.setContentType("text/html;charset=UTF-8");
         String forwardPage = checkInsertProject(project, user, session);
+//        user.setGender(GenderType.getGenderCode(GenderType.Gender.FEMALE));
+//        userDao.updateUser(user);
         response.sendRedirect(forwardPage);
     }
 
@@ -69,7 +77,8 @@ public class CreateProjectController extends HttpServlet {
                 || project.getProjectName() == null
                 || project.getDeadline() == null
                 || project.getNeededSkills() == null
-                || project.getUserCreator() == null) {
+                || project.getUserCreator() == null
+                || session.getAttribute(Tag.USER) == null) {
             return Tag.CREATE_NEW_PROJECT;
         }
         ProjectDao projectDao = new ProjectDaoImplementation();

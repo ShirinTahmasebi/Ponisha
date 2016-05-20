@@ -7,6 +7,7 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import javax.persistence.TypedQuery;
 
 public class ProjectDaoImplementation implements ProjectDao {
 
@@ -14,7 +15,11 @@ public class ProjectDaoImplementation implements ProjectDao {
 
     @Override
     public List<Project> getAllProjects() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        EntityManagerFactory emf;
+        emf = Persistence.createEntityManagerFactory(Tag.PERSISTANCE_UNIT_NAME);
+        em = emf.createEntityManager();
+        TypedQuery<Project> allProjects = em.createNamedQuery("Project.findAll", Project.class);
+        return allProjects.getResultList();
     }
 
     @Override

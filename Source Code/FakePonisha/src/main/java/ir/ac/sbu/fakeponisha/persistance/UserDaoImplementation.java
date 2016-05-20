@@ -40,7 +40,21 @@ public class UserDaoImplementation implements UserDao {
 
     @Override
     public void updateUser(User user) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        EntityManagerFactory emf;
+        emf = Persistence.createEntityManagerFactory(Tag.PERSISTANCE_UNIT_NAME);
+        em = emf.createEntityManager();
+        User newUser = em.find(User.class, user.getUserId());
+        em.getTransaction().begin();
+        newUser.setUsername(user.getUsername());
+        newUser.setUserFirstLastName(user.getUserFirstLastName());
+        newUser.setBirthDate(user.getBirthDate());
+        newUser.setCity(user.getCity());
+        newUser.setEmail(user.getEmail());
+        newUser.setGender(user.getGender());
+        newUser.setPassword(user.getPassword());
+        newUser.setProjectList(user.getProjectList());
+        newUser.setResumeId(user.getResumeId());
+        em.getTransaction().commit();
     }
 
     @Override

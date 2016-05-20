@@ -1,6 +1,7 @@
 ir/ac/sbu/fakeponisha/utils/Helper.class
 ir/ac/sbu/fakeponisha/utils/Response.class
 ir/ac/sbu/fakeponisha/model/User_.class
+ir/ac/sbu/fakeponisha/business/ShowProjectsListController.class
 ir/ac/sbu/fakeponisha/business/LoginController.class
 ir/ac/sbu/fakeponisha/utils/GenderType.class
 ir/ac/sbu/fakeponisha/persistance/ProjectDaoImplementation.class
