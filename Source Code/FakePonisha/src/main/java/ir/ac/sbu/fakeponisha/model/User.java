@@ -79,8 +79,12 @@ public class User implements Serializable {
     @Size(min = 1, max = 50)
     @Column(name = "email")
     private String email;
+    @OneToOne(cascade = CascadeType.ALL, mappedBy = "user")
+    private RequestedProjects requestedProjects;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "userCreator")
     private List<Project> projectList;
+    @OneToOne(mappedBy = "userOwner")
+    private Company company;
     @JoinColumn(name = "resumeId", referencedColumnName = "resumeId")
     @OneToOne
     private Resume resumeId;
@@ -163,6 +167,14 @@ public class User implements Serializable {
         this.email = email;
     }
 
+    public RequestedProjects getRequestedProjects() {
+        return requestedProjects;
+    }
+
+    public void setRequestedProjects(RequestedProjects requestedProjects) {
+        this.requestedProjects = requestedProjects;
+    }
+
     @XmlTransient
     public List<Project> getProjectList() {
         return projectList;
@@ -170,6 +182,14 @@ public class User implements Serializable {
 
     public void setProjectList(List<Project> projectList) {
         this.projectList = projectList;
+    }
+
+    public Company getCompany() {
+        return company;
+    }
+
+    public void setCompany(Company company) {
+        this.company = company;
     }
 
     public Resume getResumeId() {
@@ -195,7 +215,7 @@ public class User implements Serializable {
         }
         User other = (User) object;
         return !((this.userId == null && other.userId != null) || (this.userId != null && !this.userId.equals(other.userId)));
-    }
+        }
 
     @Override
     public String toString() {
@@ -205,5 +225,5 @@ public class User implements Serializable {
                 + " userPassword=" + password
                 + "]";
     }
-
+    
 }

@@ -6,7 +6,9 @@
 package ir.ac.sbu.fakeponisha.model;
 
 import java.io.Serializable;
+import java.util.List;
 import javax.persistence.Basic;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -16,10 +18,12 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -67,6 +71,8 @@ public class Project implements Serializable {
     @Size(max = 255)
     @Column(name = "projectDescription")
     private String projectDescription;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "project")
+    private List<RequestedProjects> requestedProjectsList;
     @JoinColumn(name = "userCreator", referencedColumnName = "userId")
     @ManyToOne(optional = false)
     private User userCreator;
@@ -134,6 +140,15 @@ public class Project implements Serializable {
         this.projectDescription = projectDescription;
     }
 
+    @XmlTransient
+    public List<RequestedProjects> getRequestedProjectsList() {
+        return requestedProjectsList;
+    }
+
+    public void setRequestedProjectsList(List<RequestedProjects> requestedProjectsList) {
+        this.requestedProjectsList = requestedProjectsList;
+    }
+
     public User getUserCreator() {
         return userCreator;
     }
@@ -157,7 +172,7 @@ public class Project implements Serializable {
         }
         Project other = (Project) object;
         return !((this.projectId == null && other.projectId != null) || (this.projectId != null && !this.projectId.equals(other.projectId)));
-    }
+        }
 
     @Override
     public String toString() {
@@ -170,5 +185,5 @@ public class Project implements Serializable {
                 + " CreatorUser=" + (userCreator == null ? "NULL" : userCreator.toString())
                 + " ]";
     }
-
+    
 }

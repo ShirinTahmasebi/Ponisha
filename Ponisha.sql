@@ -48,10 +48,20 @@ create table resumeItem(
     primary key (itemId)
 )charset = utf8;
 
--- CREATE TABLE createdProjects (
--- 	projectId INTEGER NOT NULL, 
---     userId INTEGER NOT NULL UNIQUE,
--- 	CONSTRAINT projectIdFK FOREIGN KEY (projectId) REFERENCES project (projectId),
--- 	CONSTRAINT userIdFK FOREIGN KEY (userId) REFERENCES user (userId), 
--- 	PRIMARY KEY (projectId, userId)
--- ) charset = utf8;
+CREATE TABLE requestedProjects (
+	projectId INTEGER NOT NULL, 
+    userId INTEGER NOT NULL UNIQUE,
+	CONSTRAINT projectIdFK FOREIGN KEY (projectId) REFERENCES project (projectId),
+	CONSTRAINT userIdFK FOREIGN KEY (userId) REFERENCES user (userId), 
+	PRIMARY KEY (projectId, userId)
+) charset = utf8;
+
+create table company(
+	companyId INTEGER NOT NULL AUTO_INCREMENT,
+    companyName nvarchar(255) NOT NULL,
+    companyAddress nvarchar(255),
+    companySite nvarchar(255),
+    userOwner INTEGER UNIQUE,
+    constraint userOwnerFK foreign key (userOwner) references user (userId),
+    primary key (companyId)
+)charset = utf8;
