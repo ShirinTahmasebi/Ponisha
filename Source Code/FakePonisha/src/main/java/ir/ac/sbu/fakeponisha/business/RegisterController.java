@@ -9,8 +9,6 @@ import ir.ac.sbu.fakeponisha.utils.Regex;
 import ir.ac.sbu.fakeponisha.utils.Response;
 import ir.ac.sbu.fakeponisha.utils.Tag;
 import java.io.IOException;
-import java.io.PrintWriter;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -48,8 +46,6 @@ public class RegisterController extends HttpServlet {
         String forwardPage = checkInsertUser(user, request, session);
 
         response.sendRedirect(forwardPage);
-//        RequestDispatcher rd = request.getRequestDispatcher(forwardPage);
-//        rd.forward(request, response);
     }
 
     /**

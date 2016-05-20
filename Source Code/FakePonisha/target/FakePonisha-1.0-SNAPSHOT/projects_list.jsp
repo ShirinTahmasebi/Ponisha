@@ -23,20 +23,20 @@
         <div style="height:50px;"></div>
         <div style="margin:20px auto" class="container" >
             <div class="table-responsive">
-                <table id="myTable"class="table hover" collapsing="0" width="100%" >
+                <table id="projctsTable"class="table hover" collapsing="0" width="100%" >
                     <thead>
                         <tr>
                             <th style="text-align:right; padding-right:25px;">نام&nbspپروژه</th>
                             <th style="text-align:right; padding-right:25px">کارفرما</th>
                             <th style="text-align:right; padding-right:25px">مهارت&nbspهای&nbspمورد&nbspنیاز</th>
                             <th style="text-align:right; padding-right:25px">پایان</th>
+                            <th style="display:none;"></th>
                         </tr>
                     </thead>
                     <tbody>
-                        <% 
-                        ProjectDao projectDao = new ProjectDaoImplementation();
-                        List<Project> projects = projectDao.getAllProjects();
-                        
+                        <%                            ProjectDao projectDao = new ProjectDaoImplementation();
+                            List<Project> projects = projectDao.getAllProjects();
+
                             for (Project project : projects) {
                         %>
                         <tr>
@@ -44,21 +44,35 @@
                             <td><%=project.getUserCreator().getUsername()%></td>
                             <td><%=project.getNeededSkills()%></td>
                             <td><%=project.getDeadline()%></td>
+                            <td style="display:none;"><%=project.getProjectId()%></td>
                         </tr>
-                          
+
                         <%}%>
-                        </tbody>
+                    </tbody>
                 </table>
             </div>
         </div>
         <script type="text/javascript">
             $(document).ready(function () {
-                var table = $("#myTable").DataTable({
-                    "language": {"url": "https://cdn.datatables.net/plug-ins/1.10.7/i18n/Persian.json"}
-                });
-                $("#myTable").on("click", "tbody tr", function () {
-                    window.location.href = "project_details.jsp";
-                });
+                var table = document.getElementById("projctsTable");
+                var tbody = table.getElementsByTagName("tbody")[0];
+                tbody.onclick = function (e) {
+                    e = e || window.event;
+                    var data = [];
+                    var target = e.srcElement || e.target;
+                    while (target && target.nodeName !== "TR") {
+                        target = target.parentNode;
+                    }
+                    var cell4 = "";
+                    if (target) {
+                        var cells = target.getElementsByTagName("td");
+                        for (var i = 0; i < cells.length; i++) {
+                            data.push(cells[i].innerHTML);
+                        }
+                        cell4 = cells[4].innerHTML;
+                    }
+                    window.location.href = "project_details.html?projectId=" + cell4;
+                };
             });
         </script>
     </body>
