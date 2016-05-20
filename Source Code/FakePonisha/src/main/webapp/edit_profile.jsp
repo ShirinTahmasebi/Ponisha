@@ -1,165 +1,169 @@
-
-
 <!DOCTYPE html>
 <html >
-  <head>
-    <link rel="stylesheet" type="text/css" href="css/edit_profile_style.css">
-    <link rel="stylesheet" type="text/css" href="css/projects_list_admin_style.css">
-  
-    <link rel='stylesheet prefetch' href='css/bootstrap.min.css'>
-    <link rel="stylesheet" href="css/projects_list_admin_style.css">
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/edit_profile_style.css">
+        <link rel="stylesheet" type="text/css" href="css/projects_list_admin_style.css">
 
-  	<script type="text/javascript" src="js/jquery-latest.min.js"></script>
-    
-	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+        <link rel='stylesheet prefetch' href='css/bootstrap.min.css'>
+        <link rel="stylesheet" href="css/projects_list_admin_style.css">
 
-      <%@ page 
-language="java"
-contentType="text/html; charset=UTF-8"
-pageEncoding="UTF-8"
-%>
-    
-  </head>
+        <script type="text/javascript" src="js/jquery-latest.min.js"></script>
 
-  <body>
-<%@ include file="menu.jsp" %> 
-  <div id="form-div">
-    <form class="form" id="form1"  role="form" method="post">
-      <div class = "container" dir="rtl">
-		<div class = "row" >
-			<div class = "col-md-9 col-sm-9 col-xs-9">
-				<p class="text" >
-        			<input name="deadline" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input"  id="deadline" value="شیرین طهماسبی" >
-				</p>
-      		</div>
-			<div class = "col-md-3 col-sm-3 col-xs-3 lables">نام و نام خانوادگی:</div>
-		</div>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 
-		<hr>
+        <%@ page 
+            language="java"
+            contentType="text/html; charset=UTF-8"
+            pageEncoding="UTF-8"
+            %>
 
-		<div class = "row" >
-			<div class = "col-md-9 col-sm-9 col-xs-9">
-				<p class="text" >
-        			<input name="deadline" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input"  id="deadline" value="tahmasebi_shirin@yahoo.com" />
-				</p>
-      		</div>
-			<div class = "col-md-3 col-sm-3 col-xs-3 lables">آدرس ایمیل::</div>
-		</div>
+    </head>
 
-		<hr>
+    <body>
+        <%@ include file="menu.jsp" %> 
+        <div id="form-div">
+            <form class="form" id="form1"  role="form" method="post">
+                <div class = "container" dir="rtl">
+                    <div class = "row" >
+                        <div class = "col-md-9 col-sm-9 col-xs-9">
+                            <p class="text" >
+                                <input name="deadline" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input"  id="deadline" value="شیرین طهماسبی" >
+                            </p>
+                        </div>
+                        <div class = "col-md-3 col-sm-3 col-xs-3 lables">نام و نام خانوادگی:</div>
+                    </div>
 
-		<div class = "row" >
-			<div class = "col-md-6 col-sm-6 col-xs-6"></div>
-			<div class = "col-md-3 col-sm-3 col-xs-3">
-				<select class="form-control">
-    				<option value="undefined">نامشخص</option>
-    				<option value="female">زن</option>
-    				<option value="male">مرد</option>
-				</select>
-      		</div>
-			<div class = "col-md-3 col-sm-3 col-xs-3 lables">جنسیت:</div>
-		</div>
+                    <hr>
 
-		<hr>
+                    <div class = "row" >
+                        <div class = "col-md-9 col-sm-9 col-xs-9">
+                            <p class="text" >
+                                <input name="deadline" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input"  id="deadline" value="tahmasebi_shirin@yahoo.com" />
+                            </p>
+                        </div>
+                        <div class = "col-md-3 col-sm-3 col-xs-3 lables">آدرس ایمیل::</div>
+                    </div>
 
-		
-		<div class = "row" >
-			<div class = "col-md-9 col-sm-9 col-xs-9">
-				<p class="text" >
-        			<input name="deadline" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input"  id="deadline" value="تهران" />
-				</p>
-      		</div>
-			<div class = "col-md-3 col-sm-3 col-xs-3 lables">شهر:</div>
-		</div>
+                    <hr>
 
-<hr>
-		<div class = "row" >
-			<div class = "col-md-9 col-sm-9 col-xs-9">
-				<p class="text" >
-        			<input name="deadline" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input"  id="deadline" placeholder="برای مثال 12 بهمن 95" value="31 شهریور 1373" />
-				</p>
-      		</div>
-			<div class = "col-md-3 col-sm-3 col-xs-3 lables">تاریخ تولد:</div>
-		</div>
+                    <div class = "row" >
+                        <div class = "col-md-6 col-sm-6 col-xs-6"></div>
+                        <div class = "col-md-3 col-sm-3 col-xs-3">
+                            <select class="form-control">
+                                <option value="undefined">نامشخص</option>
+                                <option value="female">زن</option>
+                                <option value="male">مرد</option>
+                            </select>
+                        </div>
+                        <div class = "col-md-3 col-sm-3 col-xs-3 lables">جنسیت:</div>
+                    </div>
 
-		<hr>
-	
+                    <hr>
 
-		
-			<div id="table" class="table-editable">
-    
-    			<table class="table" dir="rtl">
-      				<tr>
-        				<th>عنوان مهارت</th>
-        				<th>میزان تسلط</th>
-        				<th>توضیحات</th>
-                		<th><span class="table-add glyphicon glyphicon-plus"></span></th>
-        			</tr>
-      				<tr>
-        				<td contenteditable="true">برنامه نویسی اندروید</td>
-        				<td contenteditable="true" style = "padding:10px;">
-        					<select class="form-control">
-    							<option value="undefined">نامشخص</option>
-    							<option value="low">کم</option>
-    							<option value="middle"  selected="selected">متوسط</option>
-    							<option value="high">زیاد</option>
-							</select>
-						</td>
-        				<td contenteditable="true">مدرک مجتمع فنی تایستان سال 94</td>
-        				<td><span class="table-remove glyphicon glyphicon-minus"></span></td>
-        			</tr>
-      				<!-- This is our clonable table line -->
-      				<tr class="hide">
-        				<td contenteditable="true">عنوان مهارت</td>
-        				<td contenteditable="true" style = "padding:10px;">
-        					<select class="form-control">
-    							<option value="undefined">نامشخص</option>
-    							<option value="low">کم</option>
-    							<option value="middle">متوسط</option>
-    							<option value="high">زیاد</option>
-							</select>
-						</td>
-        				<td contenteditable="true">-</td>
-        				<td><span class="table-remove glyphicon glyphicon-minus"></span></td>
-      				</tr>
-    			</table>
-  			</div>
-		
-<hr>
-		<div class = "row" >
-			<div class = "col-md-9 col-sm-9 col-xs-9">
-				<p class="text" >
-        			
-        			<textarea name="text" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="توضیحات لازم در مورد رزومه خود را میتوانید اینجا وارد کنید. مثلا نام دانشگاه و ..."></textarea>
-				</p>
-      		</div>
-			<div class = "col-md-3 col-sm-3 col-xs-3 lables">توضیحات شما:</div>
-		</div>
 
-		<div class = "row" >
-			<div class = "col-md-4 col-sm-4 col-xs-4 lables">
-				<div class="submit" >
-        			<input type="submit" value="اعمال تغییرات" id="button-red"/>
-        			<div class="ease"></div>
-      			</div>
-      		</div>
-			<div class = "col-md-4 col-sm-4 col-xs-4"/>
-			
-		</div>
-		
-	</div>
-      
-      
-      
-      
-    </form>
-  </div>
-    
-    
-		<script src='js/bootstrap.min.js'></script>
+                    <div class = "row" >
+                        <div class = "col-md-9 col-sm-9 col-xs-9">
+                            <p class="text" >
+                                <input name="deadline" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input"  id="deadline" value="تهران" />
+                            </p>
+                        </div>
+                        <div class = "col-md-3 col-sm-3 col-xs-3 lables">شهر:</div>
+                    </div>
 
-        <script src="js/projects_list_admin_functions.js"></script>
-    
-  </body>
+                    <hr>
+                    <div class = "row" >
+                        <div class = "col-md-9 col-sm-9 col-xs-9">
+                            <p class="text" >
+                                <input name="deadline" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input"  id="deadline" placeholder="برای مثال 12 بهمن 95" value="31 شهریور 1373" />
+                            </p>
+                        </div>
+                        <div class = "col-md-3 col-sm-3 col-xs-3 lables">تاریخ تولد:</div>
+                    </div>
+
+                    <hr>
+
+
+
+                    <div id="table" class="table-editable">
+
+                        <table class="table" dir="rtl">
+                            <tr>
+                                <th>عنوان مهارت</th>
+                                <th>میزان تسلط</th>
+                                <th>توضیحات</th>
+                                <th><span id="additem" onclick="openResumeEditor()" class="table-add glyphicon glyphicon-plus"></span></th>
+                            </tr>
+                            <tr>
+                                <td contenteditable="true">برنامه نویسی اندروید</td>
+                                <td contenteditable="true" style = "padding:10px;">
+                                    <select class="form-control">
+                                        <option value="undefined">نامشخص</option>
+                                        <option value="low">کم</option>
+                                        <option value="middle"  selected="selected">متوسط</option>
+                                        <option value="high">زیاد</option>
+                                    </select>
+                                </td>
+                                <td contenteditable="true">مدرک مجتمع فنی تایستان سال 94</td>
+                                <td><span  class="table-remove glyphicon glyphicon-minus"></span></td>
+                            </tr>
+                            <!--                             This is our clonable table line 
+                                                        <tr class="hide hiddenrow">
+                                                            <td id= "field1" contenteditable="true">عنوان مهارت</td>
+                                                            <td id= "field2" contenteditable="true" style = "padding:10px;">
+                                                                <select class="form-control">
+                                                                    <option value="undefined">نامشخص</option>
+                                                                    <option value="low">کم</option>
+                                                                    <option value="middle">متوسط</option>
+                                                                    <option value="high">زیاد</option>
+                                                                </select>
+                                                            </td>
+                                                            <td id= "field3" contenteditable="true">-</td>
+                                                            <td><span class="table-remove glyphicon glyphicon-minus"></span></td>
+                                                        </tr>-->
+                        </table>
+                    </div>
+
+                    <hr>
+                    <div class = "row" >
+                        <div class = "col-md-9 col-sm-9 col-xs-9">
+                            <p class="text" >
+
+                                <textarea name="text" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="توضیحات لازم در مورد رزومه خود را میتوانید اینجا وارد کنید. مثلا نام دانشگاه و ..."></textarea>
+                            </p>
+                        </div>
+                        <div class = "col-md-3 col-sm-3 col-xs-3 lables">توضیحات شما:</div>
+                    </div>
+
+                    <div class = "row" >
+                        <div class = "col-md-4 col-sm-4 col-xs-4 lables">
+                            <div class="submit" >
+                                <input type="submit" value="اعمال تغییرات" id="button-red"/>
+                                <div class="ease"></div>
+                            </div>
+                        </div>
+                        <div class = "col-md-4 col-sm-4 col-xs-4"/>
+
+                    </div>
+
+                </div>
+
+
+
+
+            </form>
+        </div>
+
+
+        <script src='js/bootstrap.min.js'></script>
+
+        <script>
+
+                                    function openResumeEditor() {
+                                        window.location.replace("add_resume_item.jsp");
+                                    }
+        </script>
+        <!--<script src="js/projects_list_admin_functions.js"></script>-->
+
+    </body>
 </html>
- 
+

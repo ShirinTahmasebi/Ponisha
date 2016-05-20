@@ -38,6 +38,16 @@ create table project(
     primary key (projectId)
 ) charset = utf8;
 
+create table resumeItem(
+	itemId INTEGER NOT NULL AUTO_INCREMENT,
+	itemName nvarchar(100) not null,
+    itemLevel nvarchar(50) not null,
+    itemDescription nvarchar(255),
+    resumeId INTEGER NOT NULL,
+    constraint resumeIdFK foreign key (resumeId) references resume (resumeId),
+    primary key (itemId)
+)charset = utf8;
+
 -- CREATE TABLE createdProjects (
 -- 	projectId INTEGER NOT NULL, 
 --     userId INTEGER NOT NULL UNIQUE,
