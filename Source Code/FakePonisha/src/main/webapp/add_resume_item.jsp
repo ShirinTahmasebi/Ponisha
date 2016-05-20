@@ -17,12 +17,12 @@
     <body>
         <%@ include file="menu.jsp" %> 
         <div id="form-div">
-            <form class="form" id="form1"  role="form" method="post" action="CreateProjectController">
+            <form class="form" id="form1"  role="form" method="post" action="CreateResumeItemController">
                 <div class = "container" dir="rtl">
                     <div class = "row" >
                         <div class = "col-md-9 col-sm-9 col-xs-9">
                             <p class="text" >
-                                <input name="skillName" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="عنوان مهارت مورد نظر شما" id="deadline" />
+                                <input name="itemName" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="عنوان مهارت مورد نظر شما" id="deadline" />
                             </p>
                         </div>
                         <div class = "col-md-3 col-sm-3 col-xs-3 lables">نام مهارت مورد نظر:</div>
@@ -33,7 +33,7 @@
                     <div class = "row" >
                         <div class = "col-md-9 col-sm-9 col-xs-9">
                             <p class="text" >
-                                <input name="level" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="مبتدی متوسط ویا حرفه ای" id="deadline" />
+                                <input name="itemLevel" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="مبتدی متوسط ویا حرفه ای" id="deadline" />
                             </p>
                         </div>
                         <div class = "col-md-3 col-sm-3 col-xs-3 lables">سطح توانایی شما: </div>
@@ -47,7 +47,7 @@
                         <div class = "col-md-9 col-sm-9 col-xs-9">
                             <p class="text" >
 
-                                <textarea name="description" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="توضیحاتی که به روشن شدن محتوای این آیتم کمک میکند را بنویسید"></textarea>
+                                <textarea name="itemDescription" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="توضیحاتی که به روشن شدن محتوای این آیتم کمک میکند را بنویسید"></textarea>
                             </p>
                         </div>
                         <div class = "col-md-3 col-sm-3 col-xs-3 lables">توضیحات شما:</div>

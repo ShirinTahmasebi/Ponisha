@@ -22,6 +22,21 @@ public class Tag {
     final public static String PROJECT_ID = "projectId";
 
     /*
+     resume model fields
+     */
+    final public static String RESUME = "resume";
+    final public static String RESUME_ID = "resumeId";
+
+    /*
+     resumeItem model fields
+     */
+    final public static String RESUME_ITEM = "resumeItem";
+    final public static String RESUME_ITEM_ID = "itemId";
+    final public static String RESUME_ITEM_NAME = "itemName";
+    final public static String RESUME_ITEM_LEVEL = "itemLevel";
+    final public static String RESUME_ITEM_DESCIRPTION = "itemDescription";
+
+    /*
      Page names strings
      */
     final public static String LOGIN_PAGE = "login.jsp";
@@ -31,5 +46,5 @@ public class Tag {
     final public static String PROJECT_DETAILS = "project_details.jsp";
 
     final public static String PERSISTANCE_UNIT_NAME = "UserService";
-    
+
 }
