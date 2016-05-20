@@ -2,6 +2,8 @@ package ir.ac.sbu.fakeponisha.business;
 
 import ir.ac.sbu.fakeponisha.model.ResumeItem;
 import ir.ac.sbu.fakeponisha.model.User;
+import ir.ac.sbu.fakeponisha.persistance.ResumeItemDao;
+import ir.ac.sbu.fakeponisha.persistance.ResumeItemDaoImplementation;
 import ir.ac.sbu.fakeponisha.utils.Helper;
 import ir.ac.sbu.fakeponisha.utils.Response;
 import ir.ac.sbu.fakeponisha.utils.Tag;
@@ -66,10 +68,9 @@ public class CreateResumeItemController extends HttpServlet {
                 || resumeItem.getItemDescription() == null) {
             return Tag.ADD_RESUME_ITEM_PAGE;
         }
-//        ProjectDao projectDao = new ProjectDaoImplementation();
-//        projectDao.insertProject(project);
-//        //َ Update user attribute in session
-//        session.setAttribute(Tag.USER, user);
+
+        ResumeItemDao resumeItemDao = new ResumeItemDaoImplementation();
+        resumeItemDao.insertResumeItem(resumeItem);
         return Tag.FIRST_PAGE;
     }
 }

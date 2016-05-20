@@ -3,9 +3,11 @@
 /Users/apple/Desktop/Ponishaa/Source Code/FakePonisha/src/main/java/ir/ac/sbu/fakeponisha/business/ProjectDetailController.java
 /Users/apple/Desktop/Ponishaa/Source Code/FakePonisha/src/main/java/ir/ac/sbu/fakeponisha/model/Project.java
 /Users/apple/Desktop/Ponishaa/Source Code/FakePonisha/src/main/java/ir/ac/sbu/fakeponisha/persistance/ResumeDao.java
+/Users/apple/Desktop/Ponishaa/Source Code/FakePonisha/src/main/java/ir/ac/sbu/fakeponisha/persistance/ResumeItemDaoImplementation.java
 /Users/apple/Desktop/Ponishaa/Source Code/FakePonisha/src/main/java/ir/ac/sbu/fakeponisha/utils/Response.java
 /Users/apple/Desktop/Ponishaa/Source Code/FakePonisha/src/main/java/ir/ac/sbu/fakeponisha/business/RegisterController.java
 /Users/apple/Desktop/Ponishaa/Source Code/FakePonisha/src/main/java/ir/ac/sbu/fakeponisha/model/User.java
+/Users/apple/Desktop/Ponishaa/Source Code/FakePonisha/src/main/java/ir/ac/sbu/fakeponisha/persistance/ResumeItemDao.java
 /Users/apple/Desktop/Ponishaa/Source Code/FakePonisha/src/main/java/ir/ac/sbu/fakeponisha/persistance/ProjectDao.java
 /Users/apple/Desktop/Ponishaa/Source Code/FakePonisha/src/main/java/ir/ac/sbu/fakeponisha/business/CreateProjectController.java
 /Users/apple/Desktop/Ponishaa/Source Code/FakePonisha/src/main/java/ir/ac/sbu/fakeponisha/business/CreateResumeItemController.java
