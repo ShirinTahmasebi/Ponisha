@@ -56,8 +56,6 @@ public class CreateProjectController extends HttpServlet {
         project.setUserCreator(user);
         response.setContentType("text/html;charset=UTF-8");
         String forwardPage = checkInsertProject(project, user, session);
-//        user.setGender(GenderType.getGenderCode(GenderType.Gender.FEMALE));
-//        userDao.updateUser(user);
         response.sendRedirect(forwardPage);
     }
 
@@ -79,7 +77,7 @@ public class CreateProjectController extends HttpServlet {
                 || project.getNeededSkills() == null
                 || project.getUserCreator() == null
                 || session.getAttribute(Tag.USER) == null) {
-            return Tag.CREATE_NEW_PROJECT;
+            return Tag.CREATE_NEW_PROJECT_PAGE;
         }
         ProjectDao projectDao = new ProjectDaoImplementation();
         projectDao.insertProject(project);

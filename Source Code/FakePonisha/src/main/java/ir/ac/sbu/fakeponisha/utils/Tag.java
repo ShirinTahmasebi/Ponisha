@@ -26,6 +26,7 @@ public class Tag {
      */
     final public static String RESUME = "resume";
     final public static String RESUME_ID = "resumeId";
+    final public static String RESUME_DESCRIPTION = "resumeDescription";
 
     /*
      resumeItem model fields
@@ -42,9 +43,11 @@ public class Tag {
     final public static String LOGIN_PAGE = "login.jsp";
     final public static String REGISTER_PAGE = "register.jsp";
     final public static String FIRST_PAGE = "first_page.jsp";
-    final public static String CREATE_NEW_PROJECT = "creat_new_project.jsp";
-    final public static String PROJECT_DETAILS = "project_details.jsp";
+    final public static String CREATE_NEW_PROJECT_PAGE = "creat_new_project.jsp";
+    final public static String PROJECT_DETAILS_PAGE = "project_details.jsp";
+    final public static String ADD_RESUME_ITEM_PAGE = "add_resume_item.jsp";
 
     final public static String PERSISTANCE_UNIT_NAME = "UserService";
+    
 
 }

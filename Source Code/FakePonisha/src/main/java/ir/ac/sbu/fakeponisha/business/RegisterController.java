@@ -1,6 +1,9 @@
 package ir.ac.sbu.fakeponisha.business;
 
+import ir.ac.sbu.fakeponisha.model.Resume;
 import ir.ac.sbu.fakeponisha.model.User;
+import ir.ac.sbu.fakeponisha.persistance.ResumeDao;
+import ir.ac.sbu.fakeponisha.persistance.ResumeDaoImplementation;
 import ir.ac.sbu.fakeponisha.persistance.UserDao;
 import ir.ac.sbu.fakeponisha.persistance.UserDaoImplementation;
 import ir.ac.sbu.fakeponisha.utils.GenderType;
@@ -69,6 +72,11 @@ public class RegisterController extends HttpServlet {
         UserDao userDao = new UserDaoImplementation();
         User u = userDao.getUser(user.getUsername());
         if (u == null) {
+            Resume resume = new Resume();
+            resume.setResumeDescription("User Resume");
+            ResumeDao resumeDao = new ResumeDaoImplementation();
+            resumeDao.insertResume(resume);
+            user.setResumeId(resume);
             userDao.insertUser(user);
             return true;
         }

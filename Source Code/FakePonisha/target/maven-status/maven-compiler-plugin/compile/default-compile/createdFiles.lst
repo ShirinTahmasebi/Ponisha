@@ -5,9 +5,11 @@ ir/ac/sbu/fakeponisha/utils/GenderType.class
 ir/ac/sbu/fakeponisha/persistance/UserDaoImplementation.class
 ir/ac/sbu/fakeponisha/model/Resume.class
 ir/ac/sbu/fakeponisha/utils/Tag.class
+ir/ac/sbu/fakeponisha/persistance/ResumeDao.class
 ir/ac/sbu/fakeponisha/model/User.class
 ir/ac/sbu/fakeponisha/business/ProjectDetailController.class
 ir/ac/sbu/fakeponisha/model/Project_.class
+ir/ac/sbu/fakeponisha/persistance/ResumeDaoImplementation.class
 ir/ac/sbu/fakeponisha/persistance/ProjectDao.class
 ir/ac/sbu/fakeponisha/utils/Regex.class
 ir/ac/sbu/fakeponisha/utils/Helper.class

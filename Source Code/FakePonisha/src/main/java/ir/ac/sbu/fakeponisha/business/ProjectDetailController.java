@@ -66,7 +66,7 @@ public class ProjectDetailController extends HttpServlet {
             request.setAttribute(Tag.PROJECT, project);
         }
 //        response.sendRedirect(Tag.PROJECT_DETAILS);
-        request.getRequestDispatcher(Tag.PROJECT_DETAILS).forward(request, response);
+        request.getRequestDispatcher(Tag.PROJECT_DETAILS_PAGE).forward(request, response);
         
     }
 
