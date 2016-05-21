@@ -82,6 +82,9 @@ public class RequestProjectController extends HttpServlet {
         requestedProjectsDao.insertRequest(requestedProjects);
         
         processRequest(request, response);
+        
+        //َ Update user attribute in session
+        session.setAttribute(Tag.USER, requestedProjects.getUserId());
     }
 
     /**

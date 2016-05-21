@@ -71,7 +71,7 @@
                         }
                         cell4 = cells[4].innerHTML;
                     }
-                    window.location.href = "project_details.html?projectId=" + cell4;
+                    window.location.href = "helper.html?projectId=" + cell4;
                 };
             });
         </script>

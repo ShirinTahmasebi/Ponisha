@@ -182,7 +182,12 @@
                                 <td><%=requestProj.getPrice()%></td>
                                 <td><%=requestProj.getDeadline()%></td>
                                 <td><%=requestProj.getDescription()%></td>
-                                <td><a href="user_profile.jsp" class="btn btn-default" role="button">مشاهده پروفایل کارجو</a></td>
+                                <td><%
+                                    out.println("<a href='user_profile_editable.jsp?userId="
+                                            + requestProj.getUserId().getUserId()
+                                            + "'"
+                                            + "class='btn btn-default' role='button'>مشاهده پروفایل کارجو</a>");
+                                    %></td>
                                 <td style="display:none;"><%=requestProj.getUserId().getUserId()%></td>
                             </tr>
 

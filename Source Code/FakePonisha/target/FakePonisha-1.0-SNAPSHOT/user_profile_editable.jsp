@@ -1,3 +1,6 @@
+<%@page import="ir.ac.sbu.fakeponisha.persistance.UserDaoImplementation"%>
+<%@page import="ir.ac.sbu.fakeponisha.persistance.UserDao"%>
+<%@page import="ir.ac.sbu.fakeponisha.model.RequestedProjects"%>
 <%@page import="ir.ac.sbu.fakeponisha.model.Project"%>
 <%@page import="ir.ac.sbu.fakeponisha.utils.GenderType"%>
 <html>
@@ -9,13 +12,23 @@
 
     <body style= " text-align: justify; text-justify: inter-word;">
         <%@ include file="menu.jsp" %> 
-        <%User user = (User) session.getAttribute(Tag.USER);%>
+        <%            User user;
+            boolean isEditable = false;
+            if (request.getParameter(Tag.USER_ID) != null) {
+                user = (User) request.getAttribute(Tag.USER);
+                isEditable = false;
+            } else {
+                user = (User) session.getAttribute(Tag.USER);
+                isEditable = true;
+            }%>
 
         <div class = "container" dir="rtl">
+            <%if (isEditable) {%>
             <hr>
             <div class = "row" >
                 <a href="edit_profile.jsp" class="btn  editProfileBtn btn-block" role="button">ویرایش پروفایل</a>
             </div>
+            <%}%>
             <hr>
             <p style = "font-size:30px;">اطلاعات شخصی:</p>
             <hr>
@@ -27,10 +40,16 @@
                                 + user.getUserFirstLastName()
                                 + "</div>"
                         );
-                    } else {
+                    } else if (isEditable) {
                         out.println(
                                 "<div class = 'col-md-9 col-sm-9 col-xs-9'>"
                                 + "این فیلد پر نشده است. میتوانید آن را ویرایش کنید"
+                                + "</div>"
+                        );
+                    } else {
+                        out.println(
+                                "<div class = 'col-md-9 col-sm-9 col-xs-9'>"
+                                + "این فیلد پر نشده است"
                                 + "</div>"
                         );
                     }
@@ -48,10 +67,16 @@
                                 + user.getEmail()
                                 + "</div>"
                         );
-                    } else {
+                    } else if (isEditable) {
                         out.println(
                                 "<div class = 'col-md-9 col-sm-9 col-xs-9'>"
                                 + "این فیلد پر نشده است. میتوانید آن را ویرایش کنید"
+                                + "</div>"
+                        );
+                    } else {
+                        out.println(
+                                "<div class = 'col-md-9 col-sm-9 col-xs-9'>"
+                                + "این فیلد پر نشده است"
                                 + "</div>"
                         );
                     }
@@ -69,10 +94,16 @@
                                 + GenderType.getGenderString(user.getGender())
                                 + "</div>"
                         );
-                    } else {
+                    } else if (isEditable) {
                         out.println(
                                 "<div class = 'col-md-9 col-sm-9 col-xs-9'>"
                                 + "این فیلد پر نشده است. میتوانید آن را ویرایش کنید"
+                                + "</div>"
+                        );
+                    } else {
+                        out.println(
+                                "<div class = 'col-md-9 col-sm-9 col-xs-9'>"
+                                + "این فیلد پر نشده است"
                                 + "</div>"
                         );
                     }
@@ -90,10 +121,16 @@
                                 + user.getCity()
                                 + "</div>"
                         );
-                    } else {
+                    } else if (isEditable) {
                         out.println(
                                 "<div class = 'col-md-9 col-sm-9 col-xs-9'>"
                                 + "این فیلد پر نشده است. میتوانید آن را ویرایش کنید"
+                                + "</div>"
+                        );
+                    } else {
+                        out.println(
+                                "<div class = 'col-md-9 col-sm-9 col-xs-9'>"
+                                + "این فیلد پر نشده است"
                                 + "</div>"
                         );
                     }
@@ -111,10 +148,16 @@
                                 + user.getBirthDate()
                                 + "</div>"
                         );
-                    } else {
+                    } else if (isEditable) {
                         out.println(
                                 "<div class = 'col-md-9 col-sm-9 col-xs-9'>"
                                 + "این فیلد پر نشده است. میتوانید آن را ویرایش کنید"
+                                + "</div>"
+                        );
+                    } else {
+                        out.println(
+                                "<div class = 'col-md-9 col-sm-9 col-xs-9'>"
+                                + "این فیلد پر نشده است"
                                 + "</div>"
                         );
                     }
@@ -125,8 +168,13 @@
             <hr>
 
             <div class = "row" >
-                <a href="creat_new_project.jsp" class="btn btn-info col-md-2 col-sm-2 col-xs-2" role="button">ایجاد شرکت جدید</a>
+                <% if (isEditable) {%>
+                <a href="creat_new_company_page.jsp" class="btn btn-info col-md-2 col-sm-2 col-xs-2" role="button">ایجاد شرکت جدید</a>
                 <div class = "col-md-7 col-sm-7 col-xs-7"></div>
+                <%
+                } else { %>
+                <div class = "col-md-9 col-sm-9 col-xs-9"></div>
+                <%}%>
                 <div class = "col-md-3 col-sm-3 col-xs-3"><p style = "font-size:30px;">شرکت های ثبت شده:</p></div>
             </div>
 
@@ -165,8 +213,13 @@
             <hr>
 
             <div class = "row" >
+                <% if (isEditable) {%>
                 <a href="creat_new_project.jsp" class="btn btn-info col-md-2 col-sm-2 col-xs-2" role="button">ایجاد پروژه جدید</a>
                 <div class = "col-md-7 col-sm-7 col-xs-7"></div>
+                <%
+                } else { %>
+                <div class = "col-md-9 col-sm-9 col-xs-9"></div>
+                <%}%>
                 <div class = "col-md-3 col-sm-3 col-xs-3"><p style = "font-size:30px;">پروژه های ثبت شده:</p></div>
             </div>
 
@@ -183,7 +236,7 @@
                         </thead>  
                         <tbody>  
                             <%
-                                if (user != null && user.getProjectList() != null && user.getProjectList().size()>0) {
+                                if (user != null && user.getProjectList() != null && user.getProjectList().size() > 0) {
                                     for (Project proj : user.getProjectList()) {
 
                                         out.println("<tr>");
@@ -203,12 +256,13 @@
 
                                 } else {
                                     out.println(
-                                            "<div class = 'col-md-9 col-sm-9 col-xs-9'>"
+                                            "<tr>"
                                             + "پروژه ای ایجاد نشده است. برای ایجاد آن روی دکمه روبرو کلیک کنید."
-                                            + "</div>"
+                                            + "</tr>"
                                     );
                                 }
                             %>
+
                         </tbody>  
                     </table>  
                 </div>
@@ -232,112 +286,38 @@
                                 <th style="text-align:right;">مبلغ</th>  
                                 <th style="text-align:right;">زمان&nbsp;انجام</th>  
                                 <th style="text-align:right;">توضیحات</th>  
+                                <th style="display:none;"></th>
                             </tr>  
                         </thead>  
                         <tbody>  
-                            <tr>  
-                                <td>شیرین طهماسبی</td>  
-                                <td>دویست میلیون ریال</td>  
-                                <td>تا پایان آذر 95</td>  
-                                <td>انجام با بهترین کیفیت</td> 
-                            </tr> 
-                            
-                            <tr>  
-                                <td>شیرین طهماسبی</td>  
-                                <td>دویست میلیون ریال</td>  
-                                <td>تا پایان آذر 95</td>  
-                                <td>انجام با بهترین کیفیت</td> 
-                            </tr>  
-                            <tr>  
-                                <td>شیرین طهماسبی</td>  
-                                <td>دویست میلیون ریال</td>  
-                                <td>تا پایان آذر 95</td>  
-                                <td>انجام با بهترین کیفیت</td> 
-                            </tr>  
-                            <tr>  
-                                <td>شیرین طهماسبی</td>  
-                                <td>دویست میلیون ریال</td>  
-                                <td>تا پایان آذر 95</td>  
-                                <td>انجام با بهترین کیفیت</td> 
-                            </tr>  
-                            <tr>  
-                                <td>شیرین طهماسبی</td>  
-                                <td>دویست میلیون ریال</td>  
-                                <td>تا پایان آذر 95</td>  
-                                <td>انجام با بهترین کیفیت</td> 
-                            </tr>  
-                            <tr>  
-                                <td>شیرین طهماسبی</td>  
-                                <td>دویست میلیون ریال</td>  
-                                <td>تا پایان آذر 95</td>  
-                                <td>انجام با بهترین کیفیت</td> 
-                            </tr>  
-                            <tr>  
-                                <td>شیرین طهماسبی</td>  
-                                <td>دویست میلیون ریال</td>  
-                                <td>تا پایان آذر 95</td>  
-                                <td>انجام با بهترین کیفیت</td> 
-                            </tr>  
-                            <tr>  
-                                <td>شیرین طهماسبی</td>  
-                                <td>دویست میلیون ریال</td>  
-                                <td>تا پایان آذر 95</td>  
-                                <td>انجام با بهترین کیفیت</td> 
-                            </tr>  
-                            <tr>  
-                                <td>شیرین طهماسبی</td>  
-                                <td>دویست میلیون ریال</td>  
-                                <td>تا پایان آذر 95</td>  
-                                <td>انجام با بهترین کیفیت</td> 
-                            </tr>  
-                            <tr>  
-                                <td>شیرین طهماسبی</td>  
-                                <td>دویست میلیون ریال</td>  
-                                <td>تا پایان آذر 95</td>  
-                                <td>انجام با بهترین کیفیت</td> 
-                            </tr>  
-                            <tr>  
-                                <td>شیرین طهماسبی</td>  
-                                <td>دویست میلیون ریال</td>  
-                                <td>تا پایان آذر 95</td>  
-                                <td>انجام با بهترین کیفیت</td> 
-                            </tr>  
-                            <tr>  
-                                <td>شیرین طهماسبی</td>  
-                                <td>دویست میلیون ریال</td>  
-                                <td>تا پایان آذر 95</td>  
-                                <td>انجام با بهترین کیفیت</td> 
-                            </tr>  
-                            <tr>  
-                                <td>شیرین طهماسبی</td>  
-                                <td>دویست میلیون ریال</td>  
-                                <td>تا پایان آذر 95</td>  
-                                <td>انجام با بهترین کیفیت</td> 
-                            </tr>  
-                            <tr>  
-                                <td>شیرین طهماسبی</td>  
-                                <td>دویست میلیون ریال</td>  
-                                <td>تا پایان آذر 95</td>  
-                                <td>انجام با بهترین کیفیت</td> 
-                            </tr>  
-                            <tr>  
-                                <td>شیرین طهماسبی</td>  
-                                <td>دویست میلیون ریال</td>  
-                                <td>تا پایان آذر 95</td>  
-                                <td>انجام با بهترین کیفیت</td> 
-                            </tr>  
-                            <tr>  
-                                <td>شیرین طهماسبی</td>  
-                                <td>دویست میلیون ریال</td>  
-                                <td>تا پایان آذر 95</td>  
-                                <td>انجام با بهترین کیفیت</td> 
-                            </tr>  
-                            <tr>  
-                                <td>شیرین طهماسبی</td>  
-                                <td>دویست میلیون ریال</td>  
-                                <td>تا پایان آذر 95</td>  
-                                <td>انجام با بهترین کیفیت</td> 
-                            </tr>  
+
+                            <%
+                                if (user != null && user.getRequestedProjectsList() != null && user.getRequestedProjectsList().size() > 0) {
+                                    for (RequestedProjects requestedProject : user.getRequestedProjectsList()) {%>
+                            <tr>
+                                <td><%=(requestedProject.getUserId().getUserFirstLastName() != null) ? requestedProject.getUserId().getUserFirstLastName() : requestedProject.getUserId().getUsername()%></td>
+                                <td><%=requestedProject.getPrice()%></td>
+                                <td><%=requestedProject.getDeadline()%></td>
+                                <td><%=requestedProject.getDescription()%></td>
+                                <td style="display:none;"><%=requestedProject.getProjectId().getProjectId()%></td>
+                            </tr>
+
+                            <%}
+                            } else {
+                            %>
+
+
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>پبشنهادی ایجاد نشده است.</td> 
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <%
+                                }
+                            %>
+
                         </tbody>  
                     </table>  
                 </div>
@@ -472,19 +452,42 @@
 
 
 
-        <script type='text/javascript'>
+        <!--        <script type='text/javascript'>
+        
+                    $(document).ready(function () {
+        
+        
+                        $('#projctsTable').on('click', 'tbody tr', function () {
+                            window.location.href = "project_details.jsp";
+                        });
+                    });
+        
+        
+                </script>-->
 
+        <script type="text/javascript">
             $(document).ready(function () {
-
-
-                $('#projctsTable').on('click', 'tbody tr', function () {
-                    window.location.href = "project_details.jsp";
-                });
+                var table = document.getElementById("myTable");
+                var tbody = table.getElementsByTagName("tbody")[0];
+                tbody.onclick = function (e) {
+                    e = e || window.event;
+                    var data = [];
+                    var target = e.srcElement || e.target;
+                    while (target && target.nodeName !== "TR") {
+                        target = target.parentNode;
+                    }
+                    var cell4 = "";
+                    if (target) {
+                        var cells = target.getElementsByTagName("td");
+                        for (var i = 0; i < cells.length; i++) {
+                            data.push(cells[i].innerHTML);
+                        }
+                        cell4 = cells[4].innerHTML;
+                    }
+                    window.location.href = "helper.html?projectId=" + cell4;
+                };
             });
-
-
         </script>
-
     </body>
 </html>
 

@@ -6,6 +6,7 @@ public class Tag {
      user model fields
      */
     final public static String USER = "user";
+    final public static String USER_ID = "userId";
     final public static String USER_NAME = "userName";
     final public static String USER_PASSWORD = "password";
     final public static String USER_EMAIL = "email";
@@ -54,6 +55,7 @@ public class Tag {
     final public static String CREATE_NEW_PROJECT_PAGE = "creat_new_project.jsp";
     final public static String PROJECT_DETAILS_PAGE = "project_details.jsp";
     final public static String ADD_RESUME_ITEM_PAGE = "add_resume_item.jsp";
+    final public static String USER_EDITABLE_PROFILE_PAGE = "user_profile_editable.jsp";
 
     final public static String PERSISTANCE_UNIT_NAME = "UserService";
 

@@ -25,7 +25,18 @@ public class UserDaoImplementation implements UserDao {
 
     @Override
     public User getUser(int userId) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        EntityManagerFactory emf;
+        emf = Persistence.createEntityManagerFactory(Tag.PERSISTANCE_UNIT_NAME);
+        em = emf.createEntityManager();
+        TypedQuery<User> user = em.createNamedQuery("User.findByUserId", User.class);
+        user.setParameter(1, userId);
+        try {
+            return user.getSingleResult();
+        } catch (NoResultException e ) {
+            return null;
+        }catch(NonUniqueResultException e){
+            return user.getResultList().get(0);
+        }
     }
 
     @Override
