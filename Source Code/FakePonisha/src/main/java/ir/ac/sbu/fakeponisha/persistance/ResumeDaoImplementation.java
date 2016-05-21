@@ -51,7 +51,6 @@ public class ResumeDaoImplementation implements ResumeDao {
 
     @Override
     public void updateResume(Resume resume) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     private EntityManager getEntityManager(EntityManagerFactory emf) {

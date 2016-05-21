@@ -1,3 +1,5 @@
+<%@page import="ir.ac.sbu.fakeponisha.model.ResumeItem"%>
+<%@page import="java.util.List"%>
 <!DOCTYPE html>
 <html >
     <head>
@@ -21,13 +23,15 @@
 
     <body>
         <%@ include file="menu.jsp" %> 
+        <% User user = (User) session.getAttribute(Tag.USER);%>
         <div id="form-div">
             <form class="form" id="form1"  role="form" method="post" action="EditProfileController">
                 <div class = "container" dir="rtl">
                     <div class = "row" >
                         <div class = "col-md-9 col-sm-9 col-xs-9">
                             <p class="text" >
-                                <input name="userFirstLastName" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input"  id="deadline" value="شیرین طهماسبی" >
+                                <input name="userFirstLastName" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input"  id="deadline" 
+                                       value="<%=(user.getUserFirstLastName() == null) ? " " : user.getUserFirstLastName()%>" >
                             </p>
                         </div>
                         <div class = "col-md-3 col-sm-3 col-xs-3 lables">نام و نام خانوادگی:</div>
@@ -38,10 +42,11 @@
                     <div class = "row" >
                         <div class = "col-md-9 col-sm-9 col-xs-9">
                             <p class="text" >
-                                <input name="email" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input"  id="deadline" value="tahmasebi_shirin@yahoo.com" />
+                                <input name="email" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input"  id="deadline" 
+                                       value="<%=(user.getEmail()== null) ? " " : user.getEmail()%>" />
                             </p>
                         </div>
-                        <div class = "col-md-3 col-sm-3 col-xs-3 lables">آدرس ایمیل::</div>
+                        <div class = "col-md-3 col-sm-3 col-xs-3 lables">آدرس ایمیل:</div>
                     </div>
 
                     <hr>
@@ -64,7 +69,8 @@
                     <div class = "row" >
                         <div class = "col-md-9 col-sm-9 col-xs-9">
                             <p class="text" >
-                                <input name="city" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input"  id="deadline" value="تهران" />
+                                <input name="city" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input"  id="deadline" 
+                                       value="<%= (user.getCity() ==  null)? "": user.getCity()%>" />
                             </p>
                         </div>
                         <div class = "col-md-3 col-sm-3 col-xs-3 lables">شهر:</div>
@@ -74,7 +80,8 @@
                     <div class = "row" >
                         <div class = "col-md-9 col-sm-9 col-xs-9">
                             <p class="text" >
-                                <input name="birthDate" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input"  id="deadline" placeholder="برای مثال 12 بهمن 95" value="31 شهریور 1373" />
+                                <input name="birthDate" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input"  id="deadline" placeholder="برای مثال 12 بهمن 95" 
+                                       value="<%=(user.getBirthDate() == null)? "": user.getBirthDate()%>" />
                             </p>
                         </div>
                         <div class = "col-md-3 col-sm-3 col-xs-3 lables">تاریخ تولد:</div>
@@ -93,19 +100,18 @@
                                 <th>توضیحات</th>
                                 <th><span id="additem" onclick="openResumeEditor()" class="table-add glyphicon glyphicon-plus"></span></th>
                             </tr>
+                            <%
+                                List<ResumeItem> resumeItems = user.getResumeId().getResumeItemList();
+
+                                for (ResumeItem resumeItem : resumeItems) {
+                            %>
                             <tr>
-                                <td contenteditable="true">برنامه نویسی اندروید</td>
-                                <td contenteditable="true" style = "padding:10px;">
-                                    <select class="form-control">
-                                        <option value="undefined">نامشخص</option>
-                                        <option value="low">کم</option>
-                                        <option value="middle"  selected="selected">متوسط</option>
-                                        <option value="high">زیاد</option>
-                                    </select>
-                                </td>
-                                <td contenteditable="true">مدرک مجتمع فنی تایستان سال 94</td>
+                                <td><%=resumeItem.getItemName()%></td>
+                                <td style = "padding:10px;"><%=resumeItem.getItemLevel()%></td>
+                                <td><%=resumeItem.getItemDescription()%></td>
                                 <td><span  class="table-remove glyphicon glyphicon-minus"></span></td>
                             </tr>
+                            <%}%>
                         </table>
                     </div>
 
@@ -114,7 +120,9 @@
                         <div class = "col-md-9 col-sm-9 col-xs-9">
                             <p class="text" >
 
-                                <textarea name="text" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="توضیحات لازم در مورد رزومه خود را میتوانید اینجا وارد کنید. مثلا نام دانشگاه و ..."></textarea>
+                                <textarea name="resumeDescription" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="توضیحات لازم در مورد رزومه خود را میتوانید اینجا وارد کنید. مثلا نام دانشگاه و ...">
+                                    <%=user.getResumeId().getResumeDescription()%>
+                                </textarea>
                             </p>
                         </div>
                         <div class = "col-md-3 col-sm-3 col-xs-3 lables">توضیحات شما:</div>

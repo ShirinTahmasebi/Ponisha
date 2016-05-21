@@ -1,3 +1,5 @@
+<%@page import="java.util.List"%>
+<%@page import="ir.ac.sbu.fakeponisha.model.ResumeItem"%>
 <%@page import="ir.ac.sbu.fakeponisha.persistance.UserDaoImplementation"%>
 <%@page import="ir.ac.sbu.fakeponisha.persistance.UserDao"%>
 <%@page import="ir.ac.sbu.fakeponisha.model.RequestedProjects"%>
@@ -305,8 +307,6 @@
                             <%}
                             } else {
                             %>
-
-
                             <tr>
                                 <td></td>
                                 <td></td>
@@ -334,7 +334,7 @@
             <hr>
 
             <div class = "row" >
-                <div class = "col-md-9 col-sm-9 col-xs-9">این قسمت برای توضیحاتیست که خود کاربر میخواهد ارائه دهد. برای مثال اگر مقام یا جایگاه خاصی را در مسابقه یا المپیاد کسب کرده است. یا اگر مایل به ذکر مدرک تحصیلی و دانشگاه خود میباشد و ...</div>
+                <div class = "col-md-9 col-sm-9 col-xs-9"><%=user.getResumeId().getResumeDescription()%></div>
                 <div class = "col-md-3 col-sm-3 col-xs-3">توضیحات:</div>
             </div>
             <hr>
@@ -357,91 +357,18 @@
                             </tr>  
                         </thead>  
                         <tbody>  
-                            <tr>  
-                                <td>برنامه نویسی اندروید</td>  
-                                <td>متوسط</td>  
-                                <td>مدرک مجتمع فنی تابستان سال 94</td>  
-                            </tr>  
-                            <tr>  
-                                <td>برنامه نویسی اندروید</td>  
-                                <td>متوسط</td>  
-                                <td>مدرک مجتمع فنی تابستان سال 94</td>  
-                            </tr>  
-                            <tr>  
-                                <td>برنامه نویسی اندروید</td>  
-                                <td>متوسط</td>  
-                                <td>مدرک مجتمع فنی تابستان سال 94</td>  
-                            </tr>  
-                            <tr>  
-                                <td>برنامه نویسی اندروید</td>  
-                                <td>متوسط</td>  
-                                <td>مدرک مجتمع فنی تابستان سال 94</td>  
-                            </tr>  
-                            <tr>  
-                                <td>برنامه نویسی اندروید</td>  
-                                <td>متوسط</td>  
-                                <td>مدرک مجتمع فنی تابستان سال 94</td>  
-                            </tr> 
-                            <tr>  
-                                <td>برنامه نویسی اندروید</td>  
-                                <td>متوسط</td>  
-                                <td>مدرک مجتمع فنی تابستان سال 94</td>  
-                            </tr>  
-                            <tr>  
-                                <td>برنامه نویسی اندروید</td>  
-                                <td>متوسط</td>  
-                                <td>مدرک مجتمع فنی تابستان سال 94</td>  
-                            </tr> 
-                            <tr>  
-                                <td>برنامه نویسی اندروید</td>  
-                                <td>متوسط</td>  
-                                <td>مدرک مجتمع فنی تابستان سال 94</td>  
-                            </tr> 
-                            <tr>  
-                                <td>برنامه نویسی اندروید</td>  
-                                <td>متوسط</td>  
-                                <td>مدرک مجتمع فنی تابستان سال 94</td>  
-                            </tr>  
-                            <tr>  
-                                <td>برنامه نویسی اندروید</td>  
-                                <td>متوسط</td>  
-                                <td>مدرک مجتمع فنی تابستان سال 94</td>  
-                            </tr>  
-                            <tr>  
-                                <td>برنامه نویسی اندروید</td>  
-                                <td>متوسط</td>  
-                                <td>مدرک مجتمع فنی تابستان سال 94</td>  
-                            </tr>  
-                            <tr>  
-                                <td>برنامه نویسی اندروید</td>  
-                                <td>متوسط</td>  
-                                <td>مدرک مجتمع فنی تابستان سال 94</td>  
+                            <%
+                                List<ResumeItem> resumeItems = user.getResumeId().getResumeItemList();
+
+                                for (ResumeItem resumeItem : resumeItems) {
+                            %>
+                            <tr>
+                                <td><%=resumeItem.getItemName()%></td>
+                                <td style = "padding:10px;"><%=resumeItem.getItemLevel()%></td>
+                                <td><%=resumeItem.getItemDescription()%></td>
+                                <td><span  class="table-remove glyphicon glyphicon-minus"></span></td>
                             </tr>
-                            <tr>  
-                                <td>برنامه نویسی اندروید</td>  
-                                <td>متوسط</td>  
-                                <td>مدرک مجتمع فنی تابستان سال 94</td>  
-                            </tr> 
-                            <tr>  
-                                <td>برنامه نویسی اندروید</td>  
-                                <td>متوسط</td>  
-                                <td>مدرک مجتمع فنی تابستان سال 94</td>  
-                            </tr> 
-                            <tr>  
-                                <td>برنامه نویسی اندروید</td>  
-                                <td>متوسط</td>  
-                                <td>مدرک مجتمع فنی تابستان سال 94</td>  
-                            </tr>  
-                            <tr>  
-                                <td>برنامه نویسی اندروید</td>  
-                                <td>متوسط</td>  
-                                <td>مدرک مجتمع فنی تابستان سال 94</td>  
-                            </tr>
-                            <tr>  
-                                <td>برنامه نویسی اندروید</td>  
-                                <td>متوسط</td>  
-                                <td>مدرک مجتمع فنی تابستان سال 94</td>  
-                            </tr>
+                            <%}%>
                         </tbody>  
                     </table>  
                 </div>

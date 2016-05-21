@@ -4,6 +4,8 @@ import ir.ac.sbu.fakeponisha.model.ResumeItem;
 import ir.ac.sbu.fakeponisha.model.User;
 import ir.ac.sbu.fakeponisha.persistance.ResumeItemDao;
 import ir.ac.sbu.fakeponisha.persistance.ResumeItemDaoImplementation;
+import ir.ac.sbu.fakeponisha.persistance.UserDao;
+import ir.ac.sbu.fakeponisha.persistance.UserDaoImplementation;
 import ir.ac.sbu.fakeponisha.utils.Helper;
 import ir.ac.sbu.fakeponisha.utils.Response;
 import ir.ac.sbu.fakeponisha.utils.Tag;
@@ -46,6 +48,12 @@ public class CreateResumeItemController extends HttpServlet {
         resumeItem.setResumeId(((User) session.getAttribute(Tag.USER)).getResumeId());
 
         String forwardPage = checkInsertResumeItem(resumeItem);
+        UserDao userDao = new UserDaoImplementation();
+        
+        //Update User in session
+        User user = userDao.getUserByResumeId(((User) session.getAttribute(Tag.USER)).getResumeId().getResumeId());
+        session.setAttribute(Tag.USER, user);
+        
         response.sendRedirect(forwardPage);
 
     }
@@ -71,6 +79,7 @@ public class CreateResumeItemController extends HttpServlet {
 
         ResumeItemDao resumeItemDao = new ResumeItemDaoImplementation();
         resumeItemDao.insertResumeItem(resumeItem);
-        return Tag.FIRST_PAGE;
+       
+        return Tag.USER_EDITABLE_PROFILE_PAGE;
     }
 }

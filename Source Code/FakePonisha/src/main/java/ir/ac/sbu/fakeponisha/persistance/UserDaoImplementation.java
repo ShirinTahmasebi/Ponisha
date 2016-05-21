@@ -56,6 +56,7 @@ public class UserDaoImplementation implements UserDao {
         oldUser.setBirthDate(newUser.getBirthDate());
         oldUser.setCity(newUser.getCity());
         oldUser.setEmail(newUser.getEmail());
+        oldUser.getResumeId().setResumeDescription(newUser.getResumeId().getResumeDescription());
         em.getTransaction().commit();
     }
 
@@ -65,6 +66,20 @@ public class UserDaoImplementation implements UserDao {
         em = getEntityManager(emf);
         TypedQuery<User> user = em.createNamedQuery("User.findByUsername", User.class);
         user.setParameter(1, userName);
+        try {
+            return user.getSingleResult();
+        } catch (NoResultException e) {
+            return null;
+        } catch (NonUniqueResultException e) {
+            return user.getResultList().get(0);
+        }
+    }
+    @Override
+    public User getUserByResumeId(int resumeId) {
+        EntityManager em;
+        em = getEntityManager(emf);
+        TypedQuery<User> user = em.createNamedQuery("User.findByResumeId", User.class);
+        user.setParameter(1, resumeId);
         try {
             return user.getSingleResult();
         } catch (NoResultException e) {

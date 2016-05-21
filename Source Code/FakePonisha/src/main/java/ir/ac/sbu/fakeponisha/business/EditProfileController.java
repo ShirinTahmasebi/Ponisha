@@ -43,9 +43,12 @@ public class EditProfileController extends HttpServlet {
         newUser.setEmail(Helper.getRequestString(request, Tag.USER_EMAIL));
         newUser.setCity(Helper.getRequestString(request, Tag.USER_CITY));
         newUser.setBirthDate(Helper.getRequestString(request, Tag.USER_BIRTH_DATE));
+        newUser.getResumeId().setResumeDescription(Helper.getRequestString(request, Tag.RESUME_DESCRIPTION));
 
         UserDao userDao = new UserDaoImplementation();
         userDao.updateUser((User) session.getAttribute(Tag.USER), newUser);
+        
+        session.setAttribute(Tag.USER, newUser);
 
         response.sendRedirect(Tag.FIRST_PAGE);
 

@@ -24,7 +24,7 @@ public interface UserDao {
      * @return
      */
     public User getUser(String userName);
-    
+
     /**
      *
      * @param userName
@@ -42,6 +42,14 @@ public interface UserDao {
     /**
      *
      * @param user
+     * @param oldUser
      */
     public void updateUser(User user, User oldUser);
+
+    /**
+     *
+     * @param resumeId
+     * @return
+     */
+    public User getUserByResumeId(int resumeId);
 }
