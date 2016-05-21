@@ -79,8 +79,8 @@ public class User implements Serializable {
     @Size(min = 1, max = 50)
     @Column(name = "email")
     private String email;
-    @OneToOne(cascade = CascadeType.ALL, mappedBy = "userId")
-    private RequestedProjects requestedProjects;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "userId")
+    private List<RequestedProjects> requestedProjectsList;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "userCreator")
     private List<Project> projectList;
     @OneToOne(mappedBy = "userOwner")
@@ -167,12 +167,13 @@ public class User implements Serializable {
         this.email = email;
     }
 
-    public RequestedProjects getRequestedProjects() {
-        return requestedProjects;
+    @XmlTransient
+    public List<RequestedProjects> getRequestedProjectsList() {
+        return requestedProjectsList;
     }
 
-    public void setRequestedProjects(RequestedProjects requestedProjects) {
-        this.requestedProjects = requestedProjects;
+    public void setRequestedProjectsList(List<RequestedProjects> requestedProjectsList) {
+        this.requestedProjectsList = requestedProjectsList;
     }
 
     @XmlTransient

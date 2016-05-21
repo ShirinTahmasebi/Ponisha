@@ -9,17 +9,17 @@ import javax.persistence.metamodel.ListAttribute;
 import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
 
-@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2016-05-21T09:49:43")
+@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2016-05-21T10:02:37")
 @StaticMetamodel(User.class)
 public class User_ { 
 
     public static volatile ListAttribute<User, Project> projectList;
     public static volatile SingularAttribute<User, String> password;
     public static volatile SingularAttribute<User, Integer> gender;
+    public static volatile ListAttribute<User, RequestedProjects> requestedProjectsList;
     public static volatile SingularAttribute<User, Resume> resumeId;
     public static volatile SingularAttribute<User, String> city;
     public static volatile SingularAttribute<User, String> userFirstLastName;
-    public static volatile SingularAttribute<User, RequestedProjects> requestedProjects;
     public static volatile SingularAttribute<User, Company> company;
     public static volatile SingularAttribute<User, Integer> userId;
     public static volatile SingularAttribute<User, String> birthDate;

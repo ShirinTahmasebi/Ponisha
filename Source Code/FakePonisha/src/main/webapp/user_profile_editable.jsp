@@ -183,7 +183,7 @@
                         </thead>  
                         <tbody>  
                             <%
-                                if (user != null && user.getProjectList() != null) {
+                                if (user != null && user.getProjectList() != null && user.getProjectList().size()>0) {
                                     for (Project proj : user.getProjectList()) {
 
                                         out.println("<tr>");
@@ -240,7 +240,8 @@
                                 <td>دویست میلیون ریال</td>  
                                 <td>تا پایان آذر 95</td>  
                                 <td>انجام با بهترین کیفیت</td> 
-                            </tr>  
+                            </tr> 
+                            
                             <tr>  
                                 <td>شیرین طهماسبی</td>  
                                 <td>دویست میلیون ریال</td>  
