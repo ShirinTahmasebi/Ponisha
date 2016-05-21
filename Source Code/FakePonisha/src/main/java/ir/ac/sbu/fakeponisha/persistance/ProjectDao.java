@@ -6,7 +6,6 @@
 package ir.ac.sbu.fakeponisha.persistance;
 
 import ir.ac.sbu.fakeponisha.model.Project;
-import ir.ac.sbu.fakeponisha.model.User;
 import java.util.List;
 
 /**

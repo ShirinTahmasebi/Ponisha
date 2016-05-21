@@ -43,5 +43,5 @@ public interface UserDao {
      *
      * @param user
      */
-    public void updateUser(User user);
+    public void updateUser(User user, User oldUser);
 }

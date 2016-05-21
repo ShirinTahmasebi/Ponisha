@@ -10,6 +10,9 @@ public class Tag {
     final public static String USER_NAME = "userName";
     final public static String USER_PASSWORD = "password";
     final public static String USER_EMAIL = "email";
+    final public static String USER_FIRST_LAST_NAME = "userFirstLastName";
+    final public static String USER_BIRTH_DATE = "birthDate";
+    final public static String USER_CITY = "city";
 
     /*
      project model fields
@@ -57,6 +60,8 @@ public class Tag {
     final public static String ADD_RESUME_ITEM_PAGE = "add_resume_item.jsp";
     final public static String USER_EDITABLE_PROFILE_PAGE = "user_profile_editable.jsp";
     final public static String CREATE_RECOMMENDATION_PAGE = "recommendation.jsp";
+    final public static String EDIT_PROFILE_PAGE = "edit_profile.jsp";
 
     final public static String PERSISTANCE_UNIT_NAME = "UserService";
+
 }
