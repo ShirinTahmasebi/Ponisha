@@ -22,33 +22,6 @@ import javax.servlet.http.HttpSession;
 @WebServlet(name = "RequestProjectController", urlPatterns = {"/RequestProjectController"})
 public class RequestProjectController extends HttpServlet {
 
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet RequestProjectController</title>");
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet RequestProjectController at " + request.getContextPath() + "</h1>");
-            out.println("<h1>Servlet RequestProjectController at " + request.getParameter(Tag.PROJECT_ID) + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
-        }
-    }
-
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>POST</code> method.
@@ -66,25 +39,20 @@ public class RequestProjectController extends HttpServlet {
         String deadline = Helper.getRequestString(request, Tag.REQUESTED_PROJECTS_DEADLINE);
         String price = Helper.getRequestString(request, Tag.REQUESTED_PROJECTS_PRICE);
         String description = Helper.getRequestString(request, Tag.REQUESTED_PROJECTS_DESCRIPTION);
-        
+
         ProjectDao projectDao = new ProjectDaoImplementation();
         Project project = projectDao.getProject(Integer.parseInt(request.getParameter(Tag.PROJECT_ID)));
-        
-        
+
         RequestedProjects requestedProjects = new RequestedProjects();
         requestedProjects.setDeadline(deadline);
         requestedProjects.setPrice(price);
         requestedProjects.setDescription(description);
         requestedProjects.setProjectId(project);
-        requestedProjects.setUserId(((User)session.getAttribute(Tag.USER)));
-        
-        RequestedProjectsDao requestedProjectsDao = new RequestedProjectsDaoImplementation();
-        requestedProjectsDao.insertRequest(requestedProjects);
-        
-        processRequest(request, response);
-        
-        //َ Update user attribute in session
-        session.setAttribute(Tag.USER, requestedProjects.getUserId());
+        requestedProjects.setUserId(((User) session.getAttribute(Tag.USER)));
+
+        response.setContentType("text/html;charset=UTF-8");
+        String forwardPage = checkInsertRequest(requestedProjects, request, session);
+        response.sendRedirect(forwardPage);
     }
 
     /**
@@ -96,5 +64,22 @@ public class RequestProjectController extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
+
+    private String checkInsertRequest(RequestedProjects requestedProjects, HttpServletRequest request, HttpSession session) {
+        if (requestedProjects == null
+                || requestedProjects.getDeadline() == null
+                || requestedProjects.getDescription() == null
+                || requestedProjects.getPrice() == null
+                || requestedProjects.getProjectId() == null
+                || requestedProjects.getUserId() == null
+                || session.getAttribute(Tag.USER) == null) {
+            return Tag.CREATE_RECOMMENDATION_PAGE + "?projectId=" + request.getParameter(Tag.PROJECT_ID);
+        }
+        RequestedProjectsDao requestedProjectsDao = new RequestedProjectsDaoImplementation();
+        requestedProjectsDao.insertRequest(requestedProjects);
+        //َ Update user attribute in session
+        session.setAttribute(Tag.USER, requestedProjects.getUserId());
+        return Tag.FIRST_PAGE;
+    }
 
 }
