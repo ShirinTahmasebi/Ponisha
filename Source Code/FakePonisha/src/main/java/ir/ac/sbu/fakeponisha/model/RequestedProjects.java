@@ -6,14 +6,20 @@
 package ir.ac.sbu.fakeponisha.model;
 
 import java.io.Serializable;
-import javax.persistence.EmbeddedId;
+import javax.persistence.Basic;
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
@@ -25,58 +31,105 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "RequestedProjects.findAll", query = "SELECT r FROM RequestedProjects r"),
-    @NamedQuery(name = "RequestedProjects.findByProjectId", query = "SELECT r FROM RequestedProjects r WHERE r.requestedProjectsPK.projectId = :projectId"),
-    @NamedQuery(name = "RequestedProjects.findByUserId", query = "SELECT r FROM RequestedProjects r WHERE r.requestedProjectsPK.userId = :userId")})
+    @NamedQuery(name = "RequestedProjects.findByRequestId", query = "SELECT r FROM RequestedProjects r WHERE r.requestId = :requestId"),
+    @NamedQuery(name = "RequestedProjects.findByPrice", query = "SELECT r FROM RequestedProjects r WHERE r.price = :price"),
+    @NamedQuery(name = "RequestedProjects.findByDeadline", query = "SELECT r FROM RequestedProjects r WHERE r.deadline = :deadline"),
+    @NamedQuery(name = "RequestedProjects.findByDescription", query = "SELECT r FROM RequestedProjects r WHERE r.description = :description")})
 public class RequestedProjects implements Serializable {
     private static final long serialVersionUID = 1L;
-    @EmbeddedId
-    protected RequestedProjectsPK requestedProjectsPK;
-    @JoinColumn(name = "projectId", referencedColumnName = "projectId", insertable = false, updatable = false)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Basic(optional = false)
+    @Column(name = "requestId")
+    private Integer requestId;
+    @Basic(optional = false)
+    @NotNull
+    @Size(min = 1, max = 100)
+    @Column(name = "price")
+    private String price;
+    @Basic(optional = false)
+    @NotNull
+    @Size(min = 1, max = 50)
+    @Column(name = "deadline")
+    private String deadline;
+    @Basic(optional = false)
+    @NotNull
+    @Size(min = 1, max = 255)
+    @Column(name = "description")
+    private String description;
+    @JoinColumn(name = "projectId", referencedColumnName = "projectId")
     @ManyToOne(optional = false)
-    private Project project;
-    @JoinColumn(name = "userId", referencedColumnName = "userId", insertable = false, updatable = false)
+    private Project projectId;
+    @JoinColumn(name = "userId", referencedColumnName = "userId")
     @OneToOne(optional = false)
-    private User user;
+    private User userId;
 
     public RequestedProjects() {
     }
 
-    public RequestedProjects(RequestedProjectsPK requestedProjectsPK) {
-        this.requestedProjectsPK = requestedProjectsPK;
+    public RequestedProjects(Integer requestId) {
+        this.requestId = requestId;
     }
 
-    public RequestedProjects(int projectId, int userId) {
-        this.requestedProjectsPK = new RequestedProjectsPK(projectId, userId);
+    public RequestedProjects(Integer requestId, String price, String deadline, String description) {
+        this.requestId = requestId;
+        this.price = price;
+        this.deadline = deadline;
+        this.description = description;
     }
 
-    public RequestedProjectsPK getRequestedProjectsPK() {
-        return requestedProjectsPK;
+    public Integer getRequestId() {
+        return requestId;
     }
 
-    public void setRequestedProjectsPK(RequestedProjectsPK requestedProjectsPK) {
-        this.requestedProjectsPK = requestedProjectsPK;
+    public void setRequestId(Integer requestId) {
+        this.requestId = requestId;
     }
 
-    public Project getProject() {
-        return project;
+    public String getPrice() {
+        return price;
     }
 
-    public void setProject(Project project) {
-        this.project = project;
+    public void setPrice(String price) {
+        this.price = price;
     }
 
-    public User getUser() {
-        return user;
+    public String getDeadline() {
+        return deadline;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setDeadline(String deadline) {
+        this.deadline = deadline;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Project getProjectId() {
+        return projectId;
+    }
+
+    public void setProjectId(Project projectId) {
+        this.projectId = projectId;
+    }
+
+    public User getUserId() {
+        return userId;
+    }
+
+    public void setUserId(User userId) {
+        this.userId = userId;
     }
 
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (requestedProjectsPK != null ? requestedProjectsPK.hashCode() : 0);
+        hash += (requestId != null ? requestId.hashCode() : 0);
         return hash;
     }
 
@@ -87,7 +140,7 @@ public class RequestedProjects implements Serializable {
             return false;
         }
         RequestedProjects other = (RequestedProjects) object;
-        if ((this.requestedProjectsPK == null && other.requestedProjectsPK != null) || (this.requestedProjectsPK != null && !this.requestedProjectsPK.equals(other.requestedProjectsPK))) {
+        if ((this.requestId == null && other.requestId != null) || (this.requestId != null && !this.requestId.equals(other.requestId))) {
             return false;
         }
         return true;
@@ -95,7 +148,7 @@ public class RequestedProjects implements Serializable {
 
     @Override
     public String toString() {
-        return "ir.ac.sbu.fakeponisha.model.RequestedProjects[ requestedProjectsPK=" + requestedProjectsPK + " ]";
+        return "ir.ac.sbu.fakeponisha.model.RequestedProjects[ requestId=" + requestId + " ]";
     }
     
 }

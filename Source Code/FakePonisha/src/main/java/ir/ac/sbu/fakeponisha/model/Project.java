@@ -71,7 +71,7 @@ public class Project implements Serializable {
     @Size(max = 255)
     @Column(name = "projectDescription")
     private String projectDescription;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "project")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "projectId")
     private List<RequestedProjects> requestedProjectsList;
     @JoinColumn(name = "userCreator", referencedColumnName = "userId")
     @ManyToOne(optional = false)

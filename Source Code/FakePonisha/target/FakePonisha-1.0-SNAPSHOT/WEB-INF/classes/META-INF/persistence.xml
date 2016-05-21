@@ -2,11 +2,11 @@
 <persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence                   http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
   <persistence-unit name="UserService" transaction-type="RESOURCE_LOCAL">
     <provider>org.hibernate.ejb.HibernatePersistence</provider>
-    <class>ir.ac.sbu.fakeponisha.model.User</class>
-    <class>ir.ac.sbu.fakeponisha.model.Resume</class>
-    <class>ir.ac.sbu.fakeponisha.model.Project</class>
     <class>ir.ac.sbu.fakeponisha.model.ResumeItem</class>
     <class>ir.ac.sbu.fakeponisha.model.RequestedProjects</class>
+    <class>ir.ac.sbu.fakeponisha.model.Project</class>
+    <class>ir.ac.sbu.fakeponisha.model.User</class>
+    <class>ir.ac.sbu.fakeponisha.model.Resume</class>
     <class>ir.ac.sbu.fakeponisha.model.Company</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/ponisha?zeroDateTimeBehavior=convertToNull&amp;useUnicode=true&amp;characterEncoding=UTF-8"/>

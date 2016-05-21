@@ -79,7 +79,7 @@ public class User implements Serializable {
     @Size(min = 1, max = 50)
     @Column(name = "email")
     private String email;
-    @OneToOne(cascade = CascadeType.ALL, mappedBy = "user")
+    @OneToOne(cascade = CascadeType.ALL, mappedBy = "userId")
     private RequestedProjects requestedProjects;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "userCreator")
     private List<Project> projectList;
