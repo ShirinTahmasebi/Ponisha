@@ -14,7 +14,7 @@ import javax.servlet.http.HttpSession;
 @WebServlet(urlPatterns = {"/LogoutController"})
 public class LogoutController extends HttpServlet {
 
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
+    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. doGet is implemented here to perform log out process!">
     /**
      * Handles the HTTP <code>GET</code> method.
      *
@@ -40,7 +40,7 @@ public class LogoutController extends HttpServlet {
      */
     @Override
     public String getServletInfo() {
-        return "his servlet is used to make user's session invalid in Ponisha site logout process.";
+        return "This servlet is used to make user's session invalid in Ponisha site logout process.";
     }// </editor-fold>
 
 }

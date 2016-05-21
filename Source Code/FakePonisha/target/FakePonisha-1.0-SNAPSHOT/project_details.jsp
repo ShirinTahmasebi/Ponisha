@@ -1,3 +1,5 @@
+<%@page import="ir.ac.sbu.fakeponisha.model.RequestedProjects"%>
+<%@page import="java.util.List"%>
 <%@page import="ir.ac.sbu.fakeponisha.model.Project"%>
 <!DOCTYPE html>
 <html>
@@ -166,128 +168,27 @@
                                 <th style="text-align:right;">زمان&nbsp;انجام</th>  
                                 <th style="text-align:right;">توضیحات</th> 
                                 <th style="text-align:right;"></th>  
+                                <th style="display: none;text-align:right;">userID!</th>  
                             </tr>  
                         </thead>  
                         <tbody>  
-                            <tr>  
-                                <td>شیرین طهماسبی</td>  
-                                <td>دویست میلیون ریال</td>  
-                                <td>تا پایان آذر 95</td>  
-                                <td>انجام با بهترین کیفیت</td> 
-                                <td><a href="user_profile.html" class="btn btn-default" role="button">مشاهده پروفایل کارجو</a></td>
-                            </tr>  
-                            <tr>  
-                                <td>شیرین طهماسبی</td>  
-                                <td>دویست میلیون ریال</td>  
-                                <td>تا پایان آذر 95</td>  
-                                <td>انجام با بهترین کیفیت</td> 
-                                <td><a href="user_profile.html" class="btn btn-default" role="button">مشاهده پروفایل کارجو</a></td>
-                            </tr>  
-                            <tr>  
-                                <td>شیرین طهماسبی</td>  
-                                <td>دویست میلیون ریال</td>  
-                                <td>تا پایان آذر 95</td>  
-                                <td>انجام با بهترین کیفیت</td> 
-                                <td><a href="user_profile.html" class="btn btn-default" role="button">مشاهده پروفایل کارجو</a></td>
-                            </tr>  
-                            <tr>  
-                                <td>شیرین طهماسبی</td>  
-                                <td>دویست میلیون ریال</td>  
-                                <td>تا پایان آذر 95</td>  
-                                <td>انجام با بهترین کیفیت</td> 
-                                <td><a href="user_profile.html" class="btn btn-default" role="button">مشاهده پروفایل کارجو</a></td>
-                            </tr>  
-                            <tr>  
-                                <td>شیرین طهماسبی</td>  
-                                <td>دویست میلیون ریال</td>  
-                                <td>تا پایان آذر 95</td>  
-                                <td>انجام با بهترین کیفیت</td> 
-                                <td><a href="user_profile.html" class="btn btn-default" role="button">مشاهده پروفایل کارجو</a></td>
-                            </tr>  
-                            <tr>  
-                                <td>شیرین طهماسبی</td>  
-                                <td>دویست میلیون ریال</td>  
-                                <td>تا پایان آذر 95</td>  
-                                <td>انجام با بهترین کیفیت</td> 
-                                <td><a href="user_profile.html" class="btn btn-default" role="button">مشاهده پروفایل کارجو</a></td>
-                            </tr>  
-                            <tr>  
-                                <td>شیرین طهماسبی</td>  
-                                <td>دویست میلیون ریال</td>  
-                                <td>تا پایان آذر 95</td>  
-                                <td>انجام با بهترین کیفیت</td> 
-                                <td><a href="user_profile.html" class="btn btn-default" role="button">مشاهده پروفایل کارجو</a></td>
-                            </tr>  
-                            <tr>  
-                                <td>شیرین طهماسبی</td>  
-                                <td>دویست میلیون ریال</td>  
-                                <td>تا پایان آذر 95</td>  
-                                <td>انجام با بهترین کیفیت</td> 
-                                <td><a href="user_profile.html" class="btn btn-default" role="button">مشاهده پروفایل کارجو</a></td>
-                            </tr>  
-                            <tr>  
-                                <td>شیرین طهماسبی</td>  
-                                <td>دویست میلیون ریال</td>  
-                                <td>تا پایان آذر 95</td>  
-                                <td>انجام با بهترین کیفیت</td> 
-                                <td><a href="user_profile.html" class="btn btn-default" role="button">مشاهده پروفایل کارجو</a></td>
-                            </tr>  
-                            <tr>  
-                                <td>شیرین طهماسبی</td>  
-                                <td>دویست میلیون ریال</td>  
-                                <td>تا پایان آذر 95</td>  
-                                <td>انجام با بهترین کیفیت</td> 
-                                <td><a href="user_profile.html" class="btn btn-default" role="button">مشاهده پروفایل کارجو</a></td>
-                            </tr>  
-                            <tr>  
-                                <td>شیرین طهماسبی</td>  
-                                <td>دویست میلیون ریال</td>  
-                                <td>تا پایان آذر 95</td>  
-                                <td>انجام با بهترین کیفیت</td> 
-                                <td><a href="user_profile.html" class="btn btn-default" role="button">مشاهده پروفایل کارجو</a></td>
-                            </tr>  
-                            <tr>  
-                                <td>شیرین طهماسبی</td>  
-                                <td>دویست میلیون ریال</td>  
-                                <td>تا پایان آذر 95</td>  
-                                <td>انجام با بهترین کیفیت</td> 
-                                <td><a href="user_profile.html" class="btn btn-default" role="button">مشاهده پروفایل کارجو</a></td>
-                            </tr>  
-                            <tr>  
-                                <td>شیرین طهماسبی</td>  
-                                <td>دویست میلیون ریال</td>  
-                                <td>تا پایان آذر 95</td>  
-                                <td>انجام با بهترین کیفیت</td> 
-                                <td><a href="user_profile.html" class="btn btn-default" role="button">مشاهده پروفایل کارجو</a></td>
-                            </tr>  
-                            <tr>  
-                                <td>شیرین طهماسبی</td>  
-                                <td>دویست میلیون ریال</td>  
-                                <td>تا پایان آذر 95</td>  
-                                <td>انجام با بهترین کیفیت</td> 
-                                <td><a href="user_profile.html" class="btn btn-default" role="button">مشاهده پروفایل کارجو</a></td>
-                            </tr>  
-                            <tr>  
-                                <td>شیرین طهماسبی</td>  
-                                <td>دویست میلیون ریال</td>  
-                                <td>تا پایان آذر 95</td>  
-                                <td>انجام با بهترین کیفیت</td> 
-                                <td><a href="user_profile.html" class="btn btn-default" role="button">مشاهده پروفایل کارجو</a></td>
-                            </tr>  
-                            <tr>  
-                                <td>شیرین طهماسبی</td>  
-                                <td>دویست میلیون ریال</td>  
-                                <td>تا پایان آذر 95</td>  
-                                <td>انجام با بهترین کیفیت</td> 
-                                <td><a href="user_profile.html" class="btn btn-default" role="button">مشاهده پروفایل کارجو</a></td>
-                            </tr>  
-                            <tr>  
-                                <td>شیرین طهماسبی</td>  
-                                <td>دویست میلیون ریال</td>  
-                                <td>تا پایان آذر 95</td>  
-                                <td>انجام با بهترین کیفیت</td> 
-                                <td><a href="user_profile.html" class="btn btn-default" role="button">مشاهده پروفایل کارجو</a></td>
-                            </tr>  
+                            <%
+                                List<RequestedProjects> requestedProjects = project.getRequestedProjectsList();
+
+                                for (RequestedProjects requestProj : requestedProjects) {
+                            %>
+                            <tr>
+                                <td><%=(requestProj.getUserId().getUserFirstLastName() != null) ? requestProj.getUserId().getUserFirstLastName() : requestProj.getUserId().getUsername()%></td>
+                                <td><%=requestProj.getPrice()%></td>
+                                <td><%=requestProj.getDeadline()%></td>
+                                <td><%=requestProj.getDescription()%></td>
+                                <td><a href="user_profile.jsp" class="btn btn-default" role="button">مشاهده پروفایل کارجو</a></td>
+                                <td style="display:none;"><%=requestProj.getUserId().getUserId()%></td>
+                            </tr>
+
+                            <%}%>
+
+
                         </tbody>  
                     </table>  
                 </div>

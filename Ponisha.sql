@@ -49,11 +49,15 @@ create table resumeItem(
 )charset = utf8;
 
 CREATE TABLE requestedProjects (
+	requestId INTEGER NOT NULL AUTO_INCREMENT,
 	projectId INTEGER NOT NULL, 
-    userId INTEGER NOT NULL UNIQUE,
+    userId INTEGER NOT NULL,
+    price varchar(100) not null,
+    deadline varchar(50) not null,
+    description varchar(255) not null,
 	CONSTRAINT projectIdFK FOREIGN KEY (projectId) REFERENCES project (projectId),
 	CONSTRAINT userIdFK FOREIGN KEY (userId) REFERENCES user (userId), 
-	PRIMARY KEY (projectId, userId)
+	PRIMARY KEY (requestId)
 ) charset = utf8;
 
 create table company(
