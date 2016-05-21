@@ -5,7 +5,6 @@
  */
 package ir.ac.sbu.fakeponisha.persistance;
 
-import ir.ac.sbu.fakeponisha.model.Project;
 import ir.ac.sbu.fakeponisha.model.Resume;
 import ir.ac.sbu.fakeponisha.utils.Tag;
 import java.util.List;
@@ -18,7 +17,7 @@ import javax.persistence.TypedQuery;
 
 public class ResumeDaoImplementation implements ResumeDao {
 
-    private static EntityManager em;
+    private EntityManagerFactory emf;
 
     @Override
     public List<Resume> getAllResumes() {
@@ -27,9 +26,8 @@ public class ResumeDaoImplementation implements ResumeDao {
 
     @Override
     public Resume getResume(int resumeId) {
-        EntityManagerFactory emf;
-        emf = Persistence.createEntityManagerFactory(Tag.PERSISTANCE_UNIT_NAME);
-        em = emf.createEntityManager();
+        EntityManager em;
+        em = getEntityManager(emf);
         TypedQuery<Resume> resume = em.createNamedQuery("Resume.findByResumeId", Resume.class);
         resume.setParameter(1, resumeId);
         try {
@@ -43,9 +41,8 @@ public class ResumeDaoImplementation implements ResumeDao {
 
     @Override
     public void insertResume(Resume resume) {
-        EntityManagerFactory emf;
-        emf = Persistence.createEntityManagerFactory(Tag.PERSISTANCE_UNIT_NAME);
-        em = emf.createEntityManager();
+        EntityManager em;
+        em = getEntityManager(emf);
         em.getTransaction().begin();
         em.persist(resume);
         em.getTransaction().commit();
@@ -57,4 +54,10 @@ public class ResumeDaoImplementation implements ResumeDao {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+    private EntityManager getEntityManager(EntityManagerFactory emf) {
+        if (emf == null) {
+            emf = Persistence.createEntityManagerFactory(Tag.PERSISTANCE_UNIT_NAME);
+        }
+        return emf.createEntityManager();
+    }
 }

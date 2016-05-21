@@ -18,7 +18,7 @@ import javax.persistence.Persistence;
  */
 public class ResumeItemDaoImplementation implements ResumeItemDao {
 
-    private static EntityManager em;
+    private EntityManagerFactory emf;
 
     @Override
     public List<ResumeItem> getAllResumeItems() {
@@ -32,9 +32,8 @@ public class ResumeItemDaoImplementation implements ResumeItemDao {
 
     @Override
     public void insertResumeItem(ResumeItem resumeItem) {
-        EntityManagerFactory emf;
-        emf = Persistence.createEntityManagerFactory(Tag.PERSISTANCE_UNIT_NAME);
-        em = emf.createEntityManager();
+        EntityManager em;
+        em = getEntityManager(emf);
         em.getTransaction().begin();
         em.persist(resumeItem);
         em.getTransaction().commit();
@@ -44,6 +43,13 @@ public class ResumeItemDaoImplementation implements ResumeItemDao {
     @Override
     public void updateResumeItem(ResumeItem resmueItem) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private EntityManager getEntityManager(EntityManagerFactory emf) {
+        if (emf == null) {
+            emf = Persistence.createEntityManagerFactory(Tag.PERSISTANCE_UNIT_NAME);
+        }
+        return emf.createEntityManager();
     }
 
 }

@@ -18,7 +18,7 @@ import javax.persistence.Persistence;
  */
 public class RequestedProjectsDaoImplementation implements RequestedProjectsDao {
 
-    EntityManager em;
+    private EntityManagerFactory emf;
 
     @Override
     public List<RequestedProjects> getAllRequests() {
@@ -32,9 +32,8 @@ public class RequestedProjectsDaoImplementation implements RequestedProjectsDao 
 
     @Override
     public void insertRequest(RequestedProjects request) {
-        EntityManagerFactory emf;
-        emf = Persistence.createEntityManagerFactory(Tag.PERSISTANCE_UNIT_NAME);
-        em = emf.createEntityManager();
+        EntityManager em;
+        em = getEntityManager(emf);
         em.getTransaction().begin();
         em.persist(request);
         em.getTransaction().commit();
@@ -43,6 +42,13 @@ public class RequestedProjectsDaoImplementation implements RequestedProjectsDao 
     @Override
     public void updateRequest(RequestedProjects requestedProjects) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    private EntityManager getEntityManager(EntityManagerFactory emf) {
+        if (emf == null) {
+            emf = Persistence.createEntityManagerFactory(Tag.PERSISTANCE_UNIT_NAME);
+        }
+        return emf.createEntityManager();
     }
 
 }

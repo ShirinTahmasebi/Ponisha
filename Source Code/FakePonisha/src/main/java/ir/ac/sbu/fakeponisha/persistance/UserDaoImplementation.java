@@ -16,9 +16,6 @@ public class UserDaoImplementation implements UserDao {
 
     @Override
     public List<User> getAllUsers() {
-//        EntityManager em;
-//        emf = Persistence.createEntityManagerFactory(Tag.PERSISTANCE_UNIT_NAME);
-//        em = emf.createEntityManager();
         EntityManager em;
         em = getEntityManager(emf);
         TypedQuery<User> allUsers = em.createNamedQuery("User.findAll", User.class);
@@ -27,9 +24,6 @@ public class UserDaoImplementation implements UserDao {
 
     @Override
     public User getUser(int userId) {
-//        EntityManagerFactory emf;
-//        emf = Persistence.createEntityManagerFactory(Tag.PERSISTANCE_UNIT_NAME);
-//        em = emf.createEntityManager();
         EntityManager em;
         em = getEntityManager(emf);
         TypedQuery<User> user = em.createNamedQuery("User.findByUserId", User.class);
@@ -45,9 +39,6 @@ public class UserDaoImplementation implements UserDao {
 
     @Override
     public void insertUser(User user) {
-//        EntityManagerFactory emf;
-//        emf = Persistence.createEntityManagerFactory(Tag.PERSISTANCE_UNIT_NAME);
-//        em = emf.createEntityManager();
         EntityManager em;
         em = getEntityManager(emf);
         em.getTransaction().begin();
@@ -70,9 +61,6 @@ public class UserDaoImplementation implements UserDao {
 
     @Override
     public User getUser(String userName) {
-//        EntityManagerFactory emf;
-//        emf = Persistence.createEntityManagerFactory(Tag.PERSISTANCE_UNIT_NAME);
-//        em = emf.createEntityManager();
         EntityManager em;
         em = getEntityManager(emf);
         TypedQuery<User> user = em.createNamedQuery("User.findByUsername", User.class);
@@ -88,9 +76,6 @@ public class UserDaoImplementation implements UserDao {
 
     @Override
     public User getUser(String userName, String password) {
-//        EntityManagerFactory emf;
-//        emf = Persistence.createEntityManagerFactory(Tag.PERSISTANCE_UNIT_NAME);
-//        em = emf.createEntityManager();
         EntityManager em;
         em = getEntityManager(emf);
         TypedQuery<User> user = em.createNamedQuery("User.findByUsernamePassword", User.class);
