@@ -66,7 +66,7 @@
             <hr>
 
             <div class = "row" >
-                   <% if (project != null && project.getBudget()!= null) {
+                <% if (project != null && project.getBudget() != null) {
                         out.println(
                                 "<div class = 'col-md-9 col-sm-9 col-xs-9'>"
                                 + project.getBudget()
@@ -86,7 +86,7 @@
             <hr>
 
             <div class = "row" >
-                   <% if (project != null && project.getDeadline()!= null) {
+                <% if (project != null && project.getDeadline() != null) {
                         out.println(
                                 "<div class = 'col-md-9 col-sm-9 col-xs-9'>"
                                 + project.getDeadline()
@@ -106,7 +106,7 @@
             <hr>
 
             <div class = "row" >
-                   <% if (project != null && project.getNeededSkills()!= null) {
+                <% if (project != null && project.getNeededSkills() != null) {
                         out.println(
                                 "<div class = 'col-md-9 col-sm-9 col-xs-9'>"
                                 + project.getNeededSkills()
@@ -126,7 +126,7 @@
             <hr>
 
             <div class = "row" >
-                   <% if (project != null && project.getProjectDescription()!= null) {
+                <% if (project != null && project.getProjectDescription() != null) {
                         out.println(
                                 "<div class = 'col-md-9 col-sm-9 col-xs-9'>"
                                 + project.getProjectDescription()
@@ -146,7 +146,12 @@
             <hr>
 
             <div class = "row" >
-                <a href="recommendation.html" class="btn btn-info col-md-2 col-sm-2 col-xs-2" role="button">ارسال پیشنهاد</a>
+                <%
+                    out.println("<a href='recommendation.jsp?projectId="
+                            + project.getProjectId()
+                            + "'"
+                            + "class='btn btn-info col-md-2 col-sm-2 col-xs-2' role='button'>ارسال پیشنهاد</a>");
+                %>
                 <div class = "col-md-7 col-sm-7 col-xs-7"></div>
                 <div class = "col-md-3 col-sm-3 col-xs-3">پیشنهاد های ثبت شده:</div>
             </div>

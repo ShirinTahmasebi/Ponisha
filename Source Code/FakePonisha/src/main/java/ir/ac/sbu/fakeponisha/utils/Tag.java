@@ -22,6 +22,14 @@ public class Tag {
     final public static String PROJECT_ID = "projectId";
 
     /*
+     requested project model fields
+     */
+    final public static String REQUESTED_PROJECTS = "RequestedProjects";
+    final public static String REQUESTED_PROJECTS_PRICE = "price";
+    final public static String REQUESTED_PROJECTS_DEADLINE = "deadline";
+    final public static String REQUESTED_PROJECTS_DESCRIPTION = "description";
+
+    /*
      resume model fields
      */
     final public static String RESUME = "resume";
@@ -48,6 +56,5 @@ public class Tag {
     final public static String ADD_RESUME_ITEM_PAGE = "add_resume_item.jsp";
 
     final public static String PERSISTANCE_UNIT_NAME = "UserService";
-    
 
 }

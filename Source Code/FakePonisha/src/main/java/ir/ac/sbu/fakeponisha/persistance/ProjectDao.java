@@ -30,13 +30,6 @@ public interface ProjectDao {
 
     /**
      *
-     * @param projectName
-     * @return
-     */
-    public User getProject(String projectName);
-
-    /**
-     *
      * @param project
      */
     public void insertProject(Project project);

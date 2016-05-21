@@ -42,10 +42,6 @@ public class ProjectDaoImplementation implements ProjectDao {
         
     }
 
-    @Override
-    public User getProject(String projectName) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
     @Override
     public void insertProject(Project project) {
