@@ -3,7 +3,7 @@ package ir.ac.sbu.springponisha.service;
 import ir.ac.sbu.springponisha.dao.model.User;
 import java.util.List;
 
-public interface UserDao {
+public interface UserManager {
 
     /**
      *

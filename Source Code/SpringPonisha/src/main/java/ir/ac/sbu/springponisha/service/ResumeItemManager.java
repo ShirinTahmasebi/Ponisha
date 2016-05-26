@@ -3,7 +3,7 @@ package ir.ac.sbu.springponisha.service;
 import ir.ac.sbu.springponisha.dao.model.ResumeItem;
 import java.util.List;
 
-public interface ResumeItemDao {
+public interface ResumeItemManager {
 
     /**
      *

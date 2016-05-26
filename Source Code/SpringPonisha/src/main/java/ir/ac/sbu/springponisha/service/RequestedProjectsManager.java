@@ -7,7 +7,7 @@ import java.util.List;
  *
  * @author Shirin
  */
-public interface RequestedProjectsDao {
+public interface RequestedProjectsManager {
 
     /**
      *
