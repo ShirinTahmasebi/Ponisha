@@ -11,6 +11,7 @@ import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -22,6 +23,8 @@ import javax.persistence.Table;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
 
 /**
  *
@@ -35,6 +38,7 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "Resume.findByResumeId", query = "SELECT r FROM Resume r WHERE r.resumeId = :resumeId"),
     @NamedQuery(name = "Resume.findByResumeDescription", query = "SELECT r FROM Resume r WHERE r.resumeDescription = :resumeDescription")})
 public class Resume implements Serializable {
+
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -44,7 +48,8 @@ public class Resume implements Serializable {
     @Size(max = 255)
     @Column(name = "resumeDescription")
     private String resumeDescription;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "resumeId")
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "resumeId")
+    @Fetch(FetchMode.SUBSELECT)
     private List<ResumeItem> resumeItemList;
     @OneToOne(mappedBy = "resumeId")
     private User user;
@@ -113,5 +118,5 @@ public class Resume implements Serializable {
     public String toString() {
         return "ir.ac.sbu.springponisha.dao.model.Resume[ resumeId=" + resumeId + " ]";
     }
-    
+
 }

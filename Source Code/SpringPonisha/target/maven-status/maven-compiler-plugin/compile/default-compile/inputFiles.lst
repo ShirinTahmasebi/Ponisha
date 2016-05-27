@@ -3,8 +3,11 @@
 /Users/apple/Desktop/Ponishaa/Source Code/SpringPonisha/src/main/java/ir/ac/sbu/springponisha/dao/model/RequestedProjects.java
 /Users/apple/Desktop/Ponishaa/Source Code/SpringPonisha/src/main/java/ir/ac/sbu/springponisha/service/impl/UserManagerImpl.java
 /Users/apple/Desktop/Ponishaa/Source Code/SpringPonisha/src/main/java/ir/ac/sbu/springponisha/service/impl/RequestedProjectsManagerImpl.java
+/Users/apple/Desktop/Ponishaa/Source Code/SpringPonisha/src/main/java/ir/ac/sbu/springponisha/controller/CreateProjectController.java
 /Users/apple/Desktop/Ponishaa/Source Code/SpringPonisha/src/main/java/ir/ac/sbu/springponisha/dao/model/Project.java
 /Users/apple/Desktop/Ponishaa/Source Code/SpringPonisha/src/main/java/ir/ac/sbu/springponisha/controller/LoginController.java
+/Users/apple/Desktop/Ponishaa/Source Code/SpringPonisha/src/main/java/ir/ac/sbu/springponisha/controller/EditProfileController.java
+/Users/apple/Desktop/Ponishaa/Source Code/SpringPonisha/src/main/java/ir/ac/sbu/springponisha/controller/CreateResumeItemController.java
 /Users/apple/Desktop/Ponishaa/Source Code/SpringPonisha/src/main/java/ir/ac/sbu/springponisha/service/ProjectManager.java
 /Users/apple/Desktop/Ponishaa/Source Code/SpringPonisha/src/main/java/ir/ac/sbu/springponisha/controller/UserApplicationInitializer.java
 /Users/apple/Desktop/Ponishaa/Source Code/SpringPonisha/src/main/java/ir/ac/sbu/springponisha/dao/model/Resume.java
@@ -22,6 +25,7 @@
 /Users/apple/Desktop/Ponishaa/Source Code/SpringPonisha/src/main/java/ir/ac/sbu/springponisha/dao/RequestedProjectsDao.java
 /Users/apple/Desktop/Ponishaa/Source Code/SpringPonisha/src/main/java/ir/ac/sbu/springponisha/service/RequestedProjectsManager.java
 /Users/apple/Desktop/Ponishaa/Source Code/SpringPonisha/src/main/java/ir/ac/sbu/springponisha/utils/Helper.java
+/Users/apple/Desktop/Ponishaa/Source Code/SpringPonisha/src/main/java/ir/ac/sbu/springponisha/controller/ProjectDetailController.java
 /Users/apple/Desktop/Ponishaa/Source Code/SpringPonisha/src/main/java/ir/ac/sbu/springponisha/dao/impl/RequestedProjectsDaoImplementation.java
 /Users/apple/Desktop/Ponishaa/Source Code/SpringPonisha/src/main/java/ir/ac/sbu/springponisha/dao/ResumeDao.java
 /Users/apple/Desktop/Ponishaa/Source Code/SpringPonisha/src/main/java/ir/ac/sbu/springponisha/dao/ResumeItemDao.java
@@ -33,3 +37,4 @@
 /Users/apple/Desktop/Ponishaa/Source Code/SpringPonisha/src/main/java/ir/ac/sbu/springponisha/dao/impl/ProjectDaoImplementation.java
 /Users/apple/Desktop/Ponishaa/Source Code/SpringPonisha/src/main/java/ir/ac/sbu/springponisha/dao/impl/ResumeDaoImplementation.java
 /Users/apple/Desktop/Ponishaa/Source Code/SpringPonisha/src/main/java/ir/ac/sbu/springponisha/service/impl/ResumeItemManagerImpl.java
+/Users/apple/Desktop/Ponishaa/Source Code/SpringPonisha/src/main/java/ir/ac/sbu/springponisha/controller/RequestProjectController.java

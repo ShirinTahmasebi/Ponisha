@@ -1,7 +1,5 @@
 <%@page import="java.util.List"%>
 <%@page import="ir.ac.sbu.springponisha.dao.model.ResumeItem"%>
-<%@page import="ir.ac.sbu.springponisha.dao.impl.UserDaoImplementation"%>
-<%@page import="ir.ac.sbu.springponisha.dao.UserDao"%>
 <%@page import="ir.ac.sbu.springponisha.dao.model.RequestedProjects"%>
 <%@page import="ir.ac.sbu.springponisha.dao.model.Project"%>
 <%@page import="ir.ac.sbu.springponisha.utils.GenderType"%>
@@ -14,7 +12,7 @@
 
     <body style= " text-align: justify; text-justify: inter-word;">
         <%@ include file="menu.jsp" %> 
-        <%            User user;
+        <%  User user;
             boolean isEditable = false;
             if (request.getParameter(Tag.USER_ID) != null) {
                 user = (User) request.getAttribute(Tag.USER);
@@ -238,7 +236,7 @@
                         </thead>  
                         <tbody>  
                             <%
-                                if (user != null && user.getProjectList() != null && user.getProjectList().size() > 0) {
+                                if (user != null && user.getProjectList()!= null && user.getProjectList().size() > 0) {
                                     for (Project proj : user.getProjectList()) {
 
                                         out.println("<tr>");
@@ -294,7 +292,7 @@
                         <tbody>  
 
                             <%
-                                if (user != null && user.getRequestedProjectsList() != null && user.getRequestedProjectsList().size() > 0) {
+                                if (user != null && user.getRequestedProjectsList()!= null && user.getRequestedProjectsList().size() > 0) {
                                     for (RequestedProjects requestedProject : user.getRequestedProjectsList()) {%>
                             <tr>
                                 <td><%=(requestedProject.getUserId().getUserFirstLastName() != null) ? requestedProject.getUserId().getUserFirstLastName() : requestedProject.getUserId().getUsername()%></td>
@@ -376,21 +374,6 @@
 
         </div>
 
-
-
-
-        <!--        <script type='text/javascript'>
-        
-                    $(document).ready(function () {
-        
-        
-                        $('#projctsTable').on('click', 'tbody tr', function () {
-                            window.location.href = "project_details.jsp";
-                        });
-                    });
-        
-        
-                </script>-->
 
         <script type="text/javascript">
             $(document).ready(function () {

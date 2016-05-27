@@ -1,3 +1,6 @@
+<%@page import="ir.ac.sbu.springponisha.service.ProjectManager"%>
+<%@page import="org.springframework.web.context.support.WebApplicationContextUtils"%>
+<%@page import="org.springframework.web.context.WebApplicationContext"%>
 <%@page import="ir.ac.sbu.springponisha.dao.ProjectDao"%>
 <%@page import="ir.ac.sbu.springponisha.dao.impl.ProjectDaoImplementation"%>
 <%@page import="java.util.List"%>
@@ -34,8 +37,9 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <%                            ProjectDao projectDao = new ProjectDaoImplementation();
-                            List<Project> projects = projectDao.getAllProjects();
+                        <%  WebApplicationContext context = WebApplicationContextUtils.getRequiredWebApplicationContext(getServletContext());
+                            ProjectManager projectService = context.getBean(ProjectManager.class);
+                            List<Project> projects = projectService.getAllProjects();
 
                             for (Project project : projects) {
                         %>
