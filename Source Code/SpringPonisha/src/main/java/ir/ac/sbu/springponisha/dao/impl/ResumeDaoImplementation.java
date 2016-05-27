@@ -42,9 +42,4 @@ public class ResumeDaoImplementation implements ResumeDao {
     @Override
     public void updateResume(Resume resume) {
     }
-
-//    @Override
-//    public Resume getResume(int resumeId) {
-//        
-//    }
 }
