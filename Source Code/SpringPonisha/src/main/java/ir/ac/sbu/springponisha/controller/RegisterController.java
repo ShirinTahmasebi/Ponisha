@@ -1,6 +1,8 @@
 package ir.ac.sbu.springponisha.controller;
 
+import ir.ac.sbu.springponisha.dao.model.Resume;
 import ir.ac.sbu.springponisha.dao.model.User;
+import ir.ac.sbu.springponisha.service.ResumeManager;
 import ir.ac.sbu.springponisha.service.UserManager;
 import ir.ac.sbu.springponisha.utils.GenderType;
 import ir.ac.sbu.springponisha.utils.Helper;
@@ -20,12 +22,14 @@ import org.springframework.web.context.support.WebApplicationContextUtils;
 @WebServlet(name = "RegisterController", urlPatterns = {"/RegisterController"})
 public class RegisterController extends HttpServlet {
 
-    private UserManager service;
+    private UserManager userService;
+    private ResumeManager resumeService;
 
     @Override
     public void init() throws ServletException {
         WebApplicationContext context = WebApplicationContextUtils.getRequiredWebApplicationContext(getServletContext());
-        service = context.getBean(UserManager.class);
+        userService = context.getBean(UserManager.class);
+        resumeService = context.getBean(ResumeManager.class);
     }
 
     @Override
@@ -61,10 +65,13 @@ public class RegisterController extends HttpServlet {
     }
 
     private boolean checkUniqueUserInfo(User user) {
-        User u = service.getUser(user.getUsername());
+        User u = userService.getUser(user.getUsername());
         if (u == null) {
-            // TODO: Add resumeId for users here
-            service.insertUser(user);
+            Resume resume = new Resume();
+            resume.setResumeDescription("User Resume");
+            resumeService.insertResume(resume);
+            user.setResumeId(resume);
+            userService.insertUser(user);
             return true;
         }
         return false;
@@ -75,7 +82,7 @@ public class RegisterController extends HttpServlet {
         boolean isUserUnique = (isUserValid) ? checkUniqueUserInfo(user) : false;
 
         if (isUserValid && isUserUnique) {
-            User foundUser = service.getUser(user.getUsername());
+            User foundUser = userService.getUser(user.getUsername());
             request.setAttribute(Tag.USER, foundUser);
             session.setAttribute(Tag.USER, foundUser);
             return Tag.FIRST_PAGE;

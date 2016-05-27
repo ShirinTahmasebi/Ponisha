@@ -1,4 +1,5 @@
 ir/ac/sbu/springponisha/service/ProjectManager.class
+ir/ac/sbu/springponisha/service/impl/ResumeManagerImpl.class
 ir/ac/sbu/springponisha/controller/RegisterController.class
 ir/ac/sbu/springponisha/dao/model/RequestedProjects.class
 ir/ac/sbu/springponisha/utils/GenderType.class
@@ -29,5 +30,6 @@ ir/ac/sbu/springponisha/dao/RequestedProjectsDao.class
 ir/ac/sbu/springponisha/utils/Tag.class
 ir/ac/sbu/springponisha/service/impl/UserManagerImpl.class
 ir/ac/sbu/springponisha/dao/model/RequestedProjects_.class
+ir/ac/sbu/springponisha/dao/impl/ResumeDaoImplementation.class
 ir/ac/sbu/springponisha/dao/UserDao.class
 ir/ac/sbu/springponisha/service/ResumeManager.class

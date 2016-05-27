@@ -11,6 +11,7 @@
 /Users/apple/Desktop/Ponishaa/Source Code/SpringPonisha/src/main/java/ir/ac/sbu/springponisha/service/UserManager.java
 /Users/apple/Desktop/Ponishaa/Source Code/SpringPonisha/src/main/java/ir/ac/sbu/springponisha/dao/model/User.java
 /Users/apple/Desktop/Ponishaa/Source Code/SpringPonisha/src/main/java/ir/ac/sbu/springponisha/dao/model/ResumeItem.java
+/Users/apple/Desktop/Ponishaa/Source Code/SpringPonisha/src/main/java/ir/ac/sbu/springponisha/service/impl/ResumeManagerImpl.java
 /Users/apple/Desktop/Ponishaa/Source Code/SpringPonisha/src/main/java/ir/ac/sbu/springponisha/service/ResumeItemManager.java
 /Users/apple/Desktop/Ponishaa/Source Code/SpringPonisha/src/main/java/ir/ac/sbu/springponisha/dao/ProjectDao.java
 /Users/apple/Desktop/Ponishaa/Source Code/SpringPonisha/src/main/java/ir/ac/sbu/springponisha/utils/Response.java
@@ -23,3 +24,4 @@
 /Users/apple/Desktop/Ponishaa/Source Code/SpringPonisha/src/main/java/ir/ac/sbu/springponisha/dao/model/Company.java
 /Users/apple/Desktop/Ponishaa/Source Code/SpringPonisha/src/main/java/ir/ac/sbu/springponisha/utils/GenderType.java
 /Users/apple/Desktop/Ponishaa/Source Code/SpringPonisha/src/main/java/ir/ac/sbu/springponisha/utils/Regex.java
+/Users/apple/Desktop/Ponishaa/Source Code/SpringPonisha/src/main/java/ir/ac/sbu/springponisha/dao/impl/ResumeDaoImplementation.java
