@@ -1,6 +1,6 @@
-<%@page import="ir.ac.sbu.fakeponisha.model.RequestedProjects"%>
+<%@page import="ir.ac.sbu.springponisha.dao.model.RequestedProjects"%>
 <%@page import="java.util.List"%>
-<%@page import="ir.ac.sbu.fakeponisha.model.Project"%>
+<%@page import="ir.ac.sbu.springponisha.dao.model.Project"%>
 <!DOCTYPE html>
 <html>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />

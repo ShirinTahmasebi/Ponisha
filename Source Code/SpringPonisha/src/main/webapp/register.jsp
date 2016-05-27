@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html >
     <head>
@@ -16,7 +14,7 @@
     </head>
 
     <body>
-        <%--<%@ include file="menu.jsp" %>--%> 
+        <%@ include file="menu.jsp" %> 
         <div id="form-main" dir = "rtl">
             <div id="form-div">
                 <form class="form" id="form1"  role="form" method="post" action="RegisterController">

@@ -1,4 +1,4 @@
-<%@page import="ir.ac.sbu.fakeponisha.model.ResumeItem"%>
+<%@page import="ir.ac.sbu.springponisha.dao.model.ResumeItem"%>
 <%@page import="java.util.List"%>
 <!DOCTYPE html>
 <html >
@@ -43,7 +43,7 @@
                         <div class = "col-md-9 col-sm-9 col-xs-9">
                             <p class="text" >
                                 <input name="email" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input"  id="deadline" 
-                                       value="<%=(user.getEmail()== null) ? " " : user.getEmail()%>" />
+                                       value="<%=(user.getEmail() == null) ? " " : user.getEmail()%>" />
                             </p>
                         </div>
                         <div class = "col-md-3 col-sm-3 col-xs-3 lables">آدرس ایمیل:</div>
@@ -70,7 +70,7 @@
                         <div class = "col-md-9 col-sm-9 col-xs-9">
                             <p class="text" >
                                 <input name="city" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input"  id="deadline" 
-                                       value="<%= (user.getCity() ==  null)? "": user.getCity()%>" />
+                                       value="<%= (user.getCity() == null) ? "" : user.getCity()%>" />
                             </p>
                         </div>
                         <div class = "col-md-3 col-sm-3 col-xs-3 lables">شهر:</div>
@@ -81,7 +81,7 @@
                         <div class = "col-md-9 col-sm-9 col-xs-9">
                             <p class="text" >
                                 <input name="birthDate" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input"  id="deadline" placeholder="برای مثال 12 بهمن 95" 
-                                       value="<%=(user.getBirthDate() == null)? "": user.getBirthDate()%>" />
+                                       value="<%=(user.getBirthDate() == null) ? "" : user.getBirthDate()%>" />
                             </p>
                         </div>
                         <div class = "col-md-3 col-sm-3 col-xs-3 lables">تاریخ تولد:</div>

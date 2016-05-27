@@ -1,5 +1,6 @@
-<%@page import="ir.ac.sbu.fakeponisha.model.User"%>
-<%@page import="ir.ac.sbu.fakeponisha.utils.Tag"%>
+<%@page import="ir.ac.sbu.springponisha.utils.Tag"%>
+<%@page import="ir.ac.sbu.springponisha.dao.model.User"%>
+<%@page import="ir.ac.sbu.springponisha.utils.Tag"%>
 <html>
     <head>
         <link rel="stylesheet" href="css/menu_style.css">

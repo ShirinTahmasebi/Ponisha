@@ -1,10 +1,10 @@
 <%@page import="java.util.List"%>
-<%@page import="ir.ac.sbu.fakeponisha.model.ResumeItem"%>
-<%@page import="ir.ac.sbu.fakeponisha.persistance.UserDaoImplementation"%>
-<%@page import="ir.ac.sbu.fakeponisha.persistance.UserDao"%>
-<%@page import="ir.ac.sbu.fakeponisha.model.RequestedProjects"%>
-<%@page import="ir.ac.sbu.fakeponisha.model.Project"%>
-<%@page import="ir.ac.sbu.fakeponisha.utils.GenderType"%>
+<%@page import="ir.ac.sbu.springponisha.dao.model.ResumeItem"%>
+<%@page import="ir.ac.sbu.springponisha.dao.impl.UserDaoImplementation"%>
+<%@page import="ir.ac.sbu.springponisha.dao.UserDao"%>
+<%@page import="ir.ac.sbu.springponisha.dao.model.RequestedProjects"%>
+<%@page import="ir.ac.sbu.springponisha.dao.model.Project"%>
+<%@page import="ir.ac.sbu.springponisha.utils.GenderType"%>
 <html>
     <link rel="stylesheet" type="text/css" href="css/table_style.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">   

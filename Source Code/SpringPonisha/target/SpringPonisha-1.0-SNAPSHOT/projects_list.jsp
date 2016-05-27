@@ -1,8 +1,8 @@
-<%@page import="ir.ac.sbu.fakeponisha.persistance.ProjectDao"%>
-<%@page import="ir.ac.sbu.fakeponisha.persistance.ProjectDaoImplementation"%>
+<%@page import="ir.ac.sbu.springponisha.dao.ProjectDao"%>
+<%@page import="ir.ac.sbu.springponisha.dao.impl.ProjectDaoImplementation"%>
 <%@page import="java.util.List"%>
-<%@page import="ir.ac.sbu.fakeponisha.model.Project"%>
-<%@page import="ir.ac.sbu.fakeponisha.model.Project"%>
+<%@page import="ir.ac.sbu.springponisha.dao.model.Project"%>
+<%@page import="ir.ac.sbu.springponisha.dao.model.Project"%>
 <html dir="rtl" lang="fa">
     <head>
         <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />

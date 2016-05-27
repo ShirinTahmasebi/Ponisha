@@ -5,20 +5,18 @@
  */
 package ir.ac.sbu.springponisha.dao.impl;
 
-import ir.ac.sbu.fakeponisha.model.RequestedProjects;
-import ir.ac.sbu.fakeponisha.utils.Tag;
+import ir.ac.sbu.springponisha.dao.RequestedProjectsDao;
+import ir.ac.sbu.springponisha.dao.model.RequestedProjects;
 import java.util.List;
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
+import javax.persistence.PersistenceContext;
+import org.springframework.stereotype.Repository;
 
-/**
- *
- * @author Shirin
- */
+@Repository
 public class RequestedProjectsDaoImplementation implements RequestedProjectsDao {
 
-    private EntityManagerFactory emf;
+    @PersistenceContext
+    private EntityManager entityManager;
 
     @Override
     public List<RequestedProjects> getAllRequests() {
@@ -32,23 +30,11 @@ public class RequestedProjectsDaoImplementation implements RequestedProjectsDao 
 
     @Override
     public void insertRequest(RequestedProjects request) {
-        EntityManager em;
-        em = getEntityManager(emf);
-        em.getTransaction().begin();
-        em.persist(request);
-        em.getTransaction().commit();
+        entityManager.persist(request);
     }
 
     @Override
     public void updateRequest(RequestedProjects requestedProjects) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
-    private EntityManager getEntityManager(EntityManagerFactory emf) {
-        if (emf == null) {
-            emf = Persistence.createEntityManagerFactory(Tag.PERSISTANCE_UNIT_NAME);
-        }
-        return emf.createEntityManager();
-    }
-
 }

@@ -18,7 +18,7 @@ pageEncoding="UTF-8"
 
 <div id ="container">
 	<header>
-		<%--<%@ include file="menu.jsp" %>--%> 
+            <%@ include file="menu.jsp" %> 
 	</header>
 
 	<div id="banner">
