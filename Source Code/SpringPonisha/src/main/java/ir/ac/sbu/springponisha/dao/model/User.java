@@ -32,16 +32,17 @@ import javax.xml.bind.annotation.XmlTransient;
 @Entity
 @Table(name = "user")
 @XmlRootElement
-@NamedQueries({
-    @NamedQuery(name = "User.findAll", query = "SELECT u FROM User u"),
-    @NamedQuery(name = "User.findByUserId", query = "SELECT u FROM User u WHERE u.userId = :userId"),
-    @NamedQuery(name = "User.findByUsername", query = "SELECT u FROM User u WHERE u.username = :username"),
+@NamedQueries({    @NamedQuery(name = "User.findAll", query = "SELECT u FROM User u"),
+    @NamedQuery(name = "User.findByUserId", query = "SELECT u FROM User u WHERE u.userId = ?"),
     @NamedQuery(name = "User.findByUserFirstLastName", query = "SELECT u FROM User u WHERE u.userFirstLastName = :userFirstLastName"),
+    @NamedQuery(name = "User.findByUsername", query = "SELECT u FROM User u WHERE u.username = ?"),
+    @NamedQuery(name = "User.findByUsernamePassword", query = "SELECT u FROM User u WHERE u.username = ? and u.password = ?"),
     @NamedQuery(name = "User.findByCity", query = "SELECT u FROM User u WHERE u.city = :city"),
     @NamedQuery(name = "User.findByBirthDate", query = "SELECT u FROM User u WHERE u.birthDate = :birthDate"),
     @NamedQuery(name = "User.findByGender", query = "SELECT u FROM User u WHERE u.gender = :gender"),
     @NamedQuery(name = "User.findByPassword", query = "SELECT u FROM User u WHERE u.password = :password"),
-    @NamedQuery(name = "User.findByEmail", query = "SELECT u FROM User u WHERE u.email = :email")})
+    @NamedQuery(name = "User.findByEmail", query = "SELECT u FROM User u WHERE u.email = :email"),
+    @NamedQuery(name = "User.findByResumeId", query = "SELECT u FROM User u WHERE u.resumeId.resumeId = ?")})
 public class User implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id

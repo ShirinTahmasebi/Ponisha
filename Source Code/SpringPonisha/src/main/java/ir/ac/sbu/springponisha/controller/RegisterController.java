@@ -4,6 +4,7 @@ import ir.ac.sbu.springponisha.dao.model.User;
 import ir.ac.sbu.springponisha.service.UserManager;
 import ir.ac.sbu.springponisha.utils.GenderType;
 import ir.ac.sbu.springponisha.utils.Helper;
+import ir.ac.sbu.springponisha.utils.Regex;
 import ir.ac.sbu.springponisha.utils.Response;
 import ir.ac.sbu.springponisha.utils.Tag;
 import java.io.IOException;
@@ -27,14 +28,6 @@ public class RegisterController extends HttpServlet {
         service = context.getBean(UserManager.class);
     }
 
-    /**
-     * Handles the HTTP <code>POST</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -49,58 +42,45 @@ public class RegisterController extends HttpServlet {
         user.setPassword(password);
         user.setEmail(email);
         user.setGender(GenderType.getGenderCode(GenderType.Gender.NOTDEFINED));
-        service.insertUser(user);
-
         response.setContentType("text/html;charset=UTF-8");
-//        String forwardPage = checkInsertUser(user, request, session);
+        String forwardPage = checkInsertUser(user, request, session);
 
-        response.sendRedirect(Tag.FIRST_PAGE);
+        response.sendRedirect(forwardPage);
     }
-//
-//    /**
-//     * Returns a short description of the servlet.
-//     *
-//     * @return a String containing servlet description
-//     */
-//    @Override
-//    public String getServletInfo() {
-//        return "This servlet is used to register users in Ponisha site.";
-//    }
-//
-//    private boolean checkValidUserInfoFormat(User user) {
-//        boolean isUsernameValid = Helper.validator(user.getUsername(), Regex.USERNAME_PATTERN);
-//        boolean isPasswordValid = Helper.validator(user.getPassword(), Regex.PASSWORD_PATTERN);
-//        boolean isEmailValid = Helper.validator(user.getEmail(), Regex.EMAIL_PATTERN);
-//        return isUsernameValid && isPasswordValid && isEmailValid;
-//    }
-//
-//    private boolean checkUniqueUserInfo(User user) {
-//        UserDao userDao = new UserDaoImplementation();
-//        User u = userDao.getUser(user.getUsername());
-//        if (u == null) {
-//            Resume resume = new Resume();
-//            resume.setResumeDescription("User Resume");
-//            ResumeDao resumeDao = new ResumeDaoImplementation();
-//            resumeDao.insertResume(resume);
-//            user.setResumeId(resume);
-//            userDao.insertUser(user);
-//            return true;
-//        }
-//        return false;
-//    }
-//
-//    private String checkInsertUser(User user, HttpServletRequest request, HttpSession session) {
-//        boolean isUserValid = checkValidUserInfoFormat(user);
-//        boolean isUserUnique = (isUserValid) ? checkUniqueUserInfo(user) : false;
-//
-//        if (isUserValid && isUserUnique) {
-//            UserDao userDao = new UserDaoImplementation();
-//            User foundUser = userDao.getUser(user.getUsername());
-//            request.setAttribute(Tag.USER, foundUser);
-//            session.setAttribute(Tag.USER, foundUser);
-//            return Tag.FIRST_PAGE;
-//        }
-//        return Tag.REGISTER_PAGE;
-//    }
+
+    @Override
+    public String getServletInfo() {
+        return "This servlet is used to register users in Ponisha site.";
+    }
+
+    private boolean checkValidUserInfoFormat(User user) {
+        boolean isUsernameValid = Helper.validator(user.getUsername(), Regex.USERNAME_PATTERN);
+        boolean isPasswordValid = Helper.validator(user.getPassword(), Regex.PASSWORD_PATTERN);
+        boolean isEmailValid = Helper.validator(user.getEmail(), Regex.EMAIL_PATTERN);
+        return isUsernameValid && isPasswordValid && isEmailValid;
+    }
+
+    private boolean checkUniqueUserInfo(User user) {
+        User u = service.getUser(user.getUsername());
+        if (u == null) {
+            // TODO: Add resumeId for users here
+            service.insertUser(user);
+            return true;
+        }
+        return false;
+    }
+
+    private String checkInsertUser(User user, HttpServletRequest request, HttpSession session) {
+        boolean isUserValid = checkValidUserInfoFormat(user);
+        boolean isUserUnique = (isUserValid) ? checkUniqueUserInfo(user) : false;
+
+        if (isUserValid && isUserUnique) {
+            User foundUser = service.getUser(user.getUsername());
+            request.setAttribute(Tag.USER, foundUser);
+            session.setAttribute(Tag.USER, foundUser);
+            return Tag.FIRST_PAGE;
+        }
+        return Tag.REGISTER_PAGE;
+    }
 
 }
