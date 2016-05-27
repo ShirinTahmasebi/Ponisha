@@ -6,6 +6,7 @@ import ir.ac.sbu.springponisha.service.ResumeItemManager;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class ResumeItemManagerImpl implements ResumeItemManager{
@@ -24,6 +25,7 @@ public class ResumeItemManagerImpl implements ResumeItemManager{
     }
 
     @Override
+    @Transactional
     public void insertResumeItem(ResumeItem resumeItem) {
         resumeItemDao.insertResumeItem(resumeItem);
     }
