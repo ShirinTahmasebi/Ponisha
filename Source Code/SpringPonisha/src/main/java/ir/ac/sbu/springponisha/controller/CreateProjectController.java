@@ -71,7 +71,7 @@ public class CreateProjectController extends HttpServlet {
         }
         projectService.insertProject(project);
         //َ Update user attribute in session
-        session.setAttribute(Tag.USER, user);
+        session.setAttribute(Tag.USER, userService.getUser(user.getUserId()));
         return Tag.FIRST_PAGE;
     }
 
